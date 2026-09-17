@@ -1,0 +1,9 @@
+{
+  "candidate_generation_allowed": false,
+  "classification": "evaluator_only_public_labels",
+  "outputs": 172,
+  "selector_fitting_allowed": false,
+  "source_competition_manifest_sha256": "d789efe03efb29a5bb8df6301cc12b7d8959d7bf3e790427142b1c8219e6c43f",
+  "tasks": 120,
+  "tree_sha256": "3ac3d1a397384bcbfe11c2ff1936875c7ffe90bc1bc75fd032d3d8ff13f4389a"
+}

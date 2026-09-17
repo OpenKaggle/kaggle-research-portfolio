@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.arc2.paper/schemas/stage_authorization_v1.schema.json",
+  "title": "ARC-AGI-2 one-stage execution authorization v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "candidate_id",
+    "stage",
+    "decision",
+    "authorized",
+    "authorized_by_user",
+    "authorized_at",
+    "contract_sha256_before",
+    "notebook",
+    "allowed_external_action",
+    "one_run_only",
+    "read_terminal_evidence_after_run",
+    "public_leaderboard_used_for_selection",
+    "future_stages_authorized",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "stage": {
+      "enum": ["private_development", "sealed_holdout", "competition_rerun"]
+    },
+    "decision": {"const": "AUTHORIZE_ONE_STAGE_RUN"},
+    "authorized": {"const": true},
+    "authorized_by_user": {"const": true},
+    "authorized_at": {"$ref": "#/$defs/timestamp"},
+    "contract_sha256_before": {"$ref": "#/$defs/sha256"},
+    "notebook": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "allowed_external_action": {
+      "enum": [
+        "KAGGLE_RUN_PRIVATE_DEVELOPMENT_ONCE_AND_READ_TERMINAL_ARTIFACTS",
+        "KAGGLE_RUN_SEALED_HOLDOUT_ONCE_AND_READ_TERMINAL_ARTIFACTS",
+        "KAGGLE_RERUN_SUBMIT_FROZEN_NOTEBOOK_ONCE_AND_READ_RECEIPT"
+      ]
+    },
+    "one_run_only": {"const": true},
+    "read_terminal_evidence_after_run": {"const": true},
+    "public_leaderboard_used_for_selection": {"const": false},
+    "future_stages_authorized": {"const": false},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]+)?(?:Z|[+-][0-9]{2}:[0-9]{2})$"
+    }
+  }
+}

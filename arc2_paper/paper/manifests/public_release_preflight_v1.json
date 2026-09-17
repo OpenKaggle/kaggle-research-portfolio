@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "status": "PRELIMINARY_NOT_FINAL",
+  "project_root": "../..",
+  "purpose": "Exercise the fail-closed public-release audit on the locally ready V2 runtime smoke and already frozen publication assets. This is not the final scored notebook or final release archive.",
+  "files": [
+    {
+      "path": "candidate_notebooks/trm_wandb_log_compat_smoke_v2/arc2-trm-wandb-log-compat-smoke-v2.ipynb",
+      "bytes": 21013,
+      "sha256": "7a354fc6b74e0259c15bebc8aaf27724b18298b8d458c0196ab62aa69e834091",
+      "category": "notebook",
+      "license": "internal preflight wrapper; final grant pending"
+    },
+    {
+      "path": "public_assets/trm_source/trm_runtime.py",
+      "bytes": 13365,
+      "sha256": "8ac51e00df2f220ff8742bddceae9a84a407e426734975db2f55234460a48776",
+      "category": "source",
+      "license": "MIT-0"
+    },
+    {
+      "path": "public_assets/trm_source/LICENSE-MIT-0",
+      "bytes": 916,
+      "sha256": "0860d23c8b1347b0b4234ed0c34a445a7330593b2af615a56d05ea02a506514e",
+      "category": "license",
+      "license": "MIT-0"
+    },
+    {
+      "path": "public_assets/trm_source/THIRD_PARTY_NOTICES.md",
+      "bytes": 1822,
+      "sha256": "7639751a25b72c7448641e0a3513418255050498fdeca6141f6d9a353bc45f51",
+      "category": "notice",
+      "license": "multi-license notice"
+    },
+    {
+      "path": "public_assets/trm_source/third_party/TinyRecursiveModels/LICENSE",
+      "bytes": 1127,
+      "sha256": "a17df02e2c90fbbb4b2fc0f0262ae429ef9c628c45ee434499fd9aeb987735a4",
+      "category": "license",
+      "license": "MIT"
+    },
+    {
+      "path": "public_assets/trm_source/third_party/icecuber/LICENSE",
+      "bytes": 1088,
+      "sha256": "7789cd54fb8b265bac4358c88967306d08cb84c05dac15de7ee0db114c4d471a",
+      "category": "license",
+      "license": "MIT"
+    },
+    {
+      "path": "public_assets/trm_source/third_party/antlr4/LICENSE.txt",
+      "bytes": 2693,
+      "sha256": "64f3d26b8407ef4400b0036c3f4b74e2f99c556f33c9ae66347479bb83e42791",
+      "category": "license",
+      "license": "BSD-3-Clause plus bundled MIT notice"
+    },
+    {
+      "path": "public_assets/manifest.json",
+      "bytes": 1236,
+      "sha256": "c2e5d6df9e36a32b355359a4f4309b9e3d5294dc594e89a2c710b6ace32c3bee",
+      "category": "receipt",
+      "license": "metadata only"
+    },
+    {
+      "path": "paper/results/model_asset_license_access_2026-09-09.json",
+      "bytes": 3328,
+      "sha256": "ea52c069f4cfe1fdb5cb736c923524c13c3783a961c535e8f1d10867ac4d44f7",
+      "category": "receipt",
+      "license": "project factual record"
+    },
+    {
+      "path": "paper/media/cover_candidate_v2.png",
+      "bytes": 1742491,
+      "sha256": "a1b96ee8da0ae8f49869b1413701e83b958826d9ac7111cf808a1c2c0da851be",
+      "category": "cover",
+      "license": "generated asset; final service-terms recheck pending"
+    },
+    {
+      "path": "paper/media/cover_manifest.md",
+      "bytes": 4717,
+      "sha256": "632f233f0cea164a9301ebb9e2af5139c5d3a2ba599a1a162d3823799cabb0ef",
+      "category": "receipt",
+      "license": "project factual record"
+    }
+  ],
+  "external_assets": [
+    {
+      "kind": "kaggle_dataset",
+      "ref": "cpmpml/arc-prize-trm-031",
+      "version": "1",
+      "public": true,
+      "license": "CC0-1.0",
+      "receipt_sha256": "ea52c069f4cfe1fdb5cb736c923524c13c3783a961c535e8f1d10867ac4d44f7"
+    },
+    {
+      "kind": "kaggle_model",
+      "ref": "sorokin/qwen3_4b_grids15_sft139/Transformers/bfloat16/1",
+      "version": "1",
+      "public": true,
+      "license": "Apache-2.0",
+      "receipt_sha256": "ea52c069f4cfe1fdb5cb736c923524c13c3783a961c535e8f1d10867ac4d44f7"
+    }
+  ],
+  "known_exclusions": [
+    "kaggle_runs/",
+    "evaluator_only/",
+    "artifacts/",
+    "public_notebooks/*/output/",
+    "**/__pycache__/",
+    "public_assets/qwen3_4b_grids15_sft139/",
+    "public_assets/trm_checkpoint/"
+  ],
+  "limitations": [
+    "The notebook is a one-task runtime smoke, not the final scored public notebook.",
+    "The exact final archive must receive a new FINAL_RELEASE_CANDIDATE manifest and pass this auditor after results, grants, links, and identifiers are frozen.",
+    "A passing preflight does not authorize an upload or establish experimental accuracy."
+  ]
+}

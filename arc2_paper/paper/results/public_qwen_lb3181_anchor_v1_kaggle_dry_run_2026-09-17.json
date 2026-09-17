@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "receipt_type": "arc2_public_qwen_anchor_private_kaggle_dry_run",
+  "observed_at_cst": "2026-09-17T05:02:36+08:00",
+  "competition": "arc-prize-2026-arc-agi-2",
+  "attempt": {
+    "ordinal": 1,
+    "maximum_attempts": 2,
+    "dependency_repairs_used": 0,
+    "maximum_dependency_repairs": 1,
+    "official_status": "COMPLETE",
+    "outcome": "PASSED"
+  },
+  "kaggle_kernel": {
+    "requested_ref": "jahyee/arc2-public-qwen-lb3181-anchor-v1",
+    "resolved_ref": "jahyee/arc2-public-qwen-lb31-81-anchor-v1",
+    "url": "https://www.kaggle.com/code/jahyee/arc2-public-qwen-lb31-81-anchor-v1",
+    "kernel_id": 134648497,
+    "run_id": 350403559,
+    "version": 1,
+    "visibility": "private",
+    "internet_enabled": false,
+    "accelerator": "NVIDIA L4 x4",
+    "runtime_seconds": 1697.0,
+    "runtime_display": "28m 17s",
+    "completion_banner": "1697.0 second run - successful",
+    "ref_normalization": "Kaggle normalized LB31.81 in the title-derived slug to lb31-81; this mapping changed neither notebook bytes nor algorithm and did not consume a dependency repair."
+  },
+  "source_bindings": {
+    "pre_push_notebook": {
+      "path": "candidate_notebooks/public_qwen_lb3181_anchor_v1/arc2-public-qwen-lb3181-anchor-v1.ipynb",
+      "sha256": "95c9274c8c17d69e2e91867bfc6ef93d9ce1f046eec2a85a3cc6148bf961bcbe"
+    },
+    "pre_push_metadata": {
+      "path": "candidate_notebooks/public_qwen_lb3181_anchor_v1/kernel-metadata.json",
+      "sha256": "c09d0506038dbd9a323a8ca92b8b100314b8d9ca1a76bd6c538204b163b31c88"
+    },
+    "pulled_version_notebook": {
+      "path": "kaggle_runs/public_qwen_lb3181_anchor_v1/version1_source/arc2-public-qwen-lb31-81-anchor-v1.ipynb",
+      "sha256": "95c9274c8c17d69e2e91867bfc6ef93d9ce1f046eec2a85a3cc6148bf961bcbe"
+    },
+    "pulled_version_metadata": {
+      "path": "kaggle_runs/public_qwen_lb3181_anchor_v1/version1_source/kernel-metadata.json",
+      "sha256": "1cdf5f229db7bace591a9ea0211d7d3c444aaa317b87064eeb3f770ed583a2f8"
+    }
+  },
+  "output_bindings": {
+    "log": {
+      "path": "kaggle_runs/public_qwen_lb3181_anchor_v1/version1_output/arc2-public-qwen-lb31-81-anchor-v1.log",
+      "sha256": "f28fe7cd7f0a30d9dd701df5acea1335ebdfed90d7f320bd0d72ff6c76b667cb",
+      "bytes": 21795
+    },
+    "submission.json": {
+      "path": "kaggle_runs/public_qwen_lb3181_anchor_v1/version1_output/submission.json",
+      "sha256": "cc9a5e0ca979c67dd79b7136c09051cb23a38543db317df32f15ee41d8f15420"
+    },
+    "arc_loader.py": {
+      "path": "kaggle_runs/public_qwen_lb3181_anchor_v1/version1_output/arc_loader.py",
+      "sha256": "2c62526daba3fdd9da317e3dcb689acca8e24018e56e4c7f2c33ed15381ed8c6"
+    },
+    "arc_decoder.py": {
+      "path": "kaggle_runs/public_qwen_lb3181_anchor_v1/version1_output/arc_decoder.py",
+      "sha256": "b38b6b1bdd5f47dbd587a9809ad2ec20cdf9ce5723736a7fb7470e9b1ce61f1d"
+    },
+    "arc_solver.py": {
+      "path": "kaggle_runs/public_qwen_lb3181_anchor_v1/version1_output/arc_solver.py",
+      "sha256": "236a6c7e7e76d2c2ff3396514392d209c618f1b683b98ebe2416243d6853f112"
+    },
+    "starter.py": {
+      "path": "kaggle_runs/public_qwen_lb3181_anchor_v1/version1_output/starter.py",
+      "sha256": "c519adef918335338558da6da97f6c0bbe2e80cb0f395315706da68ee4b56956"
+    }
+  },
+  "runtime_evidence": {
+    "output_files_reported_by_kaggle": 44,
+    "downloaded_files_including_separately_downloaded_log": 45,
+    "rank_start_count": 4,
+    "rank_done_count": 4,
+    "exception_or_traceback_present": false,
+    "generated_submission_outputs": 5,
+    "computed_tasks": [
+      "0934a4d8",
+      "36a08778",
+      "981571dc",
+      "aa4ec2a5"
+    ],
+    "task_terminal_seconds": {
+      "0934a4d8": 559.5,
+      "36a08778": 1214.9,
+      "981571dc": 1260.6,
+      "aa4ec2a5": 662.6
+    },
+    "soft_per_task_guard_note": "The public source checks the 1200-second guard before a batch, so two tasks reported terminal durations above 1200 seconds; all four workers nevertheless completed and total runtime remained below the official 12-hour limit."
+  },
+  "schema_evidence": {
+    "task_count": 120,
+    "output_count": 172,
+    "task_keys_equal_official_evaluation_challenges": true,
+    "attempt_keys_exact": [
+      "attempt_1",
+      "attempt_2"
+    ],
+    "all_grids_valid": true,
+    "non_placeholder_tasks_equal_computed_tasks": true
+  },
+  "dry_run_only_accuracy_evidence": {
+    "exact_pass2_outputs": 3,
+    "exact_pass2_denominator": 172,
+    "notebook_task_weighted_score": 2.5,
+    "notebook_task_weighted_denominator": 4,
+    "reload_score": 2.5,
+    "accuracy_claim_allowed": false
+  },
+  "gates": {
+    "official_status_COMPLETE": true,
+    "return_or_notebook_exception_absent": true,
+    "submission_json_present": true,
+    "submission_schema_120_tasks_172_outputs": true,
+    "all_four_public_smoke_tasks_reach_terminal_processing": true,
+    "runtime_below_12_hours": true,
+    "source_and_dependency_hashes_match": true,
+    "all_pass": true
+  },
+  "competition_submission": {
+    "made": false,
+    "submission_quota_consumed": false
+  },
+  "claim_boundary": "This receipt proves one private Kaggle runtime/schema dry-run of the exact public notebook bytes. It is not an independent reproduction of the source page's 0.3181 score, a hidden-set result, a generalization result, or public-release clearance."
+}

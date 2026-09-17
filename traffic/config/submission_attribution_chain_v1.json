@@ -1,0 +1,107 @@
+{
+  "version": "submission_attribution_chain_v1",
+  "competition": "2026-ieee-big-data-traffic-flow-bench",
+  "expected_whole_table_rows": 6985307,
+  "expected_task_rows": {
+    "state": 6740599,
+    "queue": 174000,
+    "odme": 70708
+  },
+  "stages": [
+    {
+      "order": 1,
+      "experiment": "v32_public_anchor",
+      "submission_id": 56106600,
+      "public_score": "0.71846",
+      "artifact_path": "public_notebooks/traffic_flow_bench_pipeline_v32/output/submission.csv",
+      "artifact_sha256": "7673146d855a153ee56e90ea5afd5dd5431299420d3e803df5e73396e7611e0c",
+      "parent_submission_id": null,
+      "changed_task": null,
+      "public_gain_from_parent": null,
+      "validation_path": "artifacts/v32_public_anchor_validation.json",
+      "validation_sha256": "e2724d48d9768a26ae7fe22d37c07b4a99962c402b6cab653d612b807965ca75",
+      "local_evidence": [],
+      "diff_path": null,
+      "diff_sha256": null,
+      "expected_changed_rows": null,
+      "expected_changed_cells": null,
+      "evaluator_boundary": "official schema key and whole-table integrity anchor; no hidden component truth"
+    },
+    {
+      "order": 2,
+      "experiment": "queue_offbyone_v1_merged",
+      "submission_id": 56107311,
+      "public_score": "0.74210",
+      "artifact_path": "artifacts/queue_offbyone_v1/submission.csv",
+      "artifact_sha256": "7e5c790f917bfb112d572aeab520edc611174c3a98b68ce23190a06c297521da",
+      "parent_submission_id": 56106600,
+      "changed_task": "queue",
+      "public_gain_from_parent": "0.02364",
+      "validation_path": "artifacts/queue_offbyone_v1/submission_validation.json",
+      "validation_sha256": "5fdab1b716393edd3840712ba380cf672b41c0403d1cf8d7e84517c816b2cb1f",
+      "local_evidence": [
+        {
+          "path": "artifacts/queue_mini_v1/queue_mini_receipt.json",
+          "sha256": "fdc1587f8bc1fb8651c9c7dedd4225ebe741558505a34555b0a1249b34db5272",
+          "status": "COMPLETE",
+          "decision": "BUILD_QUEUE_ONLY_CANDIDATE",
+          "hidden_metric_path": ["metric_boundary", "official_S_queue"]
+        },
+        {
+          "path": "artifacts/queue_offbyone_v1/queue_fix_receipt.json",
+          "sha256": "d2611cac3acb0e15565c982172d30766ed03109ad877a31664b095686fa52f83",
+          "status": "VALID",
+          "decision": null,
+          "hidden_metric_path": null
+        }
+      ],
+      "diff_path": "artifacts/queue_offbyone_v1/merged_diff.json",
+      "diff_sha256": "312e018c14c638243d254ddd0ec02c9ceb01035e32cc9f70dfefda55bf36a42e",
+      "expected_changed_rows": 160,
+      "expected_changed_cells": {
+        "queue_pred": 160
+      },
+      "evaluator_boundary": "released-observation proxy selected the variant; official Queue truth is withheld and remains null"
+    },
+    {
+      "order": 3,
+      "experiment": "odme_lambda5_v1",
+      "submission_id": 56108199,
+      "public_score": "0.74733",
+      "artifact_path": "artifacts/odme_lambda5_v1/submission.csv",
+      "artifact_sha256": "c3aea84e5c62f873bad26178db9eddc5b69cf874cffa4f99009c056e698ef8fa",
+      "parent_submission_id": 56107311,
+      "changed_task": "odme",
+      "public_gain_from_parent": "0.00523",
+      "validation_path": "artifacts/odme_lambda5_v1/submission_validation.json",
+      "validation_sha256": "c91c18fd1360e49a697a29bd3ad176bf89e5b715136b032d7ed64c810fb65e16",
+      "local_evidence": [
+        {
+          "path": "artifacts/odme_lambda_frontier_v1_focused/odme_lambda_frontier_receipt.json",
+          "sha256": "4704f59516ce75ed435977fd2e6c7cf04a71f02240177b42decc2c0ae26778ba",
+          "status": "COMPLETE",
+          "decision": "LOCAL_FRONTIER_CANDIDATE_EXISTS",
+          "hidden_metric_paths": [
+            ["metric_boundary", "S_od"],
+            ["metric_boundary", "S_dev"],
+            ["metric_boundary", "S_attr"]
+          ]
+        }
+      ],
+      "diff_path": "artifacts/odme_lambda5_v1/merged_diff.json",
+      "diff_sha256": "09681e394d8b60ddd240e2504ac973a274b691c8905fdf688843f43b0ee7e80d",
+      "expected_changed_rows": 70708,
+      "expected_changed_cells": {
+        "path_flow": 70708
+      },
+      "evaluator_boundary": "official S_link on all 20 panel-splits; hidden S_od S_dev and S_attr remain null"
+    }
+  ],
+  "expected_total_public_gain": "0.02887",
+  "information_boundary": {
+    "private_score_used": false,
+    "hidden_queue_truth_used": false,
+    "organizer_boundary_flows_used": false,
+    "hidden_odme_metrics_used": false
+  }
+}

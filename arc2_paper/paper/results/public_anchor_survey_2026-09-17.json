@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "receipt_type": "arc2_public_anchor_and_rules_survey",
+  "observed_at_cst": "2026-09-17T04:21:43+08:00",
+  "competition": "arc-prize-2026-arc-agi-2",
+  "official_sources": {
+    "overview": "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/overview",
+    "rules": "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/rules",
+    "code": "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/code"
+  },
+  "official_rules_observed": {
+    "rules_accepted_by_account": true,
+    "submission_limit_per_day": 1,
+    "maximum_final_submissions": 2,
+    "cpu_runtime_limit_hours": 12,
+    "gpu_runtime_limit_hours": 12,
+    "internet_must_be_disabled": true,
+    "public_freely_available_external_data_and_models_allowed": true,
+    "submission_filename": "submission.json",
+    "attempt_keys": [
+      "attempt_1",
+      "attempt_2"
+    ],
+    "competition_data_license": "Apache-2.0",
+    "winner_license": "CC BY 4.0",
+    "entry_deadline_utc": "2026-10-26T23:59:00Z",
+    "final_submission_deadline_utc": "2026-11-02T23:59:00Z"
+  },
+  "public_code_observations": [
+    {
+      "ref": "qiuqiuh/arc-highscore-lb3389-replica",
+      "url": "https://www.kaggle.com/code/qiuqiuh/arc-highscore-lb3389-replica",
+      "displayed_score": 0.3181,
+      "displayed_upvotes": 22,
+      "displayed_badge": "Bronze",
+      "selection_status": "SELECTED_SINGLE_PUBLIC_ANCHOR"
+    },
+    {
+      "ref": "manderson240/arc-agi-2-fork-lb33-89-20260903",
+      "url": "https://www.kaggle.com/code/manderson240/arc-agi-2-fork-lb33-89-20260903",
+      "displayed_score": 0.3139,
+      "displayed_upvotes": 4,
+      "selection_status": "SURVEY_ONLY_NOT_DOWNLOADED_OR_RUN"
+    }
+  ],
+  "selected_anchor": {
+    "ref": "qiuqiuh/arc-highscore-lb3389-replica",
+    "source_kernel_id": 133388458,
+    "displayed_score": 0.3181,
+    "score_status": "KAGGLE_CODE_PAGE_DISPLAY_NOT_INDEPENDENTLY_REPRODUCED",
+    "method_family": "Qwen3-4B per-task LoRA test-time training and constrained ARC-token decoding",
+    "explicitly_excluded_lineage": [
+      "conservative_agreement_stable_v2",
+      "TRM hybrid",
+      "V176 exact overlay"
+    ],
+    "selection_reason": "Closest high-quality public single-model anchor above the requested approximately 31.39 level, with exact public notebook bytes, one public model input, one public bootstrap dependency, offline execution, and no old V2/TRM path."
+  },
+  "discussion_context": [
+    {
+      "url": "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/discussion/738313",
+      "title": "Weird timeout",
+      "use": "Treat apparently identical-run timeout variation as a platform/runtime risk; it does not relax the two-attempt fail-closed policy."
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/discussion/709522",
+      "title": "Historical leaderboard with runtime information",
+      "use": "Third-party runtime context only; not method, score, or reproducibility evidence."
+    },
+    {
+      "url": "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/discussion/724647",
+      "title": "Good to see movement on LB",
+      "use": "Confirms leaderboard movement but provides no reproducible public method; excluded from baseline selection evidence."
+    }
+  ],
+  "acquisition": {
+    "ego_browser_task_space_id": 9,
+    "selected_notebook_pulled_with_kaggle_cli": true,
+    "selected_notebook_output_pulled_with_kaggle_cli": true,
+    "bootstrap_notebook_pulled_with_kaggle_cli": true,
+    "writes_to_kaggle": false,
+    "kernel_run_started": false,
+    "competition_submission_made": false
+  },
+  "claim_boundary": "This survey selects one public anchor and freezes current rule and listing observations. Displayed notebook scores remain source-page claims until independently reproduced; discussion posts are context only."
+}

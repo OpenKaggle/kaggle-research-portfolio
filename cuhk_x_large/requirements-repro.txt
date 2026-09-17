@@ -1,0 +1,8 @@
+# Python 3.13.2 environment used for the frozen CUHK-X Large solution.
+numpy==2.4.6
+pandas==3.0.3
+scikit-learn==1.8.0
+xgboost==3.4.1
+joblib==1.5.3
+mlx==0.32.2
+mlx-vlm==0.6.6

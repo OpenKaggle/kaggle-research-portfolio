@@ -1,0 +1,75 @@
+{
+  "audit_status": "CONTAMINATED_FOR_V176_GENERALIZATION",
+  "candidate_id": "conservative_exact_overlay_v3",
+  "claim_boundary": "The historical full-corpus solution audit made V176 coverage on the later paired 48-task slice knowable before its run. The slice remains unrun, and this audit reads no holdout solutions, but it is not sealed method-generalization evidence.",
+  "decision": "BLOCK_V3_HOLDOUT_PROMOTION_UNTIL_NEW_UNTOUCHED_HOLDOUT",
+  "derived_holdout": {
+    "disjoint_from_development": true,
+    "outputs": 49,
+    "task_id_set_sha256": "f773c6318e99281d2fb49aed126f7febf297ab5a15059fc3493b40f3ff948718",
+    "tasks": 48,
+    "v176_behavior_known_before_holdout_run": "always abstains on this slice",
+    "v176_selected_tasks": 0
+  },
+  "external_actions_performed": false,
+  "forbidden_claims": [
+    "sealed-holdout evidence for V176 overlay contribution",
+    "new-task generalization of the two V176 rules",
+    "Progress or Novelty from this 48-task slice"
+  ],
+  "historical_facts": {
+    "development_preregistration_embeds_source_audit_result": true,
+    "holdout_preregistration_pairs_that_development_candidate": true,
+    "selected_tasks_all_in_development": true,
+    "source_audit_loaded_all_training_solutions": true,
+    "source_audit_selected_tasks": 2,
+    "source_audit_task_universe": 1000
+  },
+  "holdout_solutions_read_by_this_audit": false,
+  "holdout_task_ids_disclosed": false,
+  "permitted_claims": [
+    "execution/runtime evidence for the unchanged parent",
+    "format and artifact-integrity evidence"
+  ],
+  "provenance": {
+    "audit_tool": {
+      "path": "paper/tools/audit_v3_holdout_integrity.py",
+      "sha256": "9b63c513d3b0d2477f1fb5fd5275691b14e1d65ebf88722a1e601c381a21eb99"
+    },
+    "development_manifest": {
+      "path": "kaggle_runs/development_stable_v2/benchmark_manifest.json",
+      "sha256": "38bdf6416c8d15b09e55d802021788fee3c180d2a65305c9df06d2b5f0860cad"
+    },
+    "development_preregistration": {
+      "path": "candidate_notebooks/conservative_exact_overlay_v3/preregistration.json",
+      "sha256": "1ef60af076540455f4535172e5ed5fc1756cca4dbd5db7d294ad60ccd3437f26"
+    },
+    "historical_training_solutions_sha256": "9f07a38bd25af5e83aa5bf85c5cb1a1fefdb30f6a755256fa65429e697ca97f9",
+    "holdout_notebook": {
+      "path": "candidate_notebooks/conservative_exact_overlay_v3_holdout/arc2-conservative-exact-overlay-v3-holdout.ipynb",
+      "sha256": "9bc52296435a1efccdc6e8b00b568d0bddcffe4d399d631b6e5ed775b39f32ba"
+    },
+    "holdout_preregistration": {
+      "path": "candidate_notebooks/conservative_exact_overlay_v3_holdout/preregistration.json",
+      "sha256": "4d9bde6801f061109434b29d439e51da1ebebd2ae93fe1a05eba52ed4d50ab2a"
+    },
+    "overlay_module": {
+      "path": "public_assets/trm_source/blindspot_exact_overlay.py",
+      "sha256": "d0a8e3c2701a6569327f989a09a731c43f734221564e207059e05167e1d38425"
+    },
+    "source_analysis": {
+      "path": "analyze_development_blindspots.py",
+      "sha256": "7579c0fd075d1ab34e96ae4d92ae653474d167818a22462f203b2b0d5e9398da"
+    },
+    "source_audit": {
+      "path": "artifacts/development_blindspots_v1/blindspot_analysis.json",
+      "sha256": "261bc53a7bfbd11d04e308c90f9a8f681aedc4384b7185b64ff68be595218670"
+    },
+    "training_challenges": {
+      "path": "official/competition_files/arc-agi_training_challenges.json",
+      "sha256": "779eaba89790ebad9af02514a7efc0aefaf2cf8236f046a31bbf8b9ec48f20f5"
+    }
+  },
+  "result_type": "historical_holdout_integrity_audit",
+  "schema_version": 1
+}

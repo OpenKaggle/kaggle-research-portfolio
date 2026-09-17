@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "status": "BLOCKED_UNVERIFIED_DEPENDENCIES",
+  "project_root": "../..",
+  "purpose": "Exact local dependency inventory for the frozen V3 development notebook. It is not a scored or public notebook and does not authorize an upload.",
+  "artifacts": {
+    "notebook": {
+      "path": "candidate_notebooks/conservative_exact_overlay_v3/arc2-conservative-exact-overlay-v3.ipynb",
+      "sha256": "216459571f2499da0cc689b15a576f601cace7a20a68e652d793e80ed0f8cccf"
+    },
+    "kernel_metadata": {
+      "path": "candidate_notebooks/conservative_exact_overlay_v3/kernel-metadata.json",
+      "sha256": "37c8e88b96e8d827c0fa73e4c2550c615f8062b7b8e79f4cf3e3f5267b3abc74"
+    },
+    "preregistration": {
+      "path": "candidate_notebooks/conservative_exact_overlay_v3/preregistration.json",
+      "sha256": "1ef60af076540455f4535172e5ed5fc1756cca4dbd5db7d294ad60ccd3437f26"
+    }
+  },
+  "dependencies": [
+    {
+      "kind": "competition",
+      "ref": "arc-prize-2026-arc-agi-2",
+      "status": "JOINED_COMPETITION_SOURCE",
+      "public": null,
+      "license": "Apache-2.0",
+      "receipt": {
+        "path": "paper/results/registration_snapshot_2026-09-09.json",
+        "sha256": "2419832148397108460195d26c85707ac17d54a947876440b2a3de0b688ddeed"
+      }
+    },
+    {
+      "kind": "dataset",
+      "ref": "christopherdaleman/arc-proof-search-trm-2026-source",
+      "status": "UNVERIFIED",
+      "public": null,
+      "license": "MIT-0 for the frozen local bundle; exact Kaggle asset record unverified",
+      "receipt": null,
+      "local_evidence": {
+        "path": "paper/results/v3_dependency_local_evidence_2026-09-09.json",
+        "sha256": "cd0cc9015991b67a643686d757f61c8fdd3982f5f7c54a72d5f1861b5d553ef6"
+      }
+    },
+    {
+      "kind": "dataset",
+      "ref": "cpmpml/arc-prize-trm-031",
+      "status": "VERIFIED_PUBLIC",
+      "public": true,
+      "license": "CC0-1.0",
+      "receipt": {
+        "path": "paper/results/model_asset_license_access_2026-09-09.json",
+        "sha256": "ea52c069f4cfe1fdb5cb736c923524c13c3783a961c535e8f1d10867ac4d44f7"
+      }
+    },
+    {
+      "kind": "kernel",
+      "ref": "sorokin/pip-install-unsloth-flash-patch",
+      "status": "UNVERIFIED",
+      "public": true,
+      "license": null,
+      "receipt": null,
+      "local_evidence": {
+        "path": "paper/results/v3_dependency_local_evidence_2026-09-09.json",
+        "sha256": "cd0cc9015991b67a643686d757f61c8fdd3982f5f7c54a72d5f1861b5d553ef6"
+      }
+    },
+    {
+      "kind": "model",
+      "ref": "sorokin/qwen3_4b_grids15_sft139/Transformers/bfloat16/1",
+      "status": "VERIFIED_PUBLIC",
+      "public": true,
+      "license": "Apache-2.0",
+      "receipt": {
+        "path": "paper/results/model_asset_license_access_2026-09-09.json",
+        "sha256": "ea52c069f4cfe1fdb5cb736c923524c13c3783a961c535e8f1d10867ac4d44f7"
+      }
+    }
+  ],
+  "claim_boundary": "A complete local inventory does not prove that every dependency is currently public. The two UNVERIFIED entries block public-notebook and fully-reproducible claims until exact public-access and license receipts are obtained."
+}

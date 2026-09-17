@@ -1,0 +1,369 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.arc2.paper/schemas/stage_receipt_v1.schema.json",
+  "title": "ARC-AGI-2 normalized three-stage result receipt v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "stage",
+    "candidate_id",
+    "experiment_id",
+    "hypothesis",
+    "single_changed_factor",
+    "data_split",
+    "authoritative_status",
+    "public_leaderboard_used_for_selection",
+    "started_at",
+    "completed_at",
+    "metrics",
+    "family_coverage",
+    "runtime",
+    "submission_format",
+    "artifacts",
+    "gates"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "stage": {
+      "enum": ["private_development", "sealed_holdout", "competition_rerun"]
+    },
+    "candidate_id": {"type": "string", "minLength": 1},
+    "experiment_id": {"type": "string", "minLength": 1},
+    "hypothesis": {"type": "string", "minLength": 1},
+    "single_changed_factor": {"type": "string", "minLength": 1},
+    "data_split": {"type": "string", "minLength": 1},
+    "authoritative_status": {"const": "COMPLETE"},
+    "public_leaderboard_used_for_selection": {"const": false},
+    "started_at": {"$ref": "#/$defs/timestamp"},
+    "completed_at": {"$ref": "#/$defs/timestamp"},
+    "metrics": {},
+    "family_coverage": {},
+    "runtime": {"$ref": "#/$defs/runtime"},
+    "submission_format": {"$ref": "#/$defs/submissionFormat"},
+    "artifacts": {"$ref": "#/$defs/artifacts"},
+    "gates": {"$ref": "#/$defs/gates"},
+    "kaggle": {"$ref": "#/$defs/kaggle"}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"stage": {"const": "competition_rerun"}},
+        "required": ["stage"]
+      },
+      "then": {
+        "required": ["kaggle"],
+        "properties": {
+          "metrics": {"$ref": "#/$defs/hiddenMetrics"},
+          "family_coverage": {"$ref": "#/$defs/hiddenFamilyCoverage"}
+        }
+      },
+      "else": {
+        "properties": {
+          "metrics": {"$ref": "#/$defs/labeledMetrics"},
+          "family_coverage": {"$ref": "#/$defs/labeledFamilyCoverage"}
+        },
+        "not": {"required": ["kaggle"]}
+      }
+    },
+    {
+      "if": {
+        "properties": {"stage": {"const": "private_development"}},
+        "required": ["stage"]
+      },
+      "then": {
+        "properties": {
+          "gates": {
+            "allOf": [
+              {"$ref": "#/$defs/gates"},
+              {
+                "required": ["promote_to_holdout"],
+                "properties": {"promote_to_holdout": {"const": true}}
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"stage": {"const": "sealed_holdout"}},
+        "required": ["stage"]
+      },
+      "then": {
+        "properties": {
+          "gates": {
+            "allOf": [
+              {"$ref": "#/$defs/gates"},
+              {
+                "required": ["non_degradation_vs_anchor"],
+                "properties": {"non_degradation_vs_anchor": {"const": true}}
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]+)?(?:Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "nullableInteger": {"type": ["integer", "null"]},
+    "nullableNumber": {"type": ["number", "null"]},
+    "labeledMetrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tasks",
+        "outputs",
+        "local_labels_available",
+        "method_exact_outputs",
+        "anchor_exact_outputs",
+        "attempt_1_exact_outputs",
+        "attempt_2_incremental_outputs",
+        "method_accuracy",
+        "anchor_accuracy",
+        "delta_vs_anchor"
+      ],
+      "properties": {
+        "tasks": {"type": "integer", "minimum": 1},
+        "outputs": {"type": "integer", "minimum": 1},
+        "local_labels_available": {"const": true},
+        "method_exact_outputs": {"type": "integer", "minimum": 0},
+        "anchor_exact_outputs": {"type": "integer", "minimum": 0},
+        "attempt_1_exact_outputs": {"type": "integer", "minimum": 0},
+        "attempt_2_incremental_outputs": {"type": "integer", "minimum": 0},
+        "method_accuracy": {"type": "number", "minimum": 0, "maximum": 1},
+        "anchor_accuracy": {"type": "number", "minimum": 0, "maximum": 1},
+        "delta_vs_anchor": {"type": "number", "minimum": -1, "maximum": 1}
+      }
+    },
+    "hiddenMetrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tasks",
+        "outputs",
+        "local_labels_available",
+        "method_exact_outputs",
+        "anchor_exact_outputs",
+        "attempt_1_exact_outputs",
+        "attempt_2_incremental_outputs",
+        "method_accuracy",
+        "anchor_accuracy",
+        "delta_vs_anchor"
+      ],
+      "properties": {
+        "tasks": {"type": "integer", "minimum": 1},
+        "outputs": {"type": "integer", "minimum": 1},
+        "local_labels_available": {"const": false},
+        "method_exact_outputs": {"type": "null"},
+        "anchor_exact_outputs": {"type": "null"},
+        "attempt_1_exact_outputs": {"type": "null"},
+        "attempt_2_incremental_outputs": {"type": "null"},
+        "method_accuracy": {"type": "null"},
+        "anchor_accuracy": {"type": "null"},
+        "delta_vs_anchor": {"type": "null"}
+      }
+    },
+    "labeledFamilyRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "correctness_available",
+        "tasks",
+        "method_solved",
+        "anchor_solved",
+        "delta",
+        "failed_tasks"
+      ],
+      "properties": {
+        "correctness_available": {"const": true},
+        "tasks": {"type": "integer", "minimum": 0},
+        "method_solved": {"type": "integer", "minimum": 0},
+        "anchor_solved": {"type": "integer", "minimum": 0},
+        "delta": {"type": "integer"},
+        "failed_tasks": {"type": "integer", "minimum": 0}
+      }
+    },
+    "hiddenFamilyRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "correctness_available",
+        "tasks",
+        "method_solved",
+        "anchor_solved",
+        "delta",
+        "failed_tasks"
+      ],
+      "properties": {
+        "correctness_available": {"const": false},
+        "tasks": {"type": "integer", "minimum": 0},
+        "method_solved": {"type": "null"},
+        "anchor_solved": {"type": "null"},
+        "delta": {"type": "null"},
+        "failed_tasks": {"type": "integer", "minimum": 0}
+      }
+    },
+    "labeledFamilyCoverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "geometry",
+        "object",
+        "color",
+        "topology",
+        "counting",
+        "composition",
+        "search"
+      ],
+      "properties": {
+        "geometry": {"$ref": "#/$defs/labeledFamilyRow"},
+        "object": {"$ref": "#/$defs/labeledFamilyRow"},
+        "color": {"$ref": "#/$defs/labeledFamilyRow"},
+        "topology": {"$ref": "#/$defs/labeledFamilyRow"},
+        "counting": {"$ref": "#/$defs/labeledFamilyRow"},
+        "composition": {"$ref": "#/$defs/labeledFamilyRow"},
+        "search": {"$ref": "#/$defs/labeledFamilyRow"}
+      }
+    },
+    "hiddenFamilyCoverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "geometry",
+        "object",
+        "color",
+        "topology",
+        "counting",
+        "composition",
+        "search"
+      ],
+      "properties": {
+        "geometry": {"$ref": "#/$defs/hiddenFamilyRow"},
+        "object": {"$ref": "#/$defs/hiddenFamilyRow"},
+        "color": {"$ref": "#/$defs/hiddenFamilyRow"},
+        "topology": {"$ref": "#/$defs/hiddenFamilyRow"},
+        "counting": {"$ref": "#/$defs/hiddenFamilyRow"},
+        "composition": {"$ref": "#/$defs/hiddenFamilyRow"},
+        "search": {"$ref": "#/$defs/hiddenFamilyRow"}
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "wall_seconds",
+        "peak_memory_mb",
+        "failed_tasks",
+        "failure_rate",
+        "timed_out_task_ids"
+      ],
+      "properties": {
+        "wall_seconds": {"type": "number", "exclusiveMinimum": 0},
+        "peak_memory_mb": {"type": "number", "exclusiveMinimum": 0},
+        "failed_tasks": {"type": "integer", "minimum": 0},
+        "failure_rate": {"type": "number", "minimum": 0, "maximum": 1},
+        "timed_out_task_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[0-9a-f]{8}$"}
+        }
+      }
+    },
+    "submissionFormat": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "validated",
+        "task_keys_exact",
+        "output_counts_exact",
+        "exactly_two_attempts",
+        "rectangular_grids",
+        "dimensions_1_to_30",
+        "colors_0_to_9"
+      ],
+      "properties": {
+        "validated": {"const": true},
+        "task_keys_exact": {"const": true},
+        "output_counts_exact": {"const": true},
+        "exactly_two_attempts": {"const": true},
+        "rectangular_grids": {"const": true},
+        "dimensions_1_to_30": {"const": true},
+        "colors_0_to_9": {"const": true}
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "notebook_sha256",
+        "input_manifest_sha256",
+        "submission_sha256",
+        "artifact_manifest_sha256"
+      ],
+      "properties": {
+        "notebook_sha256": {"$ref": "#/$defs/sha256"},
+        "input_manifest_sha256": {"$ref": "#/$defs/sha256"},
+        "submission_sha256": {"$ref": "#/$defs/sha256"},
+        "artifact_manifest_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["all_passed"],
+      "properties": {
+        "all_passed": {"const": true},
+        "promote_to_holdout": {"type": "boolean"},
+        "non_degradation_vs_anchor": {"type": "boolean"}
+      }
+    },
+    "kaggle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "submission_id",
+        "leaderboard_score",
+        "submission_status",
+        "score_scope",
+        "notebook_version",
+        "kernel_slug",
+        "score_observed_at",
+        "submission_receipt_sha256",
+        "reference_name",
+        "reference_score",
+        "reference_scope",
+        "delta_vs_reference",
+        "reference_receipt_sha256"
+      ],
+      "properties": {
+        "submission_id": {
+          "oneOf": [
+            {"type": "string", "minLength": 1},
+            {"type": "integer", "minimum": 0}
+          ]
+        },
+        "leaderboard_score": {"type": "number", "minimum": 0, "maximum": 1},
+        "submission_status": {"const": "complete"},
+        "score_scope": {
+          "enum": ["public_leaderboard", "private_leaderboard", "final"]
+        },
+        "notebook_version": {"type": "integer", "minimum": 1},
+        "kernel_slug": {"type": "string", "minLength": 1},
+        "score_observed_at": {"$ref": "#/$defs/timestamp"},
+        "submission_receipt_sha256": {"$ref": "#/$defs/sha256"},
+        "reference_name": {"type": "string", "minLength": 1},
+        "reference_score": {"type": "number", "minimum": 0, "maximum": 1},
+        "reference_scope": {"type": "string", "minLength": 1},
+        "delta_vs_reference": {"type": "number", "minimum": -1, "maximum": 1},
+        "reference_receipt_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    }
+  }
+}

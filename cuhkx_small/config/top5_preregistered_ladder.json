@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "frozen_utc": "2026-09-11T06:27:11Z",
+  "competition": "cuhk-x-competition-small-model-track",
+  "objective": "top_5_without_public_leaderboard_tuning",
+  "public_leaderboard_snapshot": {
+    "read_scope": "aggregate_top_20_only",
+    "observed_utc": "2026-09-11T06:27:11Z",
+    "top_1_score": 0.98507,
+    "top_5_score": 0.94029,
+    "top_6_score": 0.91542,
+    "source": "Kaggle competitions leaderboard API",
+    "forbidden_uses": [
+      "row_or_subset_probing",
+      "test_label_inference",
+      "threshold_or_hyperparameter_selection_from_public_score"
+    ]
+  },
+  "boundaries": {
+    "subject_disjoint": {
+      "release_condition": "train_subjects_intersection_validation_subjects_equals_zero",
+      "fold_order": [6, 18, 5, 21],
+      "confirmatory_subjects": [9, 24],
+      "confirmatory_rule": "untouched_until_three_stage_ladder_is_frozen"
+    },
+    "clip_disjoint": {
+      "release_condition": "canonical_train_clip_keys_intersection_validation_clip_keys_equals_zero",
+      "manifest_rule": "freeze_sha256_before_fitting_each_stage"
+    },
+    "modality_missingness": {
+      "release_condition": "availability_mask_exactly_matches_present_inputs_and_no_silent_zero_fill",
+      "training_dropout_only": true,
+      "validation_policy": "natural_missingness_plus_preregistered_one_modality_ablation",
+      "p2_required_modalities": ["thermal"],
+      "fusion_modalities": ["thermal", "imu"]
+    },
+    "sensor_order": {
+      "timestamps": "strictly_increasing_finite_no_duplicates",
+      "frame_order": "natural_numeric_then_full_relative_path",
+      "imu_channel_order": "pinned_from_official_schema_and_serialized_in_checkpoint"
+    },
+    "scale_drift": {
+      "fit_scope": "train_fold_only",
+      "transform": "per_channel_median_and_iqr",
+      "minimum_iqr": 1e-06,
+      "maximum_absolute_robust_z": 50.0,
+      "maximum_outlier_fraction": 0.05,
+      "validation_statistics_may_not_update_transform": true
+    },
+    "single_checkpoint": {
+      "learned_weight_files": 1,
+      "fp32_bytes_exclusive": 95000000,
+      "int8_bytes_exclusive": 100000000,
+      "maximum_int8_absolute_accuracy_loss": 0.005,
+      "all_preprocessing_and_calibration_state_in_checkpoint": true
+    },
+    "static_no_llm_inference": {
+      "uses_llm": false,
+      "allowed_families": [
+        "convolutional_neural_network",
+        "temporal_shift_module",
+        "small_sensor_mlp"
+      ],
+      "forbidden_import_roots": [
+        "openai",
+        "anthropic",
+        "transformers",
+        "vllm",
+        "llama_cpp",
+        "sentence_transformers",
+        "huggingface_hub"
+      ]
+    },
+    "license_and_provenance": {
+      "release_condition": "every_code_data_and_weight_asset_has_public_url_version_license_sha256_and_approved_status",
+      "forbidden": [
+        "quarantined_public_mirror",
+        "unlicensed_repackaging",
+        "license_conflict",
+        "unverifiable_checkpoint"
+      ]
+    },
+    "offline_and_network": {
+      "network_allowed_at_inference": false,
+      "two_clean_outputs_byte_identical": true,
+      "test_labels_read": false,
+      "submission_created_by_research_harness": false
+    },
+    "submission_frequency": {
+      "official_daily_maximum": 5,
+      "campaign_daily_maximum": 3,
+      "planned_qualified_submissions": 3,
+      "one_causal_mechanism_per_submission": true,
+      "public_score_may_only_confirm_not_select": true,
+      "final_selection": "retain_at_most_two_offline_qualified_candidates"
+    }
+  },
+  "ladder": [
+    {
+      "id": "S1_THERMAL_TSM_TDN",
+      "predecessor": "B0_THERMAL_TEMPORAL_MEAN",
+      "mechanism": "zero_parameter_tsm_plus_signed_temporal_difference_channels",
+      "maximum_wall_clock_hours_after_payload": 10,
+      "fast_kill": {
+        "folds": [6, 18],
+        "kill_if_all_absolute_accuracy_gains_below": 0.01
+      },
+      "promotion": {
+        "folds": [6, 18, 5, 21],
+        "minimum_median_absolute_accuracy_gain": 0.02,
+        "minimum_nonnegative_folds": 3,
+        "minimum_worst_fold_gain": -0.02
+      },
+      "causal_attribution": "same_frames_backbone_initialization_optimizer_schedule_and_resolution_as_B0"
+    },
+    {
+      "id": "S2_CONDITIONAL_THERMAL_IMU_FUSION",
+      "predecessor": "S1_THERMAL_TSM_TDN",
+      "mechanism": "small_imu_mlp_gated_by_explicit_modality_availability_mask",
+      "start_condition": "S1_full_promotion_passed_and_official_imu_payload_is_available",
+      "maximum_wall_clock_hours_after_S1": 9,
+      "fast_kill": {
+        "folds": [6, 18],
+        "kill_if_median_absolute_accuracy_gain_below": 0.005,
+        "kill_if_any_missing_thermal_ablation_drop_exceeds": 0.1
+      },
+      "promotion": {
+        "folds": [6, 18, 5, 21],
+        "minimum_median_absolute_accuracy_gain": 0.01,
+        "minimum_nonnegative_folds": 3,
+        "minimum_worst_fold_gain": -0.01,
+        "maximum_missing_modality_drop_regression": 0.02
+      },
+      "causal_attribution": "freeze_accepted_S1_visual_path_and_change_only_fusion_mask_imu_branch_and_training_modality_dropout"
+    },
+    {
+      "id": "S3_TRAIN_ONLY_ROBUST_AUGMENTATION",
+      "predecessor": "S2_CONDITIONAL_THERMAL_IMU_FUSION",
+      "mechanism": "clip_consistent_thermal_crop_intensity_jitter_and_imu_scale_time_jitter",
+      "start_condition": "S2_full_promotion_passed",
+      "maximum_wall_clock_hours_after_S2": 7,
+      "fast_kill": {
+        "folds": [6, 18],
+        "kill_if_median_absolute_accuracy_gain_below": 0.003
+      },
+      "promotion": {
+        "folds": [6, 18, 5, 21],
+        "minimum_median_absolute_accuracy_gain": 0.005,
+        "minimum_nonnegative_folds": 3,
+        "minimum_worst_fold_gain": -0.005,
+        "maximum_corruption_slice_regression": 0.0
+      },
+      "causal_attribution": "same_accepted_S2_architecture_and_seed_pairs_change_only_preregistered_train_time_augmentation",
+      "calibration_note": "temperature_is_fit_on_training_inner_folds_and_reported_for_reliability_only_because_scalar_temperature_does_not_change_argmax_accuracy"
+    }
+  ],
+  "top5_evidence_gate": {
+    "must_pass_all_three_stage_gates": true,
+    "minimum_four_subject_median_accuracy": 0.9,
+    "minimum_four_subject_worst_accuracy": 0.82,
+    "minimum_two_confirmatory_subject_pooled_accuracy": 0.9,
+    "maximum_confirmatory_drop_from_four_subject_median": 0.03,
+    "minimum_present_class_macro_recall": 0.86,
+    "required_corruption_slices": [
+      "thermal_missing_or_blank",
+      "imu_missing",
+      "timestamp_duplicate_or_reordered",
+      "imu_scale_drift"
+    ],
+    "checkpoint_and_release_boundaries_must_pass": true,
+    "public_leaderboard_score_is_not_an_evidence_gate": true
+  },
+  "confidence": {
+    "current_unconditional_top5_probability_interval": [0.001, 0.01],
+    "reason": "official_training_payload_is_still_blocked_and_no_real_P2_fold_exists_while_public_top5_is_0.94029",
+    "conditional_probability_interval_after_all_evidence_gates": [0.15, 0.4],
+    "interpretation": "planning_range_not_a_calibrated_forecast"
+  },
+  "current_decision": "RESEARCH_READY_PAYLOAD_BLOCKED_RELEASE_REJECTED"
+}

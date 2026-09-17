@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "status": "ACTIVE_NOT_COMPLETE",
+  "project_root": "../..",
+  "candidate_id": "conservative_exact_overlay_v3",
+  "deadline_receipt": {
+    "path": "paper/results/public_kaggle_deadline_recheck_2026-09-09T184121+0800.json",
+    "sha256": "1ac2df00410908d1c00127539bff8571e599f5d8edc35b98c8c8cad296ab0136"
+  },
+  "stage_receipt_schema": {
+    "path": "paper/schemas/stage_receipt_v1.schema.json",
+    "sha256": "9ee3d3107685a5d2b232a57d274fee5d0f1e1a10ef4c8b3af12d0c8a13faa531"
+  },
+  "stage_failure_receipt_schema": {
+    "path": "paper/schemas/stage_failure_receipt_v1.schema.json",
+    "sha256": "69108657658d209105a6a5f99f3603c63041a93f8137222ac519f649b64602f2"
+  },
+  "stage_measurement_builder": {
+    "path": "paper/tools/build_stage_measurement.py",
+    "sha256": "eabcafd16732ca4f602706f15165107ccc59bc394a544046146dc614fd58521f"
+  },
+  "competition_observation_schema": {
+    "path": "paper/schemas/competition_observation_v1.schema.json",
+    "sha256": "3b7033307271c449abfda179fbbee1883fad20bd9df35e4a8e0fcc6a5ac13f1c"
+  },
+  "stage_authorization_schema": {
+    "path": "paper/schemas/stage_authorization_v1.schema.json",
+    "sha256": "a8e457a6026b0a90e6c5e9b9cddf3d37eb8ae1831ffa01fd11e96de58bd7db7b"
+  },
+  "stage_authorizer": {
+    "path": "paper/tools/authorize_stage.py",
+    "sha256": "9ba09d4c7ffb3a647105e9897727026ac4938c8461f3903fc471d442a6ff29d0"
+  },
+  "required_family_buckets": [
+    "geometry",
+    "object",
+    "color",
+    "topology",
+    "counting",
+    "composition",
+    "search"
+  ],
+  "anti_tuning": {
+    "public_leaderboard_used_for_policy_selection": false,
+    "policy_selection_boundary": "development and one sealed holdout only; competition score is reporting evidence, never a tuning label"
+  },
+  "holdout_integrity": {
+    "status": "CONTAMINATED_FOR_V176_GENERALIZATION",
+    "promotion_blocked": true,
+    "receipt": {
+      "path": "paper/results/v3_holdout_integrity_audit_2026-09-09.json",
+      "sha256": "d04c5599a17bb23e2cb941daf258886d8e4263c86ba80a764ae2617b6e4f5333"
+    },
+    "generalization_route": "SYSTEMS_NEGATIVE_NO_VERIFIED_UNTOUCHED_CORPUS",
+    "corpus_availability_receipt": {
+      "path": "paper/results/v176_independent_corpus_availability_audit_2026-09-09.json",
+      "sha256": "3cb7c33b99d439e4ddc6eaafc2e00757cce2a2c19687f04f61f2e6c06f00e8a2"
+    },
+    "claim_boundary": "The historical full-corpus solution audit made V176 coverage on the later paired 48-task slice knowable before its run. The slice remains unrun, and this audit reads no holdout solutions, but it is not sealed method-generalization evidence."
+  },
+  "runtime_smoke_prerequisite": {
+    "kernel": "jahyee/arc2-trm-wandb-log-compat-smoke-v2",
+    "kernel_version": 1,
+    "last_authorized_status": "RUNNING",
+    "last_authorized_observation_cst": "2026-09-09T06:27:41+08:00",
+    "authorization_boundary_cst": "2026-09-09T06:34:25+08:00",
+    "status": "UNKNOWN",
+    "last_authorized_run_manifest": {
+      "path": "kaggle_runs/trm_wandb_log_compat_smoke_v2/run_manifest.json",
+      "sha256": "48f4447086b40541079bb4eb9625621330d421284007accda5233305992f5ae7"
+    },
+    "local_only_boundary_receipt": {
+      "path": "kaggle_runs/trm_wandb_log_compat_smoke_v2/local_preflight_receipt.json",
+      "sha256": "60d6c77bd1fd499630a88510635fec25dc867487ae2ea37d81400e049d91ae63"
+    },
+    "local_behavioral_receipt": {
+      "path": "paper/results/trm_wandb_log_compat_smoke_v2_local_behavioral_regression_2026-09-09.json",
+      "sha256": "d78d4957d6355f21ea681057c322a0ade60fcb07ac4890a680438110cd39af16"
+    },
+    "local_micro_smoke_receipt": {
+      "path": "artifacts/trm_optimizer_logger_micro_smoke/local_micro_smoke_receipt.json",
+      "sha256": "49ee14c2f49db93aaca6ecd2e138d735c3b159c1b53f8db3818f4f3a5d117765"
+    },
+    "terminal_receipt": null,
+    "claim_boundary": "Local API-path tests do not satisfy this prerequisite. Only the existing Kaggle smoke's authoritative terminal receipt can set PASSED or FAILED."
+  },
+  "stages": {
+    "private_development": {
+      "sequence": 1,
+      "state": "PENDING_PREREQUISITE",
+      "hypothesis": "At equal repaired runtime and generation compute, adding only the fixed solution-blind V176 exact attempt-two overlay improves the same-receipt method over the unchanged Stable-V2 control without changing attempt one.",
+      "single_changed_factor": "exact V176 attempt-two overlay enabled for the method arm; repaired runtime, candidates, seeds, budgets, timeouts, and control arm are shared",
+      "data_split": "frozen public-training development 48 tasks / 50 outputs",
+      "expected_tasks": 48,
+      "expected_outputs": 50,
+      "notebook": {
+        "path": "candidate_notebooks/conservative_exact_overlay_v3/arc2-conservative-exact-overlay-v3.ipynb",
+        "sha256": "216459571f2499da0cc689b15a576f601cace7a20a68e652d793e80ed0f8cccf"
+      },
+      "authorization": null,
+      "receipt": null
+    },
+    "sealed_holdout": {
+      "sequence": 2,
+      "state": "NOT_AUTHORIZED",
+      "hypothesis": "The frozen V3 policy does not regress against its same-run anchor on the disjoint sealed holdout and preserves valid two-attempt output under the frozen runtime budget.",
+      "single_changed_factor": "data split changes from development to the precommitted disjoint sealed holdout; code, policy, dependencies, seeds, and budgets remain frozen",
+      "data_split": "sealed public-training holdout 48 tasks; task-ID disjoint from development",
+      "expected_tasks": 48,
+      "expected_outputs": 49,
+      "notebook": {
+        "path": "candidate_notebooks/conservative_exact_overlay_v3_holdout/arc2-conservative-exact-overlay-v3-holdout.ipynb",
+        "sha256": "9bc52296435a1efccdc6e8b00b568d0bddcffe4d399d631b6e5ed775b39f32ba"
+      },
+      "authorization": null,
+      "receipt": null
+    },
+    "competition_rerun": {
+      "sequence": 3,
+      "state": "NOT_AUTHORIZED",
+      "hypothesis": "The exact development-and-holdout-frozen V3 notebook completes within Kaggle limits and produces a valid submission receipt on the competition test inputs without leaderboard-driven changes.",
+      "single_changed_factor": "data split changes to competition test inputs; frozen code, policy, dependencies, seeds, budgets, and submission schema remain unchanged",
+      "data_split": "official ARC-AGI-2 competition test 240 tasks / 259 outputs",
+      "expected_tasks": 240,
+      "expected_outputs": 259,
+      "score_reference": {
+        "name": "ARC Prize 85% target",
+        "score": 0.85,
+        "scope": "private_evaluation_target",
+        "receipt_sha256": "98f84b6622b4bae369e007833e0c76e7f9dceb536d3f7c27b0b0e7711ffe844c"
+      },
+      "notebook": null,
+      "authorization": null,
+      "receipt": null
+    }
+  },
+  "claim_boundary": "A passing audit of this active contract proves ordering and artifact bindings only. It is not a runtime-smoke pass, stage accuracy, sealed-holdout result, Kaggle submission, submission ID, or leaderboard score."
+}

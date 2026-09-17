@@ -1,0 +1,32 @@
+{
+  "run_id": "hsi26_b5813_yolo11m_v1",
+  "prepared_utc": "2026-09-08T22:08:46Z",
+  "competition": "hyperspectral-object-detection-challenge-2026",
+  "data_manifest_sha256": "45ee4cdf981a3a9910db97178519eee0f982f17fa622202167843b6dfcbd2334",
+  "data_files": 7003,
+  "data_bytes": 15653423958,
+  "ranking_files_present": false,
+  "code_file": "kaggle_notebook/hsi_2026_yolo_baseline.py",
+  "code_sha256": "d74733266657f7e2933596d4e22978ca4ac1294dcd29d425a910b8ddff403649",
+  "metadata_file": "kaggle_notebook/kernel-metadata.json",
+  "metadata_sha256": "7576784f9c85bf24fe54a47f2715dcde9b01c83ddc797e0ad2bb990c62866452",
+  "seed": 20260909,
+  "model": "yolo11m.pt",
+  "single_checkpoint": true,
+  "pretraining": {
+    "dataset": "COCO",
+    "source": "https://github.com/ultralytics/ultralytics",
+    "license": "AGPL-3.0"
+  },
+  "bands": [5, 8, 13],
+  "split": "fixed random image 80/20",
+  "local_transform_smoke_test": {
+    "source": "raw/core/1000.png",
+    "mosaic_shape": [1004, 1988],
+    "cube_shape": [251, 497, 16],
+    "xml_shape": [251, 497, 16],
+    "objects": 3,
+    "pseudo_rgb_sha256": "f6136af51d3d5de171912c70c9717ed029ea203a26ca9ae30d0d6042fa8ab348"
+  },
+  "status": "awaiting_explicit_private_kaggle_upload_authorization"
+}

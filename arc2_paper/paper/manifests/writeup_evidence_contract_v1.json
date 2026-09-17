@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "status": "DRAFT",
+  "project_root": "../..",
+  "writeup_path": "paper/drafts/writeup_v0.1.md",
+  "writeup_bytes": 10677,
+  "writeup_sha256": "685d0a5cc85dcadac4958b3d68d338e2e79aabb3b9926d6d916549d14836109b",
+  "maximum_words": 1500,
+  "local_safety_target_words": 1450,
+  "evidence_registry_path": "paper/07_evidence_registry.md",
+  "required_sections": [
+    {"name": "Abstract", "heading_patterns": ["^abstract$"]},
+    {"name": "Introduction", "heading_patterns": ["^introduction$"]},
+    {"name": "Prior Work", "heading_patterns": ["^prior work"]},
+    {"name": "Approach", "heading_patterns": ["^(approach|method)$"]},
+    {"name": "Results", "heading_patterns": ["result"]},
+    {"name": "Conclusion", "heading_patterns": ["conclusion"]}
+  ],
+  "rubric_dimensions": {
+    "Accuracy": {
+      "status": "missing",
+      "evidence_ids": ["P10", "P11", "P12", "P14", "P15"],
+      "gap": "The planned V3 holdout is contaminated for V176 generalization, no eligible independent labeled corpus is verified, and no linked ARC submission receipt exists; Accuracy remains missing."
+    },
+    "Universality": {
+      "status": "partial",
+      "evidence_ids": ["T1", "G1", "T6"],
+      "gap": "Common interfaces and folds exist, but no consistent cross-family/fold gain exists."
+    },
+    "Progress": {
+      "status": "partial",
+      "evidence_ids": ["T2", "P10", "P13", "E4", "A4"],
+      "gap": "Metrics and a post-hoc complementarity diagnostic exist, but the systems-negative route cannot support a positive Progress claim and deployed prospective improvement over the equal-compute anchor is unmeasured."
+    },
+    "Theory": {
+      "status": "supported",
+      "evidence_ids": ["T4", "W3", "W6", "W7"],
+      "gap": "Empirical calibration and causal ablations remain required for the final result section."
+    },
+    "Completeness": {
+      "status": "partial",
+      "evidence_ids": ["T1", "T2", "T3", "T5", "T7", "T9", "T12", "T13", "T19", "T20", "R4", "R5", "R6", "P13", "P14", "P15", "C1"],
+      "gap": "Final result package, grants, public notebook, submission ID, project link, and submitted Writeup are absent."
+    },
+    "Novelty": {
+      "status": "partial",
+      "evidence_ids": ["T4", "W6", "W7"],
+      "gap": "The systems-negative route cannot support a positive Novelty claim; no admissible same-receipt ablation shows that residual allocation and the safety gate add value beyond consensus."
+    }
+  },
+  "required_claim_bindings": [
+    {"claim_id": "mpt_negative_boundary", "text_contains": "21.7% ARC-AGI-2 evaluation accuracy", "evidence_ids": ["W4"]},
+    {"claim_id": "kaggle_denominators", "text_contains": "1,000 training tasks/1,076 outputs", "evidence_ids": ["D1", "D2"]},
+    {"claim_id": "grouped_folds", "text_contains": "five outer folds over all 1,000 public-training tasks", "evidence_ids": ["G1"]},
+    {"claim_id": "v175_evaluation_collapse", "text_contains": "zero candidates on both the old", "evidence_ids": ["A3", "A4"]},
+    {"claim_id": "dsl_negative", "text_contains": "0/167", "evidence_ids": ["A2"]},
+    {"claim_id": "development_timeout", "text_contains": "1,200-second guard", "evidence_ids": ["P10"]},
+    {"claim_id": "optimizer_repair_smoke", "text_contains": "before its first step", "evidence_ids": ["P11"]},
+    {"claim_id": "v3_holdout_contamination", "text_contains": "source-corpus analysis had already loaded every public-training solution", "evidence_ids": ["T19"]},
+    {"claim_id": "no_eligible_independent_corpus", "text_contains": "2,080 tasks/2,563 outputs", "evidence_ids": ["T20"]},
+    {"claim_id": "bootstrap_gate", "text_contains": "500 task-bootstrap", "evidence_ids": ["T4"]},
+    {"claim_id": "systems_negative_boundary", "text_contains": "report V176 as systems-negative", "evidence_ids": ["T19", "T20"]}
+  ],
+  "platform_word_count": null,
+  "final_bindings": {
+    "arc_submission_id": "",
+    "cover_sha256": "",
+    "platform_count_receipt_sha256": "",
+    "project_url": "",
+    "public_notebook_url": "",
+    "public_notebook_version": "",
+    "source_commit": "",
+    "source_repository_url": "",
+    "submission_sha256": "",
+    "writeup_url": ""
+  },
+  "claim_limit": "A DRAFT pass proves structure, local word budget, and evidence-map integrity only. It is not a final-ready result."
+}

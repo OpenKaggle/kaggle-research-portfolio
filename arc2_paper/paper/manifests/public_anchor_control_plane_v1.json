@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "status": "PUBLIC_ANCHOR_SUBMITTED_RUNNING",
+  "project_root": "../..",
+  "route": "SINGLE_PUBLIC_QWEN_ANCHOR_NO_V2_NO_TRM",
+  "single_anchor_enforced": true,
+  "survey_receipt": {
+    "path": "paper/results/public_anchor_survey_2026-09-17.json",
+    "sha256": "ea8131e1dc654a2aae088e08ae84f985ff09a8c8b4ccc8abb12eb458cdd1701a"
+  },
+  "public_source": {
+    "ref": "qiuqiuh/arc-highscore-lb3389-replica",
+    "url": "https://www.kaggle.com/code/qiuqiuh/arc-highscore-lb3389-replica",
+    "displayed_score": 0.3181,
+    "score_status": "SOURCE_PAGE_CLAIM_NOT_INDEPENDENTLY_REPRODUCED",
+    "notebook": {
+      "path": "public_notebooks/arc_highscore_lb3389_replica/arc-highscore-lb3389-replica.ipynb",
+      "sha256": "95c9274c8c17d69e2e91867bfc6ef93d9ce1f046eec2a85a3cc6148bf961bcbe"
+    },
+    "metadata": {
+      "path": "public_notebooks/arc_highscore_lb3389_replica/kernel-metadata.json",
+      "sha256": "191fb82ec6de83432ce754c930b45ba9095e66b5dcbd223c36ecad32bb9d43bf"
+    }
+  },
+  "candidate": {
+    "kernel_ref": "jahyee/arc2-public-qwen-lb3181-anchor-v1",
+    "resolved_kaggle_ref": "jahyee/arc2-public-qwen-lb31-81-anchor-v1",
+    "kaggle_kernel_id": 134648497,
+    "kaggle_run_id": 350403559,
+    "kaggle_version": 1,
+    "notebook": {
+      "path": "candidate_notebooks/public_qwen_lb3181_anchor_v1/arc2-public-qwen-lb3181-anchor-v1.ipynb",
+      "sha256": "95c9274c8c17d69e2e91867bfc6ef93d9ce1f046eec2a85a3cc6148bf961bcbe"
+    },
+    "metadata": {
+      "path": "candidate_notebooks/public_qwen_lb3181_anchor_v1/kernel-metadata.json",
+      "sha256": "c09d0506038dbd9a323a8ca92b8b100314b8d9ca1a76bd6c538204b163b31c88"
+    },
+    "algorithm_change_from_public_source": "NONE_BYTE_IDENTICAL_NOTEBOOK",
+    "is_private": true,
+    "internet_enabled": false
+  },
+  "kaggle_dry_run_receipt": {
+    "path": "paper/results/public_qwen_lb3181_anchor_v1_kaggle_dry_run_2026-09-17.json",
+    "sha256": "5239fb5ebc7ea774aa7eeb5996eb059d0ae89306855604821a365f8bd5dd7448"
+  },
+  "submission_launch_receipt": {
+    "path": "paper/results/public_qwen_lb3181_anchor_v1_submission_launch_2026-09-17.json",
+    "sha256": "934d200cd90eba47fdc60b11c7d8fab333327b28bfd2b68fded8896dd5a62cb9"
+  },
+  "dependencies": {
+    "competition": "arc-prize-2026-arc-agi-2",
+    "model": "sorokin/qwen3_4b_grids15_sft139/Transformers/bfloat16/1",
+    "bootstrap_kernel": "sorokin/pip-install-unsloth-flash-patch",
+    "docker_image": "gcr.io/kaggle-private-byod/python@sha256:320043e14c68293f1c946585b9257123385205a58af4b94b17d31868cae4e868",
+    "bootstrap_notebook": {
+      "path": "public_notebooks/arc_highscore_lb3389_replica/bootstrap/pip-install-unsloth-flash-patch.ipynb",
+      "sha256": "60f44fd0ab45a7b28a466714744039191b585e222a5c7ee7467bc936314dc1d8"
+    },
+    "bootstrap_metadata": {
+      "path": "public_notebooks/arc_highscore_lb3389_replica/bootstrap/kernel-metadata.json",
+      "sha256": "8a40d20eea31eb1144b277813256a117a67fa461d3f092deef860c6a71ca6065"
+    },
+    "model_access_license_receipt": {
+      "path": "paper/results/model_asset_license_access_2026-09-09.json",
+      "sha256": "ea52c069f4cfe1fdb5cb736c923524c13c3783a961c535e8f1d10867ac4d44f7"
+    },
+    "local_asset_verification": {
+      "path": "public_assets/verification.json",
+      "sha256": "1823852c94d0231c52d846b8fb1d6e1ea480562657c3154a5de0d8f4adaa12c5"
+    },
+    "competition_manifest": {
+      "path": "official/competition_files/competition_manifest.json",
+      "sha256": "d789efe03efb29a5bb8df6301cc12b7d8959d7bf3e790427142b1c8219e6c43f"
+    }
+  },
+  "downloaded_public_dry_run": {
+    "status": "PUBLIC_SOURCE_OUTPUT_ONLY",
+    "task_count": 120,
+    "output_count": 172,
+    "computed_task_count": 4,
+    "exact_pass2_outputs": 3,
+    "exact_pass2_denominator": 172,
+    "accuracy_claim_allowed": false,
+    "files": {
+      "arc_loader.py": {
+        "path": "public_notebooks/arc_highscore_lb3389_replica/output/arc_loader.py",
+        "sha256": "2c62526daba3fdd9da317e3dcb689acca8e24018e56e4c7f2c33ed15381ed8c6"
+      },
+      "arc_decoder.py": {
+        "path": "public_notebooks/arc_highscore_lb3389_replica/output/arc_decoder.py",
+        "sha256": "b38b6b1bdd5f47dbd587a9809ad2ec20cdf9ce5723736a7fb7470e9b1ce61f1d"
+      },
+      "arc_solver.py": {
+        "path": "public_notebooks/arc_highscore_lb3389_replica/output/arc_solver.py",
+        "sha256": "236a6c7e7e76d2c2ff3396514392d209c618f1b683b98ebe2416243d6853f112"
+      },
+      "starter.py": {
+        "path": "public_notebooks/arc_highscore_lb3389_replica/output/starter.py",
+        "sha256": "c519adef918335338558da6da97f6c0bbe2e80cb0f395315706da68ee4b56956"
+      },
+      "submission.json": {
+        "path": "public_notebooks/arc_highscore_lb3389_replica/output/submission.json",
+        "sha256": "37eeaaac47e81ed10b8a4ef42559db5e74bbc4e1841bed8f117d2036a24a7b29"
+      }
+    }
+  },
+  "gates": {
+    "local": {
+      "required": [
+        "all_bound_hashes_match",
+        "candidate_notebook_is_byte_identical_to_public_source",
+        "candidate_is_private_offline_gpu_kernel",
+        "no_old_v2_or_trm_lineage",
+        "competition_rerun_uses_test_challenges_without_solutions",
+        "runtime_buffer_and_per_task_guard_present",
+        "four_worker_launch_present",
+        "downloaded_public_output_schema_complete",
+        "downloaded_public_output_interpretation_bounded",
+        "public_model_asset_locally_verified"
+      ]
+    },
+    "kaggle_dry_run": {
+      "maximum_attempts": 2,
+      "maximum_dependency_repairs": 1,
+      "attempts_used": 1,
+      "dependency_repairs_used": 0,
+      "status": "PASSED",
+      "pass_requires": [
+        "official_status_COMPLETE",
+        "return_or_notebook_exception_absent",
+        "submission_json_present",
+        "submission_schema_120_tasks_172_outputs",
+        "all_four_public_smoke_tasks_reach_terminal_processing",
+        "runtime_below_12_hours",
+        "source_and_dependency_hashes_match"
+      ],
+      "second_failure_action": "ARCHIVE_ANCHOR_WITH_TERMINAL_FAILURE_RECEIPT"
+    },
+    "public_score": {
+      "minimum": 0.29,
+      "status": "PENDING",
+      "submission_id": 56287444,
+      "submitted_kernel_ref": "jahyee/arc2-public-qwen-lb31-81-anchor-v1",
+      "submitted_version": 1,
+      "public_score": null,
+      "below_floor_action": "ARCHIVE_ANCHOR_WITH_SCORE_RECEIPT"
+    }
+  },
+  "authorization": {
+    "local_validation": true,
+    "one_private_kaggle_dry_run_then_one_dependency_repair_retry_if_needed": true,
+    "competition_submission_only_after_local_and_kaggle_dry_run_pass": true,
+    "submission_allowed_now": false,
+    "old_v2_trm_actions_allowed": false,
+    "additional_public_anchor_allowed": false
+  },
+  "license_boundary": {
+    "competition_execution": "PUBLICLY_ACCESSIBLE_EXACT_ATTACHMENTS",
+    "public_release": "NOT_CLEARED_BOOTSTRAP_AND_NOTEBOOK_LICENSE_GRANTS_NOT_FROZEN",
+    "claim": "This control plane may reproduce the public Kaggle notebook as a private competition anchor; it does not authorize republishing the third-party notebook as owned code."
+  }
+}

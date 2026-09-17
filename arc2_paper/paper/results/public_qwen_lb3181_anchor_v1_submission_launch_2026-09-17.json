@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "receipt_type": "arc2_public_qwen_anchor_competition_submission_launch",
+  "observed_at_cst": "2026-09-17T05:10:56+08:00",
+  "competition": "arc-prize-2026-arc-agi-2",
+  "pre_submission_gate": {
+    "local_control_plane_audit_passed": true,
+    "private_kaggle_dry_run_passed": true,
+    "submissions_before_launch": 0,
+    "daily_submissions_remaining_before_launch": 1,
+    "dependency_repairs_used": 0
+  },
+  "submitted_artifact": {
+    "kernel_ref": "jahyee/arc2-public-qwen-lb31-81-anchor-v1",
+    "kernel_id": 134648497,
+    "run_id": 350403559,
+    "version": 1,
+    "notebook_sha256": "95c9274c8c17d69e2e91867bfc6ef93d9ce1f046eec2a85a3cc6148bf961bcbe",
+    "output_file": "submission.json"
+  },
+  "submission": {
+    "id": 56287444,
+    "submitted_at_utc": "2026-09-16T21:08:35.533000Z",
+    "submitted_at_cst": "2026-09-17T05:08:35.533000+08:00",
+    "cli_status": "SubmissionStatus.PENDING",
+    "ui_status": "Notebook Running",
+    "public_score": null,
+    "private_score": null,
+    "submissions_remaining_today_after_launch": 0
+  },
+  "monitor": {
+    "kind": "heartbeat",
+    "automation_id": "arc2-public-anchor-submission-monitor",
+    "cadence_minutes": 15,
+    "quiet_while_unchanged": true,
+    "below_public_score_action": {
+      "threshold": 0.29,
+      "action": "ARCHIVE_WITH_TERMINAL_SCORE_RECEIPT"
+    }
+  },
+  "prohibitions": {
+    "additional_submission": true,
+    "additional_kernel_push": true,
+    "dependency_repair": true,
+    "additional_public_anchor": true,
+    "old_v2_or_trm_route": true
+  },
+  "claim_boundary": "This receipt records the sole authorized competition submission and its initial pending/running state. It is not a score result; the source page's 0.3181 remains third-party evidence until Kaggle publishes this submission's Public Score."
+}

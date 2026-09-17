@@ -1,0 +1,256 @@
+{
+  "schemaVersion": "0.3",
+  "destination": "CUHK-X Small：从数据解锁到跨主体候选",
+  "routes": [
+    {
+      "id": "gated-sensor-ladder",
+      "label": "门控传感器阶梯",
+      "color": "cyan",
+      "recommended": true,
+      "tokens": {
+        "min": 80000,
+        "max": 160000
+      },
+      "minutes": {
+        "min": 25,
+        "max": 50
+      },
+      "summary": "P2过门后仅加IMU门控与训练期鲁棒化"
+    },
+    {
+      "id": "visual-complement",
+      "label": "视觉互补升级",
+      "color": "orange",
+      "recommended": false,
+      "tokens": {
+        "min": 100000,
+        "max": 220000
+      },
+      "minutes": {
+        "min": 35,
+        "max": 70
+      },
+      "summary": "P2过门后再验证Depth或IR的独立增益"
+    },
+    {
+      "id": "missing-modality",
+      "label": "缺失模态建模",
+      "color": "purple",
+      "recommended": false,
+      "tokens": {
+        "min": 120000,
+        "max": 260000
+      },
+      "minutes": {
+        "min": 45,
+        "max": 90
+      },
+      "summary": "P2过门后才允许mask、dropout或token"
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "payload-blocked",
+        "label": "训练载荷仍阻塞",
+        "column": 0,
+        "lane": 2
+      },
+      {
+        "id": "official-entry",
+        "label": "官方入口差分",
+        "column": 1,
+        "lane": 2,
+        "gate": "yellow",
+        "control": "boundary"
+      },
+      {
+        "id": "payload-proof",
+        "label": "来源许可CRC",
+        "column": 2,
+        "lane": 2,
+        "gate": "red",
+        "control": "proof"
+      },
+      {
+        "id": "thermal-p2",
+        "label": "Thermal TSM+差分",
+        "column": 3,
+        "lane": 2
+      },
+      {
+        "id": "loso-gate",
+        "label": "6/18快杀→四主体",
+        "column": 4,
+        "lane": 2,
+        "gate": "red",
+        "control": "proof"
+      },
+      {
+        "id": "imu-gate",
+        "label": "IMU显式门控",
+        "column": 5,
+        "lane": 0
+      },
+      {
+        "id": "robust-slices",
+        "label": "训练期鲁棒切片",
+        "column": 6,
+        "lane": 0,
+        "control": "boundary"
+      },
+      {
+        "id": "depth-ir",
+        "label": "Depth/IR互补",
+        "column": 5,
+        "lane": 2
+      },
+      {
+        "id": "appearance-shift",
+        "label": "外观/环境漂移门",
+        "column": 6,
+        "lane": 2,
+        "control": "boundary"
+      },
+      {
+        "id": "missing-token",
+        "label": "mask/dropout/token",
+        "column": 5,
+        "lane": 4
+      },
+      {
+        "id": "missingness-gate",
+        "label": "真实缺失模式门",
+        "column": 6,
+        "lane": 4,
+        "control": "boundary"
+      },
+      {
+        "id": "release-gate",
+        "label": "单checkpoint+离线复现",
+        "column": 7,
+        "lane": 2,
+        "gate": "red",
+        "control": "release"
+      },
+      {
+        "id": "qualified-receipt",
+        "label": "可提交候选回执",
+        "column": 8,
+        "lane": 2
+      }
+    ],
+    "edges": [
+      {
+        "from": "payload-blocked",
+        "to": "official-entry",
+        "routes": [
+          "gated-sensor-ladder",
+          "visual-complement",
+          "missing-modality"
+        ]
+      },
+      {
+        "from": "official-entry",
+        "to": "payload-proof",
+        "routes": [
+          "gated-sensor-ladder",
+          "visual-complement",
+          "missing-modality"
+        ]
+      },
+      {
+        "from": "payload-proof",
+        "to": "thermal-p2",
+        "routes": [
+          "gated-sensor-ladder",
+          "visual-complement",
+          "missing-modality"
+        ]
+      },
+      {
+        "from": "thermal-p2",
+        "to": "loso-gate",
+        "routes": [
+          "gated-sensor-ladder",
+          "visual-complement",
+          "missing-modality"
+        ]
+      },
+      {
+        "from": "loso-gate",
+        "to": "imu-gate",
+        "routes": [
+          "gated-sensor-ladder"
+        ]
+      },
+      {
+        "from": "imu-gate",
+        "to": "robust-slices",
+        "routes": [
+          "gated-sensor-ladder"
+        ]
+      },
+      {
+        "from": "robust-slices",
+        "to": "release-gate",
+        "routes": [
+          "gated-sensor-ladder"
+        ]
+      },
+      {
+        "from": "loso-gate",
+        "to": "depth-ir",
+        "routes": [
+          "visual-complement"
+        ],
+        "kind": "branch"
+      },
+      {
+        "from": "depth-ir",
+        "to": "appearance-shift",
+        "routes": [
+          "visual-complement"
+        ]
+      },
+      {
+        "from": "appearance-shift",
+        "to": "release-gate",
+        "routes": [
+          "visual-complement"
+        ]
+      },
+      {
+        "from": "loso-gate",
+        "to": "missing-token",
+        "routes": [
+          "missing-modality"
+        ],
+        "kind": "branch"
+      },
+      {
+        "from": "missing-token",
+        "to": "missingness-gate",
+        "routes": [
+          "missing-modality"
+        ]
+      },
+      {
+        "from": "missingness-gate",
+        "to": "release-gate",
+        "routes": [
+          "missing-modality"
+        ]
+      },
+      {
+        "from": "release-gate",
+        "to": "qualified-receipt",
+        "routes": [
+          "gated-sensor-ladder",
+          "visual-complement",
+          "missing-modality"
+        ]
+      }
+    ]
+  }
+}

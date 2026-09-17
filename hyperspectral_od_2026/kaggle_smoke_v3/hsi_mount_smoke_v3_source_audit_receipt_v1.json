@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "receipt_type": "hsi_2026_mount_smoke_source_audit",
+  "receipt_version": "v1",
+  "audit_completed_utc": "2026-09-11T01:00:02Z",
+  "verdict": "PASS_HSI_MOUNT_V3_SOURCE_AUDIT_UNEXECUTED",
+  "execution_status": "UNEXECUTED",
+  "scope": {
+    "mode": "read_only_source_audit",
+    "competition": "hyperspectral-object-detection-challenge-2026",
+    "target_version": "v3",
+    "tests_executed": false,
+    "target_script_executed": false,
+    "real_competition_data_read": false,
+    "kaggle_actions_performed": false
+  },
+  "bound_artifacts": [
+    {
+      "role": "script",
+      "path": "hyperspectral_od_2026/kaggle_smoke_v3/hsi_2026_data_mount_smoke_v3.py",
+      "sha256": "df5e89c475a0bb3211b2b9de80d848e9f8fec961b9bb52356d910f416f00072a"
+    },
+    {
+      "role": "kernel_metadata",
+      "path": "hyperspectral_od_2026/kaggle_smoke_v3/kernel-metadata.json",
+      "sha256": "3aac808c2f82a5d00b7ff1af6da3e95a02400d69ee0c1a995685278b56acbb05"
+    },
+    {
+      "role": "tests",
+      "path": "hyperspectral_od_2026/kaggle_smoke_v3/test_hsi_2026_data_mount_smoke_v3.py",
+      "sha256": "6261d4b4e2dcd10a59e5e418b8d1526a4b4a265b2274bbe63d96a05f2556f458"
+    }
+  ],
+  "checks": [
+    {
+      "name": "single_fixed_kaggle_competitions_root",
+      "status": "PASS_SOURCE_ONLY",
+      "evidence": "The script fixes /kaggle/input/competitions/hyperspectral-object-detection-challenge-2026 and rejects any unequal root; kernel metadata declares exactly that single competition source and no dataset, kernel, or model sources."
+    },
+    {
+      "name": "no_dynamic_download_network_training_or_inference",
+      "status": "PASS_SOURCE_ONLY",
+      "evidence": "The bound source contains only local inventory, hashing, image reshape, XML parsing, validation, and receipt emission paths; no kagglehub, network client, subprocess, training, model prediction, or submission path was found."
+    },
+    {
+      "name": "cpu_only_control_plane_metadata",
+      "status": "PASS_SOURCE_ONLY",
+      "evidence": "kernel-metadata.json sets enable_gpu=false, enable_tpu=false, and enable_internet=false; the receipt contract also declares CPU-only with training_started=false and submission_started=false."
+    },
+    {
+      "name": "hard_timeout_600_seconds_fail_closed",
+      "status": "PASS_SOURCE_ONLY",
+      "evidence": "The source fixes a 600-second deadline, combines monotonic deadline checks with SIGALRM, maps timeout to TIMEOUT/exit 124, contract failure to FAIL/exit 1, and receipt write failure to exit 2."
+    },
+    {
+      "name": "exact_stratified_inventory_7003_and_no_extra_files",
+      "status": "PASS_SOURCE_ONLY",
+      "evidence": "The contract requires 3000 train PNG, 3000 train XML, 1000 test PNG, 0 ranking PNG, and 3 fixed metadata files, total 7003; full count-dictionary equality requires unexpected=0, so extra files or stratum drift fail closed."
+    },
+    {
+      "name": "fixed_png_xml_dimensions_and_hashes",
+      "status": "PASS_SOURCE_ONLY",
+      "evidence": "The source fixes data_train/data_train/VIS/1000.png and its paired XML, requires their exact SHA-256 values, checks mosaic shape [1004,1988], and requires cube and XML shape [251,497,16]."
+    },
+    {
+      "name": "terminal_pass_fail_timeout_receipt",
+      "status": "PASS_SOURCE_ONLY",
+      "evidence": "The source assigns PASS, FAIL, or TIMEOUT and finalizes terminal=true with finished timestamp, elapsed time, and termination reason; it atomically replaces the receipt file and retains stdout as a write-failure fallback."
+    },
+    {
+      "name": "remote_post_run_evidence_not_overclaimed",
+      "status": "PASS_SOURCE_ONLY",
+      "evidence": "kernel_version, remote metadata competition sources, control-plane terminal status, and downloaded log SHA remain null and are explicitly listed as required post-run control-plane evidence."
+    }
+  ],
+  "remote_state": {
+    "competition_attachment_authorized": false,
+    "competition_attachment_completed": false,
+    "competition_attachment_verified": false,
+    "kernel_run_authorized": false,
+    "kernel_run_completed": false,
+    "kernel_terminal_status": null,
+    "remote_kernel_version": null,
+    "downloaded_log_sha256": null,
+    "note": "This source-only PASS does not authorize or establish any remote attachment, execution, terminal status, or downloaded-log evidence."
+  },
+  "limitations": [
+    "No test was executed.",
+    "The target script was not executed.",
+    "No real Kaggle competition data was inspected.",
+    "No Kaggle API, browser, upload, attachment, kernel, or submission action was performed."
+  ]
+}

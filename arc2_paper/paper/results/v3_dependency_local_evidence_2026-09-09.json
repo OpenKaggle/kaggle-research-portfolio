@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "checked_at_cst": "2026-09-09T16:10:36+08:00",
+  "scope": "Local identity and embedded metadata for the two V3 dependencies that still lack current exact-asset access/license receipts.",
+  "source_dataset": {
+    "ref": "christopherdaleman/arc-proof-search-trm-2026-source",
+    "local_bundle": "public_assets/trm_source",
+    "identity_files": {
+      "README.md": "c823d8c590d6a4f20a3d9f5ac2384fbdc921035f1f206a5029d34eb5e1ac1b68",
+      "LICENSE": "0860d23c8b1347b0b4234ed0c34a445a7330593b2af615a56d05ea02a506514e",
+      "LICENSE-MIT-0": "0860d23c8b1347b0b4234ed0c34a445a7330593b2af615a56d05ea02a506514e",
+      "THIRD_PARTY_NOTICES.md": "7639751a25b72c7448641e0a3513418255050498fdeca6141f6d9a353bc45f51",
+      "trm_runtime.py": "8ac51e00df2f220ff8742bddceae9a84a407e426734975db2f55234460a48776",
+      "blindspot_exact_overlay.py": "d0a8e3c2701a6569327f989a09a731c43f734221564e207059e05167e1d38425"
+    },
+    "local_license_evidence": "MIT-0 for the original bundle with retained third-party notices",
+    "exact_kaggle_asset_public_access": "UNKNOWN",
+    "exact_kaggle_asset_license": "UNKNOWN"
+  },
+  "bootstrap_kernel": {
+    "ref": "sorokin/pip-install-unsloth-flash-patch",
+    "local_notebook": {
+      "path": "public_notebooks/unsloth_bundle/pip-install-unsloth-flash-patch.ipynb",
+      "sha256": "60f44fd0ab45a7b28a466714744039191b585e222a5c7ee7467bc936314dc1d8",
+      "code_cells": 7,
+      "outputs": 0,
+      "execution_counts": 0
+    },
+    "local_metadata": {
+      "path": "public_notebooks/unsloth_bundle/kernel-metadata.json",
+      "sha256": "8a40d20eea31eb1144b277813256a117a67fa461d3f092deef860c6a71ca6065",
+      "id": "sorokin/pip-install-unsloth-flash-patch",
+      "id_no": 97546973,
+      "is_private": false,
+      "local_file_mtime_cst": "2026-09-08T22:33:34+08:00"
+    },
+    "public_access_evidence": "The frozen local Kaggle metadata records is_private=false for the exact slug; this is a historical local snapshot, not a current no-credential recheck.",
+    "exact_kaggle_asset_license": "UNKNOWN",
+    "content_risk": "The notebook installs pinned packages and a third-party flash-attention wheel and applies a source patch; no explicit notebook-level license was found in the frozen files."
+  },
+  "claim_boundary": "This receipt strengthens local identity and shows historical public metadata for the bootstrap kernel. It does not prove either exact asset is currently public, does not supply the missing bootstrap-kernel license, and does not authorize a network query or release."
+}

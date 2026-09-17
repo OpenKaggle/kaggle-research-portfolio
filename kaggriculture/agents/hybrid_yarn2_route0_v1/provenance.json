@@ -1,0 +1,39 @@
+{
+  "candidate": "hybrid_yarn2_route0_v1",
+  "decision": {
+    "fallback": "public_state_955",
+    "feature": "first publicly unlocked shop",
+    "rule": "YARN_STORE -> public_state_955; otherwise -> shop_router_0908",
+    "step": 72
+  },
+  "derived_from": {
+    "bundle_sha256": "3c94aa5390249ed2b9ce77c9f69e646547ff8e4ab010e346757033cc7212a04e",
+    "candidate": "hybrid_public_guard_v1"
+  },
+  "experiment": {
+    "first_possible_action_difference": 168,
+    "id": "KG-004",
+    "question": "Does retaining route 0 on public Yarn-second worlds reduce the current route-1 tail?",
+    "runtime_features": [
+      "already-public first and second shops"
+    ],
+    "single_change": "At step 144, shop_policy retains route 0 instead of selecting route 1 when Yarn is among the first two public shops."
+  },
+  "runtime_prohibitions": [
+    "episode seed",
+    "future shop order",
+    "opponent private state",
+    "submission or opponent identity",
+    "network access"
+  ],
+  "sources": [
+    {
+      "local": "../shop_router_0908",
+      "notebook": "yhay81/shop-router-0908"
+    },
+    {
+      "local": "../public_state_955",
+      "notebook": "thomastschinkel/kaggriculture-95-5-win-rate-via-replay-routing"
+    }
+  ]
+}

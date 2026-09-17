@@ -1,0 +1,48 @@
+{
+  "claim_boundary": "Public evaluation outputs are evaluator-only and forbidden from candidate generation, calibration, selector fitting, and threshold selection.",
+  "competition_manifest": "official/competition_files/competition_manifest.json",
+  "competition_manifest_sha256": "d789efe03efb29a5bb8df6301cc12b7d8959d7bf3e790427142b1c8219e6c43f",
+  "github_upstream_commit": "f3283f727488ad98fe575ea6a5ac981e4a188e49",
+  "materialized_evaluation": {
+    "candidate_generation_allowed": false,
+    "classification": "evaluator_only_public_labels",
+    "outputs": 172,
+    "path": "paper/evaluator_only/kaggle_evaluation_2026_09_09/tasks",
+    "selector_fitting_allowed": false,
+    "source_competition_manifest_sha256": "d789efe03efb29a5bb8df6301cc12b7d8959d7bf3e790427142b1c8219e6c43f",
+    "source_receipt": "paper/evaluator_only/kaggle_evaluation_2026_09_09/SOURCE_RECEIPT.json",
+    "source_receipt_sha256": "54ee230707ba2b7c9e9d7e9ab5e2731a641ddf16cea5d8c4cd4c66412ab14c76",
+    "tasks": 120,
+    "tree_sha256": "3ac3d1a397384bcbfe11c2ff1936875c7ffe90bc1bc75fd032d3d8ff13f4389a"
+  },
+  "splits": {
+    "evaluation": {
+      "common_task_ids": 120,
+      "github_only_task_ids": [],
+      "github_outputs": 167,
+      "github_tasks": 120,
+      "kaggle_only_task_ids": [],
+      "kaggle_outputs": 172,
+      "kaggle_tasks": 120,
+      "status_counts": {
+        "exact": 114,
+        "test_input_changed": 4,
+        "train_changed": 2
+      }
+    },
+    "training": {
+      "common_task_ids": 1000,
+      "github_only_task_ids": [],
+      "github_outputs": 1076,
+      "github_tasks": 1000,
+      "kaggle_only_task_ids": [],
+      "kaggle_outputs": 1076,
+      "kaggle_tasks": 1000,
+      "status_counts": {
+        "exact": 1000
+      }
+    }
+  },
+  "task_csv": "results/dataset_revision_tasks_2026-09-09.csv",
+  "task_csv_sha256": "8e0818abc34aa3d745e819133276cb903b71231651254e63bdfdeeb42e5fd01d"
+}

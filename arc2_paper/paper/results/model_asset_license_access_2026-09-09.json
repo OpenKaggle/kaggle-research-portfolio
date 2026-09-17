@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "checked_at_cst": "2026-09-09T07:04:18+08:00",
+  "purpose": "Freeze direct license and public-access evidence for the exact external model assets used by the candidate ARC notebook.",
+  "network_boundary": {
+    "public_api_requests_used_credentials": false,
+    "kaggle_cli_metadata_request_used_authenticated_account": true,
+    "writes_to_kaggle": false,
+    "uploads_or_runs_triggered": false
+  },
+  "assets": {
+    "trm_checkpoint": {
+      "kaggle_ref": "cpmpml/arc-prize-trm-031",
+      "public_page": "https://www.kaggle.com/datasets/cpmpml/arc-prize-trm-031",
+      "public_api_endpoint": "https://www.kaggle.com/api/v1/datasets/view/cpmpml/arc-prize-trm-031",
+      "public_api_http_status": 200,
+      "public_api_used_credentials": false,
+      "public_api_response_sha256": "1aab2330acf25de3760add21f96d3db9cbb69a0dba058f72bfadf562716fcf68",
+      "dataset_id": 8687355,
+      "is_private": false,
+      "license_name_public_api": "CC0: Public Domain",
+      "current_version_number": 1,
+      "last_updated_utc": "2025-11-09T06:40:55.217Z",
+      "dataset_total_bytes": 15118035443,
+      "authenticated_cli_metadata_license": "CC0-1.0",
+      "authenticated_cli_metadata_response_sha256": "84f568e4a8e961c56dc87eb810b1ed9e2641aac8dff265d5565e3e44d78a9942",
+      "local_checkpoint_relative_path": "public_assets/trm_checkpoint/step_220708",
+      "local_checkpoint_bytes": 2159719349,
+      "local_checkpoint_sha256": "dbf771737d9799b84faf009c24c5376831f095d2cfd66debbe9a505a445bfc31",
+      "decision": "Direct public-access and CC0 license evidence passes; attach by Kaggle Dataset reference and preserve this receipt."
+    },
+    "qwen_finetune": {
+      "kaggle_ref": "sorokin/qwen3_4b_grids15_sft139",
+      "instance": "Transformers/bfloat16/1",
+      "public_page": "https://www.kaggle.com/models/sorokin/qwen3_4b_grids15_sft139/Transformers/bfloat16",
+      "public_api_endpoint": "https://www.kaggle.com/api/v1/models/sorokin/qwen3_4b_grids15_sft139/get",
+      "public_api_http_status": 200,
+      "public_api_used_credentials": false,
+      "public_api_response_sha256": "823aa96f66f22b617076e439326cbc257483efccb0b359ca7e572f45a1471fb3",
+      "model_id": 488596,
+      "is_private": false,
+      "instance_id": 472720,
+      "framework": "transformers",
+      "instance_slug": "bfloat16",
+      "version_id": 627758,
+      "version_number": 1,
+      "license_name": "Apache 2.0",
+      "total_uncompressed_bytes": 7267271302,
+      "local_file_count": 10,
+      "local_model_shard_sha256": {
+        "model-00001-of-00002.safetensors": "379de219f74a1402a67d26fe7dcacdacadbf686947e08e41117dd9c884ee4529",
+        "model-00002-of-00002.safetensors": "3b8470b83355ccbc527afcb7a77664bd679e63899a80e79169c016658e6b92e0"
+      },
+      "decision": "Direct public-access and Apache-2.0 evidence passes; attach the exact Kaggle Model instance rather than repackaging the weights."
+    }
+  },
+  "limitations": [
+    "This receipt establishes point-in-time public access, displayed license, exact instance/version identity, and local byte identity only.",
+    "It does not establish model performance, checkpoint provenance beyond Kaggle metadata, or compliance by itself.",
+    "Current Kaggle rules and asset metadata must be rechecked immediately before final publication."
+  ]
+}

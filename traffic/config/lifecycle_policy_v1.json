@@ -1,0 +1,98 @@
+{
+  "version": "lifecycle_policy_v1",
+  "timezone": "Asia/Shanghai",
+  "milestones": {
+    "D30": "2026-10-08T14:55:00+08:00",
+    "D14": "2026-10-24T14:55:00+08:00",
+    "D7": "2026-10-31T14:55:00+08:00",
+    "D3": "2026-11-04T14:55:00+08:00",
+    "deadline": "2026-11-07T14:55:00+08:00"
+  },
+  "deadline_evidence": [
+    {
+      "milestone": "D30",
+      "experiment": "four_task_baseline_audit_v1",
+      "ledger_status": "VALID",
+      "receipt_status": "VALID",
+      "receipt_path": "artifacts/four_task_baseline_audit_v1/four_task_baseline_receipt.json",
+      "receipt_sha256": "58a0cc1da4c6bbeac57a8ed4b7187b2bfc2d5b3ca2413b2dc605bf6ecda5337c"
+    },
+    {
+      "milestone": "D14",
+      "experiment": "current_best_lineage_audit_v1",
+      "ledger_status": "VALID_FROZEN",
+      "receipt_status": "VALID_FROZEN",
+      "receipt_path": "artifacts/current_best_lineage_audit_v1/current_best_lineage_receipt.json",
+      "receipt_sha256": "a6acab847ca80090b59655db688254ce426bca40ed55ad33cd9ea6b791421cba"
+    },
+    {
+      "milestone": "D7",
+      "experiment": "current_best_full_replay_v1",
+      "ledger_status": "REPRODUCED",
+      "receipt_status": "REPRODUCED_BYTE_IDENTICAL",
+      "receipt_path": "artifacts/current_best_full_replay_v1/current_best_full_replay_receipt.json",
+      "receipt_sha256": "ca275b57863fc568be4121aa11375b615a64be110d5faa15dd3964232a581b3e"
+    }
+  ],
+  "frozen_candidate": {
+    "submission_id": 56108199,
+    "sha256": "c3aea84e5c62f873bad26178db9eddc5b69cf874cffa4f99009c056e698ef8fa"
+  },
+  "category_prefixes": {
+    "readiness": [
+      "campaign_readiness_"
+    ],
+    "reproduction": [
+      "current_best_full_replay_"
+    ],
+    "integrity_audit": [
+      "external_checkpoint_",
+      "final_submission_preview_",
+      "current_best_lineage_audit_",
+      "component_opportunity_audit_",
+      "legacy_resource_replay_",
+      "lifecycle_evidence_registry_",
+      "method_family_policy_audit_",
+      "submission_attribution_audit_",
+      "four_task_baseline_audit_",
+      "runtime_environment_audit_",
+      "lifecycle_policy_audit_"
+    ],
+    "bugfix": [
+      "bugfix_"
+    ],
+    "final_selection": [
+      "final_submission_selection"
+    ]
+  },
+  "allowed_categories": {
+    "D14_CANDIDATE_FROZEN": [
+      "readiness",
+      "reproduction",
+      "integrity_audit"
+    ],
+    "D7_REPRODUCTION_ONLY": [
+      "readiness",
+      "reproduction",
+      "integrity_audit"
+    ],
+    "D3_BUGFIX_AND_FINAL_SELECTION_ONLY": [
+      "readiness",
+      "reproduction",
+      "integrity_audit",
+      "bugfix",
+      "final_selection"
+    ],
+    "CLOSED": [
+      "readiness",
+      "integrity_audit"
+    ]
+  },
+  "bugfix_status_prefix": "BUGFIX",
+  "final_selection_status": "FINAL_SELECTED",
+  "information_boundary": {
+    "hidden_labels_read_or_reconstructed": false,
+    "private_scores_used": false,
+    "organizer_only_metrics_inferred": false
+  }
+}

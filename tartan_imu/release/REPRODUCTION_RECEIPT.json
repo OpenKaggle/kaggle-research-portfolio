@@ -1,0 +1,27 @@
+{
+  "candidate": "E003",
+  "catboost_model_sha256": "4cc94cf49919d0b0d2cb5eaf42f482da7192ca7e87bec24ba60f708fb89a77a6",
+  "cold_start": true,
+  "environment": {
+    "catboost": "1.2.10",
+    "einops": "0.8.2",
+    "numpy": "2.4.6",
+    "os": "macOS-26.5-arm64",
+    "pandas": "3.0.3",
+    "python": "3.13.2",
+    "pyyaml": "6.0.3",
+    "torch": "2.14.0"
+  },
+  "expected_submission_sha256": "4644bb8e11df4a02417902c83b65bff5777a0e98db5bb67923f62c73bcec267a",
+  "features": 633,
+  "hardware_path": "CPU",
+  "maximum_resident_set_bytes": 723648512,
+  "network_mode": "HF_HUB_OFFLINE=1; TRANSFORMERS_OFFLINE=1; all artifacts local",
+  "official_checkpoint_sha256": "ca8cc3e15a42ec91c0cda4c63ade1b068ea92039469104b40ea63f18130e97f4",
+  "output_rows": 30644,
+  "peak_memory_footprint_bytes": 506889704,
+  "platform_input_or_routing": false,
+  "reproduced_submission_sha256": "4644bb8e11df4a02417902c83b65bff5777a0e98db5bb67923f62c73bcec267a",
+  "script_runtime_seconds": 116.82041621208191,
+  "wall_clock_seconds": 117.42
+}

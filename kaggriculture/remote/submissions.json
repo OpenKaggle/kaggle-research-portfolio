@@ -1,0 +1,24 @@
+{
+  "competition": "kaggriculture",
+  "team_names": [
+    "Jiayi Du"
+  ],
+  "submissions": [
+    {
+      "archive_sha256": "8031d51abe010eb4ccb924b90e9ebc8173a7183df55d3c1db885a8217b514180",
+      "description": "stable-anchor public-state-955 sha8031d51a 2026-09-09",
+      "filename": "public_state_955.tar.gz",
+      "id": 56102094,
+      "label": "public_state_955",
+      "role": "stable_anchor"
+    },
+    {
+      "archive_sha256": "0166b0662ea4955c2a13f1493e55471d43bf6e40328adacfa6e5beb65b3ec72d",
+      "description": "hedge hybrid-public-guard-v1 sha0166b066 2026-09-09",
+      "filename": "hybrid_public_guard_v1.tar.gz",
+      "id": 56102097,
+      "label": "hybrid_public_guard_v1",
+      "role": "complementary_hedge"
+    }
+  ]
+}

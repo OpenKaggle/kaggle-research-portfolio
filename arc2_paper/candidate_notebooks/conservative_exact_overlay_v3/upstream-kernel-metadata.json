@@ -1,0 +1,30 @@
+{
+  "id": "alissaking/arc-2026-hybrid-nvarc-trm-safe-11h",
+  "id_no": 129496398,
+  "title": "ARC 2026 Hybrid NVARC TRM Safe 11h",
+  "code_file": "arc-2026-hybrid-nvarc-trm-safe-11h.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "christopherdaleman/arc-proof-search-trm-2026-source",
+    "cpmpml/arc-prize-trm-031"
+  ],
+  "kernel_sources": [
+    "sorokin/pip-install-unsloth-flash-patch"
+  ],
+  "competition_sources": [
+    "arc-prize-2026-arc-agi-2"
+  ],
+  "model_sources": [
+    "sorokin/qwen3_4b_grids15_sft139/Transformers/bfloat16/1"
+  ],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "machine_shape": "NvidiaL4"
+}

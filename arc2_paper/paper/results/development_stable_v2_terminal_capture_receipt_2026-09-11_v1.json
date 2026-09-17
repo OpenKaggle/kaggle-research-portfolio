@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "receipt_type": "arc_agi_2_stable_v2_terminal_capture",
+  "receipt_version": "v1",
+  "recorded_at_utc": "2026-09-11T02:09:21Z",
+  "kernel": {
+    "ref": "jahyee/arc2-conservative-agreement-stable-v2",
+    "id": 133611474,
+    "version": 1,
+    "official_status": "COMPLETE"
+  },
+  "terminal_time_evidence": {
+    "exact_finished_time": "UNKNOWN",
+    "observations": [
+      {
+        "source": "GetKernel",
+        "field": "lastRunTime",
+        "value": "2026-09-08T02:05:22.127Z"
+      },
+      {
+        "source": "KernelsList",
+        "field": "lastRunTime",
+        "value": "2026-09-08T20:31:36.197Z"
+      },
+      {
+        "source": "existing_run_record",
+        "field": "start",
+        "value": "2026-09-09T04:31:34+08:00"
+      },
+      {
+        "source": "existing_run_manifest",
+        "field": "first_confirmed_complete",
+        "value": "2026-09-09T05:47:22+08:00"
+      }
+    ],
+    "reason": "The two official lastRunTime values conflict with each other and with the existing run chronology, and no independent official created or finished field was returned. None of the four observations is promoted to an exact finish time."
+  },
+  "terminal_capture": {
+    "path": "arc2_paper/kaggle_runs/development_stable_v2_kernel_v1_terminal_capture_v1",
+    "file_count": 240,
+    "output_file_count": 239,
+    "log_file_count": 1,
+    "log_size_bytes": 339030,
+    "counts_source": "previously_confirmed_terminal_capture_facts",
+    "directory_reenumerated_for_this_receipt": false,
+    "individual_files_enumerated_for_this_receipt": false,
+    "individual_files_hashed_for_this_receipt": false
+  },
+  "bound_artifacts": [
+    {
+      "role": "development_notebook",
+      "path": "arc2_paper/candidate_notebooks/conservative_agreement_stable_v2/arc2-conservative-agreement-stable-v2.ipynb",
+      "sha256": "c0d1f588737e175bd136a079cb043444f7412ed2643cd27f4d583a2c5cbe74b8"
+    },
+    {
+      "role": "kernel_metadata",
+      "path": "arc2_paper/candidate_notebooks/conservative_agreement_stable_v2/kernel-metadata.json",
+      "sha256": "e7a579f8f93ff101bb05abdb844aefadd75a1e0f0fee8e4beda63fe2bf6d5480"
+    },
+    {
+      "role": "benchmark_manifest",
+      "path": "arc2_paper/benchmark_manifests.json",
+      "sha256": "4bc669836655f8899fa08cea9dbed6b9652a62d372a3137791dc251fdb035969"
+    },
+    {
+      "role": "competition_manifest",
+      "path": "arc2_paper/official/competition_files/competition_manifest.json",
+      "sha256": "d789efe03efb29a5bb8df6301cc12b7d8959d7bf3e790427142b1c8219e6c43f"
+    }
+  ],
+  "evidence_boundaries": {
+    "output_unexamined": true,
+    "sealed_labels_unopened": true,
+    "no_generalization_evidence": true,
+    "terminal_capture_file_contents_read_for_this_receipt": false,
+    "rerun_performed": false,
+    "upload_performed": false,
+    "submission_performed": false,
+    "kaggle_query_performed_for_this_receipt": false,
+    "old_receipt_modified": false
+  },
+  "claim_boundary": "This receipt records the already-confirmed official COMPLETE state and aggregate terminal-capture existence only. It does not inspect outputs, establish an exact finish time, open sealed labels, or provide method-generalization, score, promotion, rerun, upload, or submission evidence."
+}

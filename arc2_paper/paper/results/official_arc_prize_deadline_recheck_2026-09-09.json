@@ -1,0 +1,64 @@
+{
+  "checked_at_cst": "2026-09-09T14:25:52+08:00",
+  "method": "read-only retrieval of current public ARC Prize official pages; no Kaggle query was made",
+  "sources": {
+    "overview": {
+      "url": "https://arcprize.org/competitions/2026",
+      "publisher": "ARC Prize",
+      "observed_facts": {
+        "competition_start_date": "2026-03-25",
+        "competition_submissions_due_date": "2026-11-02",
+        "papers_due_date": "2026-11-08",
+        "results_announced_date": "2026-12-04",
+        "all_prizes_require_reproducible_open_source_submissions": true,
+        "designated_submission_platform": "Kaggle",
+        "internet_available_during_kaggle_evaluation": false
+      }
+    },
+    "arc_agi_2": {
+      "url": "https://arcprize.org/competitions/2026/arc-agi-2",
+      "publisher": "ARC Prize",
+      "observed_facts": {
+        "submission_form": "Kaggle notebook",
+        "predictions_required_per_test_input": 2,
+        "task_success_rule": "at least one of the two predicted outputs matches exactly",
+        "target_private_accuracy": 0.85,
+        "prize_eligible_artifact_timing": "within seven days of the competition submission deadline"
+      }
+    },
+    "paper": {
+      "url": "https://arcprize.org/competitions/2026/paper",
+      "publisher": "ARC Prize",
+      "observed_facts": {
+        "linked_kaggle_code_submission_required": true,
+        "result_sources_requested": [
+          "Kaggle leaderboard",
+          "public evaluation"
+        ],
+        "train_set_performance_must_not_be_reported": true
+      }
+    }
+  },
+  "prior_authenticated_kaggle_snapshot": {
+    "path": "paper/results/registration_snapshot_2026-09-09.json",
+    "sha256": "2419832148397108460195d26c85707ac17d54a947876440b2a3de0b688ddeed",
+    "checked_at_cst": "2026-09-09T04:36:59+08:00",
+    "arc_agi_2_deadline_utc": "2026-11-02T23:59:00Z",
+    "paper_track_deadline_utc": "2026-11-09T23:59:00Z"
+  },
+  "reconciliation": {
+    "competition": "The current ARC Prize date and the prior authenticated Kaggle snapshot both name November 2 at date level; the ARC Prize page does not state a time or timezone.",
+    "paper": "The current ARC Prize page names November 8, while the prior authenticated Kaggle snapshot names November 9 at 23:59 UTC. Use November 8 as the conservative internal paper cutoff until an authorized final cross-check resolves the discrepancy.",
+    "current_kaggle_status_or_deadline_rechecked": false,
+    "reason_current_kaggle_not_queried": "External Kaggle reads and writes are outside the current authorization boundary."
+  },
+  "operational_schedule": {
+    "competition_submission_cutoff_date": "2026-11-02",
+    "days_remaining_at_check_date": 54,
+    "d_minus_21_architecture_freeze": "2026-10-12",
+    "d_minus_7_notebook_dependency_freeze": "2026-10-26",
+    "d_minus_3_validation_and_final_selection_only": "2026-10-30",
+    "paper_internal_cutoff_date": "2026-11-08"
+  },
+  "claim_boundary": "This receipt proves only what the public ARC Prize pages displayed at retrieval time and preserves the earlier authenticated Kaggle snapshot. Date-only ARC Prize statements do not establish an exact deadline time or timezone. It is not a Kaggle status, run, score, or submission receipt."
+}

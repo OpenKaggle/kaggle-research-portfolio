@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "ACTIVE_NOT_READY",
+  "project_root": "../..",
+  "artifacts": {
+    "writeup_contract": {
+      "path": "paper/manifests/writeup_evidence_contract_v1.json",
+      "sha256": "be69f6387fbb87fa0b18460ee07e10b0a994497f836a5f28ba098d5567e42d83"
+    },
+    "pipeline_contract": {
+      "path": "paper/manifests/three_stage_pipeline_v1.json",
+      "sha256": "ee23ae12a09dbe017fc633934323753203596ce2f315b74ab6f137feb434737e"
+    },
+    "corpus_eligibility_receipt": {
+      "path": "paper/results/v176_independent_corpus_availability_audit_2026-09-09.json",
+      "sha256": "3cb7c33b99d439e4ddc6eaafc2e00757cce2a2c19687f04f61f2e6c06f00e8a2"
+    },
+    "release_manifest": {
+      "path": "paper/manifests/public_release_preflight_v1.json",
+      "sha256": "98849ea1751d5afa5181a799bc55c8caec7b71761548713b9a83dfecff240823"
+    },
+    "dependency_manifest": {
+      "path": "paper/manifests/v3_notebook_dependency_inventory_v1.json",
+      "sha256": "fe5e25c822e20965700eec24a7332e94d0dac1df899728de7432dc0b2d4bc161"
+    },
+    "deadline_receipt": {
+      "path": "paper/results/public_kaggle_deadline_recheck_2026-09-09T184121+0800.json",
+      "sha256": "1ac2df00410908d1c00127539bff8571e599f5d8edc35b98c8c8cad296ab0136"
+    },
+    "cover": {
+      "path": "paper/media/cover_candidate_v2.png",
+      "sha256": "a1b96ee8da0ae8f49869b1413701e83b958826d9ac7111cf808a1c2c0da851be"
+    },
+    "cover_manifest": {
+      "path": "paper/media/cover_manifest.md",
+      "sha256": "632f233f0cea164a9301ebb9e2af5139c5d3a2ba599a1a162d3823799cabb0ef"
+    },
+    "authorship_manifest": {
+      "path": "paper/09_authorship_and_submission_manifest.md",
+      "sha256": "9e86a35f3a0fe1c6bf41cdad13619f9773e81db890d55139c172eced68749d3d"
+    },
+    "publication_checklist": {
+      "path": "paper/13_publication_binding_checklist.md",
+      "sha256": "0e80f059ed6015927ab02ffda1428cfe86d1f05e7ffae71763d0e0d5868351d4"
+    },
+    "license_audit": {
+      "path": "paper/14_license_and_public_risk_audit.md",
+      "sha256": "de2c53e4e5541ab667aa335575e0cb3366a4f75a11389e270e488d685e6c708e"
+    }
+  },
+  "platform_receipts": {
+    "cover_attachment_receipt_sha256": null,
+    "paper_submission_receipt_sha256": null
+  },
+  "approvals": {
+    "author_order_frozen": false,
+    "author_ip_approved": false,
+    "employer_not_required_or_approved": false,
+    "final_claim_reviewed": false
+  },
+  "internal_cutoff_utc": "2026-11-08T23:59:00Z",
+  "official_deadline_utc": "2026-11-09T23:59:00Z",
+  "external_actions_authorized_by_this_manifest": false,
+  "claim_boundary": "A structural pass with final_ready=false is only a complete local blocker inventory. It is not a Paper submission, public release, Kaggle result, or authorization."
+}

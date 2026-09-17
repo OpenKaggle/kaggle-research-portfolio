@@ -1,0 +1,52 @@
+{
+  "artifact_status": "terminal_runtime_smoke_failure",
+  "authoritative_kernel_status": "ERROR",
+  "status_verified_at_cst": "2026-09-09T06:19:36+08:00",
+  "kernel": "jahyee/arc2-trm-adam-lr-compatibility-smoke",
+  "kernel_version": 1,
+  "is_private": true,
+  "internet_enabled": false,
+  "data_boundary": "one frozen public-training challenge; solutions never read",
+  "purpose": "runtime compatibility smoke; not an accuracy experiment",
+  "task_id": "bc1d5164",
+  "task_count": 1,
+  "epochs": 1,
+  "expected_optimizer_steps": 1,
+  "single_change": "AdamAtan2 constructor bootstrap learning rate changed from zero to config.lr; the existing per-step warmup schedule remained unchanged",
+  "elapsed_seconds": 45.46256375312805,
+  "returncode": 1,
+  "guards": {
+    "checkpoint_loaded": true,
+    "optimizer_constructed": true,
+    "first_step_checkpoint_saved": false,
+    "runtime_returncode_zero": false,
+    "submission_exists": false,
+    "submission_schema_valid": false,
+    "all_guards_passed": false
+  },
+  "root_error": {
+    "type": "TypeError",
+    "location": "trm_runtime/pretrain.py:591",
+    "message": "'step' is an invalid keyword argument for print()",
+    "stage": "after checkpoint load and optimizer construction; before the first completed optimizer step"
+  },
+  "paper_decision": {
+    "full_development_rerun_authorized": false,
+    "sealed_holdout_authorized": false,
+    "interpretation": "The positive-learning-rate compatibility change repaired the original AdamAtan2 constructor failure, but the smoke failed its next runtime guard before producing a candidate. This is runtime progression, not accuracy, coverage, or selector evidence.",
+    "next_boundary": "Any further compatibility repair must be a separately versioned exploratory amendment and must pass a new solution-blind smoke before any full development rerun."
+  },
+  "source_artifacts": {
+    "run_manifest.json": "af27aba15bcce9628f595fcf7ddb32d9a2d68f14fcea65c198fac730eb7d8e4d",
+    "trm-smoke-receipt.json": "fec67783eb07f87793aa46496431ff75e4efb64f6b227a8dc3dd7cbc87b28e1a",
+    "trm-smoke.log": "0e57254dc9b055e0f04ac03bb8deb242faa3295ac392f3c5e6e102ae679fee50",
+    "hybrid_trm_source/trm_runtime.py": "17d8757c874f14d20aee0368054137874e8df16f2dd8f0fe9e521d5aff2c9e82",
+    "notebook_sha256": "935bbef268085fa149e1f8c23ee5e56932d9e83c1a26c3e285a6e56777085b63",
+    "kernel_metadata_sha256": "a249d1bc6134db239194be688195b6dd5cf66fe2d323fa1d1089cd5ca009d741"
+  },
+  "limitations": [
+    "The smoke did not complete an optimizer step and emitted no TRM grid or submission.",
+    "No inference-quality or solver-complementarity conclusion follows.",
+    "The terminal local manifest and authoritative Kaggle probe both record ERROR; no retry is authorized by the preregistered smoke stop rule."
+  ]
+}

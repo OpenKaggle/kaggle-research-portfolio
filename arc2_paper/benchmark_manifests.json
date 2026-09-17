@@ -1,0 +1,969 @@
+{
+  "development": [
+    {
+      "estimated_nvarc_work": [
+        3592,
+        9,
+        220,
+        35
+      ],
+      "task_id": "bc1d5164",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        2664,
+        25,
+        154,
+        25
+      ],
+      "task_id": "1e0a9b12",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        5240,
+        119,
+        268,
+        17
+      ],
+      "task_id": "c1990cce",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        6144,
+        96,
+        336,
+        16
+      ],
+      "task_id": "8fff9e47",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        5232,
+        6,
+        324,
+        90
+      ],
+      "task_id": "e872b94a",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        5832,
+        81,
+        324,
+        81
+      ],
+      "task_id": "23581191",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        1424,
+        4,
+        87,
+        25
+      ],
+      "task_id": "be03b35f",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        3672,
+        27,
+        216,
+        27
+      ],
+      "task_id": "17cae0c1",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        6080,
+        32,
+        364,
+        72
+      ],
+      "task_id": "bbb1b8b6",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        4968,
+        81,
+        270,
+        9
+      ],
+      "task_id": "cce03e0d",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        2832,
+        64,
+        145,
+        16
+      ],
+      "task_id": "48131b3c",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        3264,
+        48,
+        180,
+        12
+      ],
+      "task_id": "3af2c5a8",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        8512,
+        120,
+        472,
+        120
+      ],
+      "task_id": "e048c9ed",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        9856,
+        100,
+        566,
+        100
+      ],
+      "task_id": "3bd67248",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        11152,
+        38,
+        678,
+        289
+      ],
+      "task_id": "7468f01a",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        12096,
+        168,
+        672,
+        168
+      ],
+      "task_id": "fafd9572",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        11312,
+        110,
+        652,
+        110
+      ],
+      "task_id": "05f2a901",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        8784,
+        18,
+        540,
+        72
+      ],
+      "task_id": "3d31c5b3",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        10400,
+        100,
+        600,
+        100
+      ],
+      "task_id": "63613498",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        6912,
+        36,
+        414,
+        9
+      ],
+      "task_id": "d4b1c2b1",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        10400,
+        100,
+        600,
+        100
+      ],
+      "task_id": "5c0a986e",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        7808,
+        160,
+        408,
+        160
+      ],
+      "task_id": "97c75046",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        10400,
+        100,
+        600,
+        100
+      ],
+      "task_id": "137f0df0",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        10400,
+        100,
+        600,
+        100
+      ],
+      "task_id": "575b1a71",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        13984,
+        196,
+        776,
+        196
+      ],
+      "task_id": "2bee17df",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        17664,
+        288,
+        960,
+        288
+      ],
+      "task_id": "88207623",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        18440,
+        91,
+        1107,
+        323
+      ],
+      "task_id": "80af3007",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        12600,
+        65,
+        755,
+        324
+      ],
+      "task_id": "278e5215",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        16504,
+        399,
+        832,
+        399
+      ],
+      "task_id": "dbc1a6ce",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        22216,
+        5,
+        1386,
+        342
+      ],
+      "task_id": "68bc2e87",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        15984,
+        154,
+        922,
+        154
+      ],
+      "task_id": "3391f8c0",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        12776,
+        209,
+        694,
+        209
+      ],
+      "task_id": "42a15761",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        20480,
+        512,
+        1024,
+        512
+      ],
+      "task_id": "52df9849",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        18048,
+        80,
+        1088,
+        361
+      ],
+      "task_id": "4290ef0e",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        18144,
+        144,
+        1062,
+        144
+      ],
+      "task_id": "810b9b61",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        17248,
+        204,
+        976,
+        204
+      ],
+      "task_id": "f15e1fac",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        30064,
+        36,
+        1861,
+        550
+      ],
+      "task_id": "7bb29440",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        25512,
+        361,
+        1414,
+        361
+      ],
+      "task_id": "ba9d41b8",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        27680,
+        240,
+        1610,
+        240
+      ],
+      "task_id": "79369cc6",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        68352,
+        784,
+        3880,
+        784
+      ],
+      "task_id": "3ad05f52",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        41600,
+        400,
+        2400,
+        400
+      ],
+      "task_id": "305b1341",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        57200,
+        550,
+        3300,
+        550
+      ],
+      "task_id": "ea959feb",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        26624,
+        256,
+        1536,
+        256
+      ],
+      "task_id": "48634b99",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        27184,
+        8,
+        1695,
+        729
+      ],
+      "task_id": "458e3a53",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        29944,
+        255,
+        1744,
+        255
+      ],
+      "task_id": "855e0971",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        74208,
+        900,
+        4188,
+        900
+      ],
+      "task_id": "b7f8a4d8",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        47536,
+        650,
+        2646,
+        650
+      ],
+      "task_id": "184a9768",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        76064,
+        812,
+        4348,
+        812
+      ],
+      "task_id": "e619ca6e",
+      "work_quartile": 4
+    }
+  ],
+  "holdout": [
+    {
+      "estimated_nvarc_work": [
+        3840,
+        72,
+        204,
+        72
+      ],
+      "task_id": "3ac3eb23",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        4120,
+        15,
+        250,
+        35
+      ],
+      "task_id": "1b2d62fb",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        1120,
+        16,
+        62,
+        64
+      ],
+      "task_id": "a6953f00",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        6560,
+        100,
+        360,
+        100
+      ],
+      "task_id": "4a1cacc2",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        3192,
+        63,
+        168,
+        63
+      ],
+      "task_id": "fc754716",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        3120,
+        30,
+        180,
+        30
+      ],
+      "task_id": "2de01db2",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        1440,
+        18,
+        81,
+        9
+      ],
+      "task_id": "8be77c9e",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        2040,
+        15,
+        120,
+        15
+      ],
+      "task_id": "a9f96cdd",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        5096,
+        49,
+        294,
+        49
+      ],
+      "task_id": "46c35fc7",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        3528,
+        49,
+        196,
+        49
+      ],
+      "task_id": "aabf363d",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        2800,
+        100,
+        125,
+        25
+      ],
+      "task_id": "60c09cac",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        2448,
+        36,
+        135,
+        9
+      ],
+      "task_id": "7fe24cdd",
+      "work_quartile": 1
+    },
+    {
+      "estimated_nvarc_work": [
+        8704,
+        64,
+        512,
+        64
+      ],
+      "task_id": "fd02da9e",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        10912,
+        72,
+        646,
+        72
+      ],
+      "task_id": "45737921",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        10400,
+        100,
+        600,
+        100
+      ],
+      "task_id": "3906de3d",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        9600,
+        60,
+        570,
+        60
+      ],
+      "task_id": "62ab2642",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        10400,
+        100,
+        600,
+        100
+      ],
+      "task_id": "7ee1c6ea",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        10088,
+        45,
+        608,
+        135
+      ],
+      "task_id": "e78887d1",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        7200,
+        100,
+        400,
+        100
+      ],
+      "task_id": "2a28add5",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        10400,
+        100,
+        600,
+        100
+      ],
+      "task_id": "d6ad076f",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        12088,
+        191,
+        660,
+        572
+      ],
+      "task_id": "2ccd9fef",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        11280,
+        66,
+        672,
+        66
+      ],
+      "task_id": "ba97ae07",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        7552,
+        144,
+        400,
+        144
+      ],
+      "task_id": "5751f35e",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        10400,
+        100,
+        600,
+        100
+      ],
+      "task_id": "fcc82909",
+      "work_quartile": 2
+    },
+    {
+      "estimated_nvarc_work": [
+        22432,
+        576,
+        1114,
+        576
+      ],
+      "task_id": "5a5a2103",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        15600,
+        150,
+        900,
+        150
+      ],
+      "task_id": "c87289bb",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        20032,
+        324,
+        1090,
+        324
+      ],
+      "task_id": "9f41bd9c",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        14760,
+        361,
+        742,
+        361
+      ],
+      "task_id": "c61be7dc",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        15400,
+        225,
+        850,
+        225
+      ],
+      "task_id": "7acdf6d3",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        21880,
+        313,
+        1211,
+        784
+      ],
+      "task_id": "b71a7747",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        13600,
+        100,
+        800,
+        100
+      ],
+      "task_id": "69889d6e",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        13600,
+        100,
+        800,
+        100
+      ],
+      "task_id": "4acc7107",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        14400,
+        224,
+        788,
+        224
+      ],
+      "task_id": "2b01abd0",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        12584,
+        121,
+        726,
+        121
+      ],
+      "task_id": "dc46ea44",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        13136,
+        16,
+        813,
+        256
+      ],
+      "task_id": "2753e76c",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        14416,
+        182,
+        810,
+        182
+      ],
+      "task_id": "8eb1be9a",
+      "work_quartile": 3
+    },
+    {
+      "estimated_nvarc_work": [
+        28008,
+        297,
+        1602,
+        297
+      ],
+      "task_id": "0a938d79",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        30600,
+        225,
+        1800,
+        225
+      ],
+      "task_id": "54db823b",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        26624,
+        256,
+        1536,
+        256
+      ],
+      "task_id": "50c07299",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        36384,
+        900,
+        1824,
+        900
+      ],
+      "task_id": "a2d730bd",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        42112,
+        400,
+        2432,
+        400
+      ],
+      "task_id": "9772c176",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        35264,
+        42,
+        2183,
+        576
+      ],
+      "task_id": "c909285e",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        41120,
+        900,
+        2120,
+        900
+      ],
+      "task_id": "fd096ab6",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        24072,
+        225,
+        1392,
+        225
+      ],
+      "task_id": "e9c9d9a1",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        26624,
+        256,
+        1536,
+        256
+      ],
+      "task_id": "332202d5",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        26624,
+        256,
+        1536,
+        256
+      ],
+      "task_id": "d753a70b",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        23736,
+        9,
+        1479,
+        484
+      ],
+      "task_id": "9ba4a9aa",
+      "work_quartile": 4
+    },
+    {
+      "estimated_nvarc_work": [
+        37248,
+        784,
+        1936,
+        784
+      ],
+      "task_id": "2e65ae53",
+      "work_quartile": 4
+    }
+  ],
+  "seed": "arc2026-ab-v2-work-stratified",
+  "selection": "SHA256 deterministic order within four input-only work quartiles; first 12 per quartile for development, next 12 for sealed holdout",
+  "source": "arcprize/ARC-AGI-2 GitHub commit f3283f7"
+}

@@ -1,0 +1,48 @@
+{
+  "competition": "2026-ieee-big-data-traffic-flow-bench",
+  "version": "current_best_freeze_v1",
+  "official_code_commit": "205faf1b78d6f73a5e55e1168d161dcbbdb86a58",
+  "submission_key_sha256": "bdb8d9b898ac727377fc639ed7f422e652a21dc2469bcc357d8c159315a3af34",
+  "anchor": {
+    "submission_id": 56106600,
+    "merged_path": "public_notebooks/traffic_flow_bench_pipeline_v32/output/submission.csv",
+    "merged_sha256": "7673146d855a153ee56e90ea5afd5dd5431299420d3e803df5e73396e7611e0c",
+    "queue_path": "public_notebooks/traffic_flow_bench_pipeline_v32/output/queue_submission.csv",
+    "queue_sha256": "33e73071ad8394374fb6dd5edbcc958e30983cbdab08d596ae43c3c60370879a"
+  },
+  "queue": {
+    "method": "remove the two penultimate-horizon positives from each of the 80 four-positive V32 onset windows",
+    "expected_rows_changed_1_to_0": 160,
+    "expected_natural_key_sha256": "54ed12c7936ce386947077bcee0c0fb22ea716bc53a10028306c4e05e7a830ac"
+  },
+  "odme": {
+    "lambda": 5.0,
+    "tolerance": 1e-9,
+    "lsmr_tolerance": 1e-10,
+    "max_iterations": 200,
+    "expected_validation_sha256": "ceae5682e2bf852d81c60a9834f830de2c45ff78375fbd49e939442303784291",
+    "expected_private_sha256": "ea9407fffa6480c1d19263ed9a8938808fb28f2312fe3bf14a141be78ce92786",
+    "expected_combined_sha256": "5c50aa1c35af1ab4d0366900530025e51e607ed58f78840edc24953262d93019"
+  },
+  "current_best": {
+    "submission_id": 56108199,
+    "public_score": 0.74733,
+    "canonical_path": "artifacts/odme_lambda5_v1/submission.csv",
+    "expected_sha256": "c3aea84e5c62f873bad26178db9eddc5b69cf874cffa4f99009c056e698ef8fa",
+    "expected_rows": 6985307,
+    "expected_changed_rows_by_task_from_v32": {
+      "queue": 160,
+      "odme": 70708
+    },
+    "expected_changed_cells_by_column_from_v32": {
+      "queue_pred": 160,
+      "path_flow": 70708
+    }
+  },
+  "information_boundary": {
+    "target_truth_allowed": false,
+    "hidden_queue_labels_allowed": false,
+    "organizer_boundary_flows_allowed": false,
+    "hidden_odme_metrics_allowed": false
+  }
+}

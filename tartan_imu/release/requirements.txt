@@ -1,0 +1,7 @@
+catboost==1.2.10
+einops==0.8.2
+numpy>=2.0,<3
+pandas>=2.2,<4
+PyYAML>=6.0,<7
+torch>=2.5,<2.15
+

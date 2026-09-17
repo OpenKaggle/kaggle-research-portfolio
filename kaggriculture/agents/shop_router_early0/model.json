@@ -1,0 +1,31 @@
+{
+  "default": 0,
+  "kind": "mmpq_multi_entry_v1",
+  "stages": [
+    {
+      "step": 144,
+      "tree": {
+        "choice": 0
+      }
+    },
+    {
+      "step": 648,
+      "tree": {
+        "feature": 71,
+        "left": {
+          "choice": 2
+        },
+        "right": {
+          "choice": 3
+        },
+        "threshold": 9888.0
+      }
+    }
+  ],
+  "variant": {
+    "early_choice": 0,
+    "kind": "forced_router_choice_counterfactual",
+    "late_choice": null,
+    "source": "$HOME/Desktop/kagglepred/kaggriculture/agents/shop_router_0908"
+  }
+}

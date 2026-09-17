@@ -1,0 +1,39 @@
+{
+  "checked_at_cst": "2026-09-09T04:36:59+08:00",
+  "method": "authenticated Kaggle CLI competitions list plus authenticated file downloads",
+  "competitions": {
+    "arc-prize-2026-arc-agi-2": {
+      "deadline_utc": "2026-11-02T23:59:00Z",
+      "team_count": 1884,
+      "user_has_entered": true,
+      "competition_manifest_sha256": "d789efe03efb29a5bb8df6301cc12b7d8959d7bf3e790427142b1c8219e6c43f"
+    },
+    "arc-prize-2026-paper-track": {
+      "deadline_utc": "2026-11-09T23:59:00Z",
+      "team_count": 176,
+      "user_has_entered": true,
+      "downloaded_note_sha256": "428bf4b015ca2c208fd4d46c5130b1b4497238226b281c29611faff5d3f793b6",
+      "normalized_copy_sha256": "eb7a074c8e6f0be65db2a40135e76f711b62653ecf139a31f2cce20ba5bd08cd"
+    }
+  },
+  "submission_made": false,
+  "team_identity_verified": true,
+  "team_snapshot": {
+    "checked_at_cst": "2026-09-09T05:15:49+08:00",
+    "method": "read-only inspection of both authenticated Kaggle Team pages",
+    "paper_track": {
+      "team_name": "Jiayi Du",
+      "members": ["jahyee"],
+      "leader": "jahyee",
+      "maximum_members": 8
+    },
+    "arc_agi_2": {
+      "team_name": "Jiayi Du",
+      "members": ["jahyee"],
+      "leader": "jahyee",
+      "maximum_members": 5
+    },
+    "exact_member_and_team_name_match": true
+  },
+  "claim_boundary": "entry, file access, and current cross-track team match only; this snapshot does not prove authorship approval, notebook publication, or submission"
+}

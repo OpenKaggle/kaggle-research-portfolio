@@ -1,0 +1,47 @@
+{
+  "competition": "arc-prize-2026-arc-agi-2",
+  "data_boundary": "public training only; frozen 48-task development split",
+  "kernel": "jahyee/arc2-conservative-agreement-stable-v2",
+  "kernel_version": 1,
+  "kaggle_run_id": 348340917,
+  "started_at_cst": "2026-09-09T04:31:34+08:00",
+  "status_checked_at_cst": "2026-09-09T05:05:01+08:00",
+  "status": "RUNNING",
+  "is_private": true,
+  "accelerator": "Nvidia L4 x4",
+  "internet_enabled": false,
+  "notebook_sha256": "c0d1f588737e175bd136a079cb043444f7412ed2643cd27f4d583a2c5cbe74b8",
+  "kernel_metadata_sha256": "e7a579f8f93ff101bb05abdb844aefadd75a1e0f0fee8e4beda63fe2bf6d5480",
+  "benchmark_manifest_sha256": "4bc669836655f8899fa08cea9dbed6b9652a62d372a3137791dc251fdb035969",
+  "competition_manifest_sha256": "d789efe03efb29a5bb8df6301cc12b7d8959d7bf3e790427142b1c8219e6c43f",
+  "single_question": "At equal generation compute on the frozen development 48, does checkpoint consensus plus best-distinct slot allocation improve pass@2 over unchanged KGMon top two without changing attempt one?",
+  "failure_class_if_gate_misses": "SELECTION unless schema, cache, seed, dependency, coverage, or runtime receipts establish an earlier SCHEMA/RUNTIME cause",
+  "fallback": "unchanged KGMon NVARC top-two anchor",
+  "stop_rule": "Do not run sealed holdout if the method gains fewer than one net development output, changes attempt one, has incomplete coverage, emits an invalid grid, or exceeds the six-hour benchmark cap. Stop view-based extensions unless representation diversity and exact-success association are first demonstrated.",
+  "runtime_observations": [
+    {
+      "observed_at_cst": "2026-09-09T04:52:31+08:00",
+      "elapsed_seconds": 1256.7,
+      "state": "RUNNING",
+      "facts": [
+        "Benchmark mode selected the frozen 48 tasks as 12 per work quartile.",
+        "TRM started on physical GPU 3 and all four NVARC ranks entered their intended lifecycle.",
+        "Pinned xFormers/FlashAttention extensions were ABI-incompatible with Kaggle Torch 2.10.0 and Python 3.12; the notebook installed its declared PyTorch SDPA fallback.",
+        "Observed NVARC allocation was about 13012 MB for training and about 9.4-9.9 GB for inference on 22.034 GB L4 devices.",
+        "Multiple puzzles completed successfully; no fatal exception was visible."
+      ]
+    },
+    {
+      "observed_at_cst": "2026-09-09T05:05:01+08:00",
+      "elapsed_seconds": 1978.2,
+      "state": "RUNNING",
+      "facts": [
+        "Live Kaggle logs showed 35 of 48 distinct NVARC task IDs completed.",
+        "All four ranks remained active; no rank had emitted its done marker.",
+        "No traceback or CUDA out-of-memory error was visible."
+      ]
+    }
+  ],
+  "selection_policy": "NVARC1; checkpoint-agreed TRM1 else NVARC2; distinct TRM2 only for an otherwise duplicated slot",
+  "promotion_gate": "full task coverage; valid grids; completed within six hours; conservative agreement pass@2 >= unchanged KGMon top2 on development before sealed holdout"
+}

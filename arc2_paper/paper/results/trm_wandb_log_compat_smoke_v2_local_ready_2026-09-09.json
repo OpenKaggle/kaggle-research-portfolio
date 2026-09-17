@@ -1,0 +1,70 @@
+{
+  "artifact_status": "LOCAL_READY_AWAITING_USER_APPROVAL",
+  "external_push_authorized": false,
+  "external_action_taken": false,
+  "target_kernel": "jahyee/arc2-trm-wandb-log-compat-smoke-v2",
+  "is_private": true,
+  "internet_enabled": false,
+  "purpose": "final versioned solution-blind runtime compatibility smoke; not an accuracy experiment",
+  "data_boundary": "official public-training challenge bc1d5164 only; no training solution file is referenced",
+  "single_change_over_smoke_v1": "replace the invalid offline wandb.log-to-print rewrite with a stdout-only helper accepting payload and optional step; retain the positive AdamAtan2 config.lr bootstrap",
+  "execution_config": {
+    "task_id": "bc1d5164",
+    "task_count": 1,
+    "epochs": 1,
+    "eval_interval": 1,
+    "expected_optimizer_steps": 1,
+    "trm_global_batch_size": 112,
+    "trm_lr": 0.0000875,
+    "trm_warmup_steps": 229,
+    "trm_num_aug": 128
+  },
+  "local_checks": {
+    "notebook_json_valid": true,
+    "metadata_json_valid": true,
+    "private_metadata": true,
+    "internet_disabled": true,
+    "one_frozen_task": true,
+    "training_challenges_only": true,
+    "no_training_solutions_reference": true,
+    "one_epoch_and_one_eval_interval": true,
+    "runtime_hash_guard_present": true,
+    "fail_closed_all_guards_check_present": true,
+    "parent_runtime_hash_pinned": true,
+    "credential_or_absolute_user_path_scan_clean": true,
+    "generic_full_notebook_validator_applicable": false
+  },
+  "generic_validator_note": "validate_candidate_notebook.py assumes the full competition notebook's model_sources set and rejects this minimal smoke metadata; task-specific fail-closed checks above are used instead, and this must not be described as a generic-validator pass.",
+  "success_gate": [
+    "authoritative Kaggle status COMPLETE",
+    "runtime return code zero",
+    "checkpoint loaded",
+    "optimizer constructed",
+    "original scheduler path preserved",
+    "first optimizer step completed",
+    "step_1 checkpoint saved",
+    "one standard-grid submission exists and validates",
+    "all output artifacts hashed"
+  ],
+  "stop_rule": "If any runtime smoke guard fails, stop this TRM path: no third compatibility patch, no full 48-task development rerun, and no sealed holdout.",
+  "artifacts": {
+    "candidate_notebook": {
+      "path": "candidate_notebooks/trm_wandb_log_compat_smoke_v2/arc2-trm-wandb-log-compat-smoke-v2.ipynb",
+      "sha256": "7a354fc6b74e0259c15bebc8aaf27724b18298b8d458c0196ab62aa69e834091"
+    },
+    "kernel_metadata": {
+      "path": "candidate_notebooks/trm_wandb_log_compat_smoke_v2/kernel-metadata.json",
+      "sha256": "a33f682b79102df25af08b0e416177cdc128b70c2b1db1588e1a392986eb7b58"
+    },
+    "runtime": {
+      "path": "public_assets/trm_source/trm_runtime.py",
+      "sha256": "8ac51e00df2f220ff8742bddceae9a84a407e426734975db2f55234460a48776"
+    },
+    "builder": {
+      "path": "build_trm_compat_smoke_notebook.py",
+      "sha256": "ad15d87060ee798df98e6aaae51c698734738cb7c53905c7024d4be48df94647"
+    },
+    "parent_runtime_sha256": "17d8757c874f14d20aee0368054137874e8df16f2dd8f0fe9e521d5aff2c9e82"
+  },
+  "approval_boundary": "Uploading this notebook and runtime source to the private Kaggle kernel is external code/data egress and requires explicit user authorization for the named target."
+}

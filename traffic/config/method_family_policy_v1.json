@@ -1,0 +1,122 @@
+{
+  "version": "method_family_policy_v1",
+  "policy": {
+    "switch_after_consecutive_no_improvement": 2,
+    "absorb_A_group_after_same_task_failures": 3,
+    "leaderboard_probe_is_not_a_local_improvement": true,
+    "preflight_and_read_only_diagnostics_may_stop_a_family_without_candidate_construction": true
+  },
+  "two_failure_switches": [
+    {
+      "name": "state_initial_family_switch",
+      "task_scope": "state",
+      "attempts": [
+        {
+          "experiment": "task1_mini_topology_v1",
+          "method_family": "topology_residual",
+          "ledger_status": "STOPPED",
+          "receipt_path": "artifacts/task1_mini_v1/task1_mini_receipt.json",
+          "receipt_sha256": "a0243bce5bee74000679f00f15ec3b69b53268385ee0564d169c8b74eb0f281a",
+          "receipt_status": "COMPLETE",
+          "receipt_decision": "STOP_TOPOLOGY_FAMILY",
+          "outcome": "NO_IMPROVEMENT"
+        },
+        {
+          "experiment": "task1_density_smoothing_mini_v1",
+          "method_family": "density_smoothing",
+          "ledger_status": "STOPPED",
+          "receipt_path": "artifacts/task1_smoothing_mini_v1/task1_smoothing_receipt.json",
+          "receipt_sha256": "a8b62b7a2c4acc1b3d51a5fdcf1762086583913fd6c8d0237a86c3709e54d9c5",
+          "receipt_status": "COMPLETE",
+          "receipt_decision": "STOP_DENSITY_SMOOTHING_FAMILY",
+          "outcome": "NO_IMPROVEMENT"
+        }
+      ],
+      "result": "SWITCHED_METHOD_FAMILY",
+      "next_experiment": "task1_cutoff_residual_audit_smoke"
+    },
+    {
+      "name": "queue_post_anchor_family_freeze",
+      "task_scope": "queue",
+      "attempts": [
+        {
+          "experiment": "queue_onset_breadth_mini_v1",
+          "method_family": "onset_breadth",
+          "ledger_status": "STOPPED",
+          "receipt_path": "artifacts/queue_onset_breadth_mini_v1/queue_onset_breadth_receipt.json",
+          "receipt_sha256": "b7e4b588a176165018a118ee310f49fad2c7196b3965c359067b245391886b11",
+          "receipt_status": "COMPLETE",
+          "receipt_decision": "STOP_ONSET_BREADTH_FAMILY",
+          "outcome": "NO_IMPROVEMENT"
+        },
+        {
+          "experiment": "queue_ongoing_trend_ablation_v1",
+          "method_family": "ongoing_trend_crossing",
+          "ledger_status": "STOPPED",
+          "receipt_path": "artifacts/queue_ongoing_trend_ablation_v1/queue_ongoing_trend_receipt.json",
+          "receipt_sha256": "bcf58e378e977a17b9290085a2b1fd6680579731950102df4a362e3ad376636a",
+          "receipt_status": "COMPLETE",
+          "receipt_decision": "STOP_ONGOING_TREND_FAMILY",
+          "outcome": "NO_IMPROVEMENT"
+        }
+      ],
+      "result": "FROZEN_AFTER_TWO_FAILURES",
+      "next_experiment": "component_opportunity_audit_v1"
+    },
+    {
+      "name": "odme_low_lambda_family_freeze",
+      "task_scope": "odme",
+      "attempts": [
+        {
+          "experiment": "odme_lambda1_vs5_numerical_gate",
+          "method_family": "lower_regularization",
+          "ledger_status": "FAILED_NUMERICAL",
+          "receipt_path": "artifacts/odme_lambda1_vs5_failure_receipt.json",
+          "receipt_sha256": "6b48e41c32cba3adef644693bc57bb56902dbddebb6e9a789a8011b581f6e5cc",
+          "receipt_status": "FAILED_NUMERICAL_GATE",
+          "receipt_decision": "STOP_LAMBDA1_POINT",
+          "outcome": "NO_IMPROVEMENT"
+        },
+        {
+          "experiment": "odme_lambda2p5_vs5_smoke",
+          "method_family": "lower_regularization",
+          "ledger_status": "STOPPED",
+          "receipt_path": "artifacts/odme_lambda2p5_vs5_smoke_d7_i10_e/odme_lambda_frontier_receipt.json",
+          "receipt_sha256": "7e473275d4bc12795a124fe46daf6e847e79eeb31ccaa7b119edcec693e52988",
+          "receipt_status": "COMPLETE",
+          "receipt_decision": "KEEP_CONTROL_LAMBDA",
+          "outcome": "NO_IMPROVEMENT"
+        }
+      ],
+      "result": "FROZEN_AFTER_TWO_FAILURES",
+      "next_experiment": "component_opportunity_audit_v1"
+    }
+  ],
+  "A_group_absorption": {
+    "task_scope": "state_physics",
+    "trigger_attempts": [
+      "task1_mini_topology_v1",
+      "task1_density_smoothing_mini_v1",
+      "task1_cutoff_residual_audit_smoke"
+    ],
+    "trigger_count": 3,
+    "absorbed_experiment": {
+      "experiment": "task1_nonlinear_residual_ablation_v1",
+      "method_family": "A_group_mask_matched_nonlinear_residual",
+      "ledger_status": "STOPPED",
+      "receipt_path": "artifacts/task1_nonlinear_residual_ablation_v1/task1_nonlinear_residual_receipt.json",
+      "receipt_sha256": "d1a69a29c712d27ed08495544fdc621c255cd3d877ec5ce6f17fbb9fbab368fa",
+      "receipt_status": "COMPLETE",
+      "receipt_decision": "STOP_NONLINEAR_RESIDUAL_FAMILY",
+      "outcome": "POSITIVE_BUT_BELOW_PREREGISTERED_EXPANSION_GATE"
+    },
+    "provenance": "A-group proposal as recorded in the campaign experiment/status narrative; uses only released train labels and no hidden scored-split truth",
+    "result": "ABSORBED_AND_EVALUATED_THEN_FROZEN"
+  },
+  "information_boundary": {
+    "hidden_labels_allowed": false,
+    "private_scores_allowed": false,
+    "organizer_boundary_flows_allowed": false,
+    "hidden_odme_metrics_allowed": false
+  }
+}

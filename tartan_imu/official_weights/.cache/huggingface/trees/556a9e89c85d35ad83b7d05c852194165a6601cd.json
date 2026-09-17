@@ -1,0 +1,60 @@
+{
+ "format_version": 1,
+ "files": {
+  ".gitattributes": {
+   "size": 1643,
+   "blob_id": "fc4967d95560aca27d3b79b1d37fb43d1cb5f783"
+  },
+  "README.md": {
+   "size": 12705,
+   "blob_id": "a7aed88b44d146750e1cfa9b440f89aaabbb7055"
+  },
+  "checkpoints/expert_car.pt": {
+   "size": 59041409,
+   "blob_id": "84ed4fd160b70c33e4a399d675fb043acb8ed6c3",
+   "lfs_sha256": "1d1a4c6796d97aea2be7c20c5e1d04efad46fadb44c4f3dc6322b70151c938de",
+   "lfs_size": 59041409,
+   "xet_hash": "b0a2ba2ae43e2ea691197c3186720ef3d4fb2285aa9033f2688c81bc7ae8cdf4"
+  },
+  "checkpoints/expert_dog.pt": {
+   "size": 59041409,
+   "blob_id": "004a35237f683b20bf20157911095621bae5a835",
+   "lfs_sha256": "dd94dd33cafe6271a14b8788bd0e496cefe047ab4e238349d38648a319062f7c",
+   "lfs_size": 59041409,
+   "xet_hash": "69811b8818fd1b338c0243c624b9e2063f515f49b8bb6578141e5b9897ac7c5d"
+  },
+  "checkpoints/expert_drone.pt": {
+   "size": 59038048,
+   "blob_id": "f30d3bc3e1537ccfb80afd98ac5156ec4687b860",
+   "lfs_sha256": "1c1e225b356fbe98070b016ad67f00265c4bb198d8ffb7b98e602324a84facdd",
+   "lfs_size": 59038048,
+   "xet_hash": "45bd2cdc7dadc85689dc62ff6f087ec3e57c8d47f5194dd852993fb4ba9b7cb7"
+  },
+  "checkpoints/expert_human.pt": {
+   "size": 59041409,
+   "blob_id": "b9be6d71e953f407925637c3358f53d6aedfe3f5",
+   "lfs_sha256": "e521079aa451d2ee1918658dc301f1f7c03118c81012857e7de814544a098118",
+   "lfs_size": 59041409,
+   "xet_hash": "95f160f363577627560627553db174772f2886d98c4e40f9588892ee0618d611"
+  },
+  "checkpoints/unified.pt": {
+   "size": 63836782,
+   "blob_id": "6405fe7504401f9567ebd7409c097b9a38cf5b14",
+   "lfs_sha256": "ca8cc3e15a42ec91c0cda4c63ade1b068ea92039469104b40ea63f18130e97f4",
+   "lfs_size": 63836782,
+   "xet_hash": "06dae73f7b888aa3e47b43f9610fbf1fd42b163a951b7e11308a888cd6cdf05f"
+  },
+  "config/resnet_lstm_multihead.yaml": {
+   "size": 430,
+   "blob_id": "fda8c86d35a226c3a435221dd04c332e8c6f29a0"
+  },
+  "config/unified.yaml": {
+   "size": 1625,
+   "blob_id": "1ab5a290b46993059b7af27986cfafee03c12faa"
+  },
+  "inference_example.py": {
+   "size": 4317,
+   "blob_id": "f55cff13ddc7c5bc409540291fb051de1fc5e91e"
+  }
+ }
+}

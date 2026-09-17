@@ -1,0 +1,120 @@
+{
+  "artifact_status": "completed_kernel_failure_snapshot",
+  "downloaded_output_observed_at_cst": "2026-09-09T05:51:26+08:00",
+  "authoritative_kernel_status": "COMPLETE",
+  "terminal_status_first_verified_at_cst": "2026-09-09T05:47:22+08:00",
+  "kernel_wall_upper_bound_seconds": 4548,
+  "competition": "arc-prize-2026-arc-agi-2",
+  "kernel": "jahyee/arc2-conservative-agreement-stable-v2",
+  "kernel_version": 1,
+  "kaggle_run_id": 348340917,
+  "data_boundary": "public training only; frozen 48-task development split",
+  "coverage": {
+    "tasks": 48,
+    "task_outputs": 50,
+    "work_quartile_task_counts": {
+      "q1": 12,
+      "q2": 12,
+      "q3": 12,
+      "q4": 12
+    }
+  },
+  "reported_policy_scores": {
+    "agreement_merge": {
+      "exact_outputs": 48,
+      "task_outputs": 50,
+      "accuracy": 0.96
+    },
+    "full_probmul_3": {
+      "exact_outputs": 48,
+      "task_outputs": 50,
+      "accuracy": 0.96
+    },
+    "kgmon_anchor": {
+      "exact_outputs": 48,
+      "task_outputs": 50,
+      "accuracy": 0.96
+    },
+    "portfolio": {
+      "exact_outputs": 48,
+      "task_outputs": 50,
+      "accuracy": 0.96
+    }
+  },
+  "cross_family_test_valid": false,
+  "failures": [
+    {
+      "primary_code": "F00",
+      "scope": "TRM runtime",
+      "facts": {
+        "available": false,
+        "returncode": 1,
+        "elapsed_seconds": 47.87632870674133,
+        "stage": "trm_runtime",
+        "root_error": "adam_atan2_pytorch.AdamAtan2 asserted lr > 0 while the TRM train state was being created"
+      }
+    },
+    {
+      "primary_code": "F01",
+      "scope": "NVARC task e619ca6e",
+      "facts": {
+        "timed_out": true,
+        "elapsed_seconds": 1219.1363742351532,
+        "decode_batches_finished": 3,
+        "decode_batches_planned": 4
+      }
+    }
+  ],
+  "paper_decision": {
+    "development_promotion_gate_passed": false,
+    "holdout_authorized": false,
+    "operational_delta_outputs_vs_kgmon": 0,
+    "within_six_hour_cap": true,
+    "interpretation": "The fallback policies matched the anchor, but TRM was unavailable, so this run does not test cross-family complementarity or the proposed selector. The timeout and incomplete decode also violate the hard development gate. Preserve as runtime negative evidence and repair only without changing the frozen method policy."
+  },
+  "paired_analysis": {
+    "tasks": 48,
+    "task_outputs": 50,
+    "anchor_attempt1_rate": 0.94,
+    "anchor_attempt2_incremental_rate": 0.02,
+    "anchor_pass2_rate": 0.96,
+    "method_attempt1_rate": 0.94,
+    "method_attempt2_incremental_rate": 0.02,
+    "method_pass2_rate": 0.96,
+    "delta_pass2": 0.0,
+    "paired_task_bootstrap_95_ci": [
+      0.0,
+      0.0
+    ],
+    "beneficial_outputs": 0,
+    "harmful_outputs": 0,
+    "neutral_outputs": 50,
+    "oracle_pool_rate": 0.96,
+    "oracle_gain_over_anchor": 0.0,
+    "selector_regret_to_oracle": 0.0,
+    "oracle_gap_recovery": null,
+    "bootstrap_replicates": 20000,
+    "bootstrap_seed": 20260908
+  },
+  "source_artifacts": {
+    "ab-benchmark-report.json": "447c49362a903281a6d53268c9d41e8fb7cdeb5553c81a2cc9cef96c27462217",
+    "benchmark_challenges.json": "dfd8b8f5ec8180db96eba03494c831e75c7ba675221d6c7f50da4dc322178708",
+    "benchmark_solutions.json": "c8308dd0d8871ef40a2144f48880878b1c001d6efe8e3a260c7716a9271a3628",
+    "benchmark_manifest.json": "38bdf6416c8d15b09e55d802021788fee3c180d2a65305c9df06d2b5f0860cad",
+    "precompletion_run_manifest.json": "0c8310c4094a1630b91f3a8ecaf6af35afaa86d94421a7b778f95def31f138ff",
+    "completed_run_manifest.json": "b51d383f60c946527fb99092f13cb6329e61d90771c54914b4182cf9da1c14c5",
+    "completed_log": "825d0004ba8ba5a7fa28e8e4d153094e90abe003e87d7c4d9a35a41828c597e1",
+    "trm-gpu3.log": "24703be160d3ba9967709f75581f14aa6131e4ed067e6ea00b831d7c8ce44c03",
+    "submission.json": "f88458667319a86fcc29384d1b9d1db09e762671671ccbcf9d08b04bd23b27d0",
+    "analysis/benchmark_receipt.json": "771f7aa220a8c5b1ebd94ac6990d93fada1642002ad9ff70d27e0ee3118f534a",
+    "analysis/summary.json": "a67134bf8cf88b61364cf07f886a06b80fe61b948fefb0f522e89d2927045c66",
+    "analysis/paired_results.csv": "6a0a9c69cc4180b328751638c964b52cda2d7842dae9c3a1632a06104e3d8b54",
+    "analysis/paired_summary.json": "4c085905f7934e386278b90723bd1e17e861e2a28377b97636eaf0e044bbe931"
+  },
+  "limitations": [
+    "Kaggle reports COMPLETE; the first authoritative COMPLETE timestamp gives a conservative 4,548-second wall-time upper bound, while the exact earlier status-transition instant is unavailable.",
+    "Candidate submissions, NVARC per-task receipts, and logs were recovered and sealed, but no TRM candidate or selector receipt exists because TRM failed before candidate generation.",
+    "This public-training smoke test is neither the sealed holdout nor the authoritative public-evaluation result.",
+    "The 0.96 aggregate cannot support Accuracy, Progress, Universality, or Novelty claims for the proposed cross-family method because that method did not execute."
+  ]
+}

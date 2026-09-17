@@ -1,0 +1,33 @@
+{
+  "default": 0,
+  "kind": "mmpq_multi_entry_v1",
+  "stages": [
+    {
+      "step": 144,
+      "tree": {
+        "choice": 0
+      }
+    },
+    {
+      "step": 648,
+      "tree": {
+        "feature": 71,
+        "left": {
+          "choice": 2
+        },
+        "right": {
+          "choice": 3
+        },
+        "threshold": 9888.0
+      }
+    }
+  ],
+  "variant": {
+    "decision_step": 144,
+    "kind": "yarn_second_route0_ablation",
+    "route_0_1_first_action_difference": 168,
+    "scope": "Only non-Yarn-first worlds can reach shop_policy; forcing route 0 therefore changes Yarn-second worlds only.",
+    "source": "$HOME/Desktop/kagglepred/kaggriculture/agents/hybrid_public_guard_v1",
+    "source_bundle_sha256": "3c94aa5390249ed2b9ce77c9f69e646547ff8e4ab010e346757033cc7212a04e"
+  }
+}

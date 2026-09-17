@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "repository_revision": "ca37a2e9c6a06271309be03bbfbe16f29e40d8b4",
+  "manifest": "training_split_huggingface.json",
+  "subjects": [6, 18],
+  "modalities": {
+    "HAR/data/Thermal/": {
+      "frames_per_clip": 8
+    },
+    "HAR/data/IMU/": {
+      "frames_per_clip": 8,
+      "note": "Official inventory has two CSV files per present IMU clip, so the cap retains both."
+    }
+  },
+  "control_plane_budget_bytes": {
+    "final_part_tail": 131072,
+    "zip64_record_prefix": 56,
+    "central_directory": 73843427,
+    "total_before_member_header_probes": 73974555
+  },
+  "static_subject_bounds": {
+    "indexed_clips_subject_6": 196,
+    "indexed_clips_subject_18": 184,
+    "indexed_clips_total": 380,
+    "thermal_selected_files_maximum": 3040,
+    "imu_selected_files_maximum": 760
+  },
+  "exact_authenticated_plan": {
+    "status": "INDEXED_NOT_EXTRACTED",
+    "central_directory_sha256": "a0cefe0405ff6a1b2cd3f7beeae4bb0e1f11126250c0d6a5fe2f4994bed7eaa8",
+    "central_directory_entries": 491879,
+    "selected_files": 3715,
+    "payload_bytes": 62993091,
+    "thermal_selected_files": 2957,
+    "thermal_payload_bytes": 52642658,
+    "imu_selected_files": 758,
+    "imu_payload_bytes": 10350433,
+    "header_probe_bytes": null,
+    "header_probe_requests": null,
+    "selected_entry_start_disks": [2, 7, 8],
+    "per_disk": null,
+    "payload_downloaded": false,
+    "transport_bytes_read_for_plan_rerun": 0,
+    "range_requests_for_plan_rerun": 0,
+    "report": "../artifacts/transport/hf_subjects_6_18_plan.json",
+    "report_sha256": "2ed7acfbcfa445d24ab9fdc43e56450faa320e4d3ad265066b5e30d02abc7300",
+    "reason": "Values were parsed offline from the size- and SHA-pinned official central-directory cache. Per-disk payload allocation remains intentionally unset because calculating it requires local-header validation; no payload was downloaded."
+  },
+  "scientific_scope_warning": "Subjects 6 and 18 alone are validation-only. Honest LOSO training for either fast-kill fold requires the full 18-subject Thermal union; IMU remains locked until S1 passes.",
+  "test_data_read": false,
+  "submission_created": false
+}

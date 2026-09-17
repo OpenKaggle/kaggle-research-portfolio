@@ -1,0 +1,104 @@
+{
+  "adjudication": {
+    "arc_agi_1_train_and_evaluation": "INELIGIBLE: historically evaluated by the bundled parent",
+    "arc_agi_2_train_and_evaluation": "INELIGIBLE: historically evaluated by the bundled parent",
+    "conceptarc": "INELIGIBLE: historically evaluated to complete coverage",
+    "one_d_arc_miniarc_community_or_synthetic": "NOT_VERIFIED: target-distribution comparability is not established",
+    "same_1000_task_repartition": "INELIGIBLE: repartitioning cannot restore solution isolation"
+  },
+  "audit_status": "NO_VERIFIED_ELIGIBLE_ARC_AGI_2_GENERALIZATION_CORPUS",
+  "authorization_boundary": {
+    "artifact_downloaded": false,
+    "external_run_started": false,
+    "kaggle_query_performed": false,
+    "network_access_used": false,
+    "sealed_holdout_opened": false,
+    "submission_performed": false
+  },
+  "candidate_id": "conservative_exact_overlay_v3",
+  "checked_at_cst": "2026-09-09T21:45:00+08:00",
+  "checked_at_utc": "2026-09-09T13:45:00+00:00",
+  "claim_boundary": "No eligible untouched labeled corpus is verified in the current local inventory. This does not prove that none exists elsewhere.",
+  "current_decision": "PIVOT_V176_TO_SYSTEMS_NEGATIVE",
+  "eligibility_requirements": {
+    "corpus_independently_created": true,
+    "license_cleared": true,
+    "one_shot_protocol_frozen_before_solution_access": true,
+    "solution_unavailable_during_method_construction": true,
+    "target_distribution_comparability_justified": true,
+    "task_and_content_overlap_zero": true
+  },
+  "local_source_evidence": {
+    "audit_tool": {
+      "path": "paper/tools/audit_v176_corpus_availability.py",
+      "sha256": "6d6f12838e2c08783dacbf7989c3c9f2c778066a23d95fff27a81ad937a3f24e"
+    },
+    "bundled_parent_readme": {
+      "observed_fact": "The bundled source documents prior testing over official ARC-AGI corpora, duplicate partitions, and ConceptARC.",
+      "path": "public_assets/trm_source/README.md",
+      "sha256": "c823d8c590d6a4f20a3d9f5ac2384fbdc921035f1f206a5029d34eb5e1ac1b68"
+    },
+    "v175_five_corpus_receipt": {
+      "aggregate": {
+        "correct_fired_outputs": 1103,
+        "fired_outputs": 1103,
+        "fired_tasks": 753,
+        "outputs": 2563,
+        "tasks": 2080
+      },
+      "corpora": [
+        {
+          "outputs": 416,
+          "stem": "arc-agi_training",
+          "tasks": 400
+        },
+        {
+          "outputs": 419,
+          "stem": "arc-agi_evaluation",
+          "tasks": 400
+        },
+        {
+          "outputs": 1076,
+          "stem": "arc-agi_training2",
+          "tasks": 1000
+        },
+        {
+          "outputs": 172,
+          "stem": "arc-agi_evaluation2",
+          "tasks": 120
+        },
+        {
+          "outputs": 480,
+          "stem": "arc-agi_concept",
+          "tasks": 160
+        }
+      ],
+      "path": "public_assets/trm_source/receipts/exact-rule-heldout-benchmark-v175.json",
+      "sha256": "62a2c6ab0119441a9526ebb7b0c8161935600c80a1646ce7f22870a17ca076d1"
+    },
+    "v3_holdout_integrity_receipt": {
+      "path": "paper/results/v3_holdout_integrity_audit_2026-09-09.json",
+      "sha256": "d04c5599a17bb23e2cb941daf258886d8e4263c86ba80a764ae2617b6e4f5333"
+    }
+  },
+  "method": "local provenance and prior-solution-access audit only; no network or Kaggle action",
+  "permitted_use_of_domain_shift_corpora": "Only a preregistered domain-shift mechanistic stress test; never an ARC-AGI-2 Accuracy, Progress, Universality, or Novelty claim.",
+  "positive_route_reopen_contract": {
+    "required_before_acquisition_or_solution_view": [
+      "new candidate and contract version",
+      "solver, rules, metrics, inclusion, exclusion, and license frozen"
+    ],
+    "required_receipts": [
+      "provenance and solution-access audit",
+      "zero-overlap audit",
+      "license receipt",
+      "target-distribution comparability justification"
+    ],
+    "stop_conditions": [
+      "any historical answer exposure",
+      "any task or content overlap",
+      "any holdout-driven tuning or rerun"
+    ]
+  },
+  "schema_version": 1
+}

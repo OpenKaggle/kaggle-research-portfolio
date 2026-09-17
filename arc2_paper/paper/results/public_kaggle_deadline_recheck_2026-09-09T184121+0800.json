@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "checked_at_cst": "2026-09-09T18:41:21+08:00",
+  "checked_at_utc": "2026-09-09T10:41:21Z",
+  "method": "read-only retrieval of publicly indexed official Kaggle competition pages; no authenticated Kaggle access was used",
+  "sources": {
+    "paper_track": {
+      "url": "https://www.kaggle.com/competitions/arc-prize-2026-paper-track/overview/abstract",
+      "publisher": "Kaggle",
+      "retrieval_surface": "public web index of the official competition page",
+      "observed_facts": {
+        "start_date": "2026-03-25",
+        "final_submission_deadline_utc": "2026-11-09T23:59:00Z",
+        "all_deadlines_default_to_2359_utc": true,
+        "submitted_writeup_required": true,
+        "draft_writeup_is_ineligible": true,
+        "media_gallery_required": true,
+        "public_notebook_required": true,
+        "project_link_optional": true,
+        "private_kaggle_resource_attached_to_public_writeup_becomes_public_after_deadline": true
+      }
+    },
+    "arc_agi_2": {
+      "url": "https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2/overview",
+      "publisher": "Kaggle",
+      "retrieval_surface": "public web index of the official competition page",
+      "observed_facts": {
+        "entry_deadline_utc": "2026-10-26T23:59:00Z",
+        "team_merger_deadline_utc": "2026-10-26T23:59:00Z",
+        "final_submission_deadline_utc": "2026-11-02T23:59:00Z",
+        "all_deadlines_default_to_2359_utc": true
+      }
+    }
+  },
+  "prior_public_arc_prize_receipt": {
+    "path": "paper/results/official_arc_prize_deadline_recheck_2026-09-09.json",
+    "sha256": "98f84b6622b4bae369e007833e0c76e7f9dceb536d3f7c27b0b0e7711ffe844c",
+    "paper_due_date": "2026-11-08",
+    "arc_agi_2_due_date": "2026-11-02"
+  },
+  "prior_authenticated_kaggle_snapshot": {
+    "path": "paper/results/registration_snapshot_2026-09-09.json",
+    "sha256": "2419832148397108460195d26c85707ac17d54a947876440b2a3de0b688ddeed",
+    "paper_track_deadline_utc": "2026-11-09T23:59:00Z",
+    "arc_agi_2_deadline_utc": "2026-11-02T23:59:00Z"
+  },
+  "reconciliation": {
+    "public_kaggle_matches_prior_authenticated_snapshot": true,
+    "arc_agi_2_deadline_status": "MATCHES_ACROSS_RECORDED_SOURCES",
+    "paper_deadline_status": "PUBLIC_KAGGLE_MATCHES_PRIOR_AUTHENTICATED_KAGGLE_BUT_ARC_PRIZE_OVERVIEW_REMAINS_ONE_DAY_EARLIER",
+    "controlling_submission_surface_deadline_utc": "2026-11-09T23:59:00Z",
+    "conservative_internal_paper_cutoff_utc": "2026-11-08T23:59:00Z"
+  },
+  "authorization_boundary": {
+    "authenticated_kaggle_access_used": false,
+    "private_kernel_status_read": false,
+    "artifact_downloaded": false,
+    "kaggle_mutation_performed": false,
+    "submission_performed": false,
+    "sealed_holdout_opened": false
+  },
+  "claim_boundary": "This receipt proves only what publicly indexed official Kaggle competition pages displayed at retrieval time and their agreement with a prior frozen authenticated snapshot. It does not prove live account state, current private-kernel status, a run, score, artifact, publication, or submission. The one-day difference from the public ARC Prize overview remains, so November 8 stays the internal safety cutoff."
+}

@@ -1,0 +1,17 @@
+{
+  "candidate": "conservative_exact_overlay_v3_holdout",
+  "status": "FROZEN_SEALED_HOLDOUT_NOTEBOOK_NOT_PUSHED",
+  "paired_development_preregistration": "../conservative_exact_overlay_v3/preregistration.json",
+  "split": "second disjoint 48-task work-stratified public-training holdout",
+  "sealed_holdout_opened": false,
+  "single_algorithmic_change": "Identical V176 solution-blind exact overlay and stable-V2 parent; only the pre-existing deterministic benchmark slice changes from development to the disjoint holdout.",
+  "frozen_hashes": {
+    "overlay_module_sha256": "d0a8e3c2701a6569327f989a09a731c43f734221564e207059e05167e1d38425",
+    "notebook_sha256": "9bc52296435a1efccdc6e8b00b568d0bddcffe4d399d631b6e5ed775b39f32ba",
+    "metadata_sha256": "1b3b3f60e1b97d329cf56245863fce284647dcb9fa51286258a6bbcb185bba15"
+  },
+  "run_authorized": false,
+  "opening_condition": "All development runtime/promotion gates in the paired preregistration pass and the user explicitly authorizes the Kaggle action.",
+  "success_condition": "No accuracy regression versus the frozen parent on the same holdout, valid schema, and acceptable runtime/memory/failure receipts.",
+  "failure_action": "Stop before competition rerun; retain the holdout receipt without tuning against its individual labels."
+}

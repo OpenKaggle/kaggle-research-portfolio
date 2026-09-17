@@ -1,0 +1,53 @@
+{
+  "version": "runtime_environment_contract_v2",
+  "python": {
+    "implementation": "CPython",
+    "version": "3.13.2"
+  },
+  "pip_version": "26.1.2",
+  "platform": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "numpy_blas": "accelerate",
+    "numpy_lapack": "accelerate"
+  },
+  "direct_packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "pyarrow": "24.0.0",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "psutil": "7.2.2"
+  },
+  "transitive_packages": {
+    "python-dateutil": "2.9.0.post0",
+    "six": "1.17.0",
+    "joblib": "1.5.3",
+    "threadpoolctl": "3.6.0"
+  },
+  "requirements_lock_path": "requirements.lock",
+  "requirements_lock_sha256": "a94b2be5dd7b34d87a626eb12ecf985b45f12181cd7a9a19a12b6c40b87716d6",
+  "official_code_commit": "205faf1b78d6f73a5e55e1168d161dcbbdb86a58",
+  "entrypoint_commands": [
+    "doctor",
+    "build",
+    "reproduce-current-best",
+    "audit-runtime",
+    "audit-four-tasks",
+    "audit-method-policy",
+    "audit-submission-attribution",
+    "audit-lifecycle-policy",
+    "audit-campaign",
+    "select-final"
+  ],
+  "required_capabilities": [
+    "numpy_finite_array",
+    "pandas_pyarrow_roundtrip",
+    "scipy_nonnegative_least_squares",
+    "sklearn_hist_gradient_boosting",
+    "psutil_process_sampling",
+    "campaign_entrypoints",
+    "full_unittest_suite"
+  ],
+  "minimum_unittests": 58
+}

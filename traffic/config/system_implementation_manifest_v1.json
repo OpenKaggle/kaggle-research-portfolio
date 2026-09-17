@@ -1,0 +1,120 @@
+{
+  "version": "system_implementation_manifest_v1",
+  "official_code_commit": "205faf1b78d6f73a5e55e1168d161dcbbdb86a58",
+  "manifest_rules": [
+    {
+      "category": "entrypoint",
+      "pattern": "run.py",
+      "expected_count": 1
+    },
+    {
+      "category": "environment",
+      "pattern": "requirements.lock",
+      "expected_count": 1
+    },
+    {
+      "category": "config",
+      "pattern": "config/*.json",
+      "expected_count": 9
+    },
+    {
+      "category": "source",
+      "pattern": "src/*.py",
+      "expected_count": 35
+    },
+    {
+      "category": "test",
+      "pattern": "tests/test_*.py",
+      "expected_count": 25
+    },
+    {
+      "category": "documentation",
+      "pattern": "README.md",
+      "expected_count": 1
+    }
+  ],
+  "canonical_receipts": [
+    {
+      "path": "artifacts/public_release_audit.json",
+      "status": "VALID"
+    },
+    {
+      "path": "artifacts/v32_public_anchor_validation.json",
+      "status": "VALID"
+    },
+    {
+      "path": "artifacts/task1_grouped_v32_frozen_profile_control_v1/task1_grouped_v32_control_receipt.json",
+      "status": "COMPLETE",
+      "decision": "ESTABLISH_DEPLOYABLE_CONTROL"
+    },
+    {
+      "path": "artifacts/queue_offbyone_v1/queue_fix_receipt.json",
+      "status": "VALID"
+    },
+    {
+      "path": "artifacts/odme_lambda_frontier_v1_focused/odme_lambda_frontier_receipt.json",
+      "status": "COMPLETE",
+      "decision": "LOCAL_FRONTIER_CANDIDATE_EXISTS"
+    },
+    {
+      "path": "artifacts/four_task_baseline_audit_v1/four_task_baseline_receipt.json",
+      "status": "VALID",
+      "decision": "D30_FOUR_TASK_BASELINES_EVIDENCED"
+    },
+    {
+      "path": "artifacts/submission_attribution_audit_v1/submission_attribution_receipt.json",
+      "status": "VALID",
+      "decision": "ATTRIBUTION_CHAIN_CLOSED"
+    },
+    {
+      "path": "artifacts/method_family_policy_audit_v1/method_family_policy_receipt.json",
+      "status": "VALID",
+      "decision": "POLICY_SATISFIED_HOLD_CURRENT_FAMILIES"
+    },
+    {
+      "path": "artifacts/lifecycle_policy_audit_v1/lifecycle_policy_receipt.json",
+      "status": "VALID",
+      "decision": "LIFECYCLE_GATES_ENFORCED"
+    },
+    {
+      "path": "artifacts/current_best_lineage_audit_v1/current_best_lineage_receipt.json",
+      "status": "VALID_FROZEN",
+      "decision": "HOLD_CURRENT_BEST_NO_FURTHER_MICROTUNING"
+    },
+    {
+      "path": "artifacts/current_best_full_replay_v1/current_best_full_replay_receipt.json",
+      "status": "REPRODUCED_BYTE_IDENTICAL",
+      "decision": "FREEZE_REPLAY_PATH_VALID"
+    },
+    {
+      "path": "artifacts/legacy_resource_replay_v1/legacy_resource_replay_receipt.json",
+      "status": "COMPLETE_REPLAY_BACKFILL"
+    },
+    {
+      "path": "artifacts/runtime_environment_audit_v3/runtime_environment_receipt.json",
+      "status": "VALID",
+      "decision": "PINNED_RUNTIME_READY_FOR_REPRODUCTION"
+    },
+    {
+      "path": "artifacts/lifecycle_evidence_registry_v1/lifecycle_evidence_registry_receipt.json",
+      "status": "VALID",
+      "decision": "USE_ACTIVATED_IDEMPOTENT_LIFECYCLE_REGISTRATION"
+    },
+    {
+      "path": "artifacts/final_submission_preview_v4/final_submission_selection_receipt.json",
+      "status": "PREVIEW_READY_NOT_FINAL",
+      "decision": "PREVIEW_SUBMISSION_56108199_WAIT_UNTIL_D3"
+    }
+  ],
+  "forbidden_path_prefixes": [
+    "data/",
+    "official/",
+    "public_notebooks/"
+  ],
+  "information_boundary": {
+    "competition_data_read": false,
+    "submission_artifact_read": false,
+    "hidden_label_or_metric_read": false,
+    "external_action_performed": false
+  }
+}

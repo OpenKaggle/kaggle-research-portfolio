@@ -1,0 +1,52 @@
+{
+  "audit": "single_public_qwen_anchor_local_gate",
+  "candidate_kernel_ref": "jahyee/arc2-public-qwen-lb3181-anchor-v1",
+  "candidate_notebook_sha256": "95c9274c8c17d69e2e91867bfc6ef93d9ce1f046eec2a85a3cc6148bf961bcbe",
+  "claim_boundary": "The sole authorized competition submission is now in flight and all further submissions, kernel pushes, repairs, alternate anchors, and old V2/TRM actions are blocked. Until Kaggle publishes its Public Score, this is not an independent 31.81 reproduction, hidden-set result, generalization result, or public-release clearance.",
+  "competition_submission": {
+    "monitor_automation_id": "arc2-public-anchor-submission-monitor",
+    "public_score": null,
+    "status": "PENDING",
+    "submission_id": 56287444,
+    "submitted_kernel_ref": "jahyee/arc2-public-qwen-lb31-81-anchor-v1",
+    "submitted_version": 1
+  },
+  "control_status": "PUBLIC_ANCHOR_SUBMITTED_RUNNING",
+  "displayed_public_score": 0.3181,
+  "failure_budget": {
+    "maximum_dependency_repairs": 1,
+    "maximum_kaggle_dry_runs": 2,
+    "public_score_floor": 0.29
+  },
+  "kaggle_dry_run": {
+    "attempts_used": 1,
+    "dependency_repairs_used": 0,
+    "resolved_kernel_ref": "jahyee/arc2-public-qwen-lb31-81-anchor-v1",
+    "runtime_seconds": 1697.0,
+    "status": "PASSED",
+    "submission": {
+      "exact_pass2": 3,
+      "outputs": 172,
+      "tasks": 120
+    }
+  },
+  "local_public_output": {
+    "accuracy_claim_allowed": false,
+    "computed_source_tasks": 4,
+    "exact_pass2": 3,
+    "outputs": 172,
+    "tasks": 120
+  },
+  "next_action": "WAIT_FOR_SUBMISSION_56287444_TERMINAL_STATE",
+  "passes": true,
+  "route": "SINGLE_PUBLIC_QWEN_ANCHOR_NO_V2_NO_TRM",
+  "schema_version": 1,
+  "selected_public_anchor": "qiuqiuh/arc-highscore-lb3389-replica",
+  "violations": [],
+  "warnings": [
+    "public_source_score_not_independently_reproduced",
+    "downloaded_public_output_computes_only_four_evaluation_tasks",
+    "python_hash_seed_is_not_fixed_in_public_source",
+    "third_party_notebook_release_license_not_cleared"
+  ]
+}

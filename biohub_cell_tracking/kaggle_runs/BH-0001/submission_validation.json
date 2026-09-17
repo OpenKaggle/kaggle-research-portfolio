@@ -1,0 +1,51 @@
+{
+  "path": "biohub_cell_tracking/kaggle_runs/BH-0001/submission.csv",
+  "valid": true,
+  "rows": 241282,
+  "datasets": [
+    "44b6_0113de3b",
+    "44b6_0b24845f",
+    "6bba_05b6850b",
+    "6bba_05db0fb1"
+  ],
+  "row_types": {
+    "edge": 118491,
+    "node": 122791
+  },
+  "topology": {
+    "44b6_0113de3b": {
+      "rows": 50522,
+      "nodes": 25621,
+      "edges": 24901,
+      "max_indegree": 1,
+      "max_outdegree": 2,
+      "division_parents": 49
+    },
+    "44b6_0b24845f": {
+      "rows": 40202,
+      "nodes": 20744,
+      "edges": 19458,
+      "max_indegree": 1,
+      "max_outdegree": 2,
+      "division_parents": 15
+    },
+    "6bba_05b6850b": {
+      "rows": 12105,
+      "nodes": 6150,
+      "edges": 5955,
+      "max_indegree": 1,
+      "max_outdegree": 2,
+      "division_parents": 9
+    },
+    "6bba_05db0fb1": {
+      "rows": 138453,
+      "nodes": 70276,
+      "edges": 68177,
+      "max_indegree": 1,
+      "max_outdegree": 2,
+      "division_parents": 28
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

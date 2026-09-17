@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "checked_at_cst": "2026-09-09T07:40:25+08:00",
+  "status": "LOCAL_BEHAVIORAL_REGRESSION_PASSED",
+  "purpose": "Strengthen the already-pushed V2 runtime smoke's local evidence without querying or changing Kaggle state.",
+  "external_boundary": {
+    "external_action_taken_by_this_check": false,
+    "kaggle_status_queried": false,
+    "artifacts_downloaded": false,
+    "last_authoritative_external_status": "RUNNING",
+    "last_status_checked_at_cst": "2026-09-09T06:27:41+08:00",
+    "later_local_only_boundary_received_at_cst": "2026-09-09T06:34:25+08:00",
+    "current_terminal_status": "UNKNOWN"
+  },
+  "frozen_artifacts": {
+    "pre_push_local_ready_receipt_sha256": "b49186c03bb7b2269e8bd9ee1f118642f7e0b12daec45429a9d78cdc05dac03a",
+    "post_push_local_boundary_receipt_sha256": "60d6c77bd1fd499630a88510635fec25dc867487ae2ea37d81400e049d91ae63",
+    "run_manifest_sha256": "48f4447086b40541079bb4eb9625621330d421284007accda5233305992f5ae7",
+    "notebook_sha256": "7a354fc6b74e0259c15bebc8aaf27724b18298b8d458c0196ab62aa69e834091",
+    "kernel_metadata_sha256": "a33f682b79102df25af08b0e416177cdc128b70c2b1db1588e1a392986eb7b58",
+    "runtime_sha256": "8ac51e00df2f220ff8742bddceae9a84a407e426734975db2f55234460a48776",
+    "parent_runtime_sha256": "17d8757c874f14d20aee0368054137874e8df16f2dd8f0fe9e521d5aff2c9e82",
+    "builder_sha256": "ad15d87060ee798df98e6aaae51c698734738cb7c53905c7024d4be48df94647",
+    "behavioral_regression_path": "paper/tests/test_trm_compat_v2.py",
+    "behavioral_regression_sha256": "856d44c690a4ae20b4a8ac725b28a0b7d271c7ad11f77f9b4bd684a9c790f838"
+  },
+  "checks": {
+    "actual_bundled_tiny_recursive_models_source_patched": true,
+    "patched_pretrain_ast_parses_and_compiles": true,
+    "wandb_import_removed": true,
+    "wandb_log_calls_removed": true,
+    "offline_logger_accepts_payload_and_step_zero": true,
+    "offline_logger_emits_payload_and_step": true,
+    "two_adam_atan2_zero_lr_anchors_replaced_with_config_lr": true,
+    "per_step_scheduler_compute_path_preserved": true,
+    "per_step_param_group_lr_assignment_preserved": true,
+    "notebook_private_and_internet_off": true,
+    "exactly_one_clean_code_cell": true,
+    "one_frozen_training_task": true,
+    "no_training_solution_reference": true,
+    "one_epoch_one_eval_interval_one_world_size": true,
+    "runtime_notebook_metadata_and_receipt_hashes_match": true,
+    "all_fail_closed_guard_names_present": true,
+    "final_all_guards_failure_exit_present": true,
+    "run_manifest_and_post_push_boundary_hashes_match": true,
+    "last_running_observation_precedes_local_only_boundary": true,
+    "boundary_forbids_further_external_actions": true,
+    "regression_passed": true
+  },
+  "claim_limit": "This is local compatibility evidence only. It does not prove the Kaggle run completed, reached step one, produced a grid, or passed any runtime guard, and it is forbidden as accuracy evidence.",
+  "next_action": "Await explicit authorization before reading the existing private kernel's current status or downloading its artifacts. Do not upload a duplicate or open the sealed holdout."
+}

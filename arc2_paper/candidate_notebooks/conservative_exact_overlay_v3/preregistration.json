@@ -1,0 +1,62 @@
+{
+  "candidate": "conservative_exact_overlay_v3",
+  "status": "FROZEN_LOCAL_NOT_PUSHED",
+  "parent": {
+    "candidate": "conservative_agreement_stable_v2",
+    "kaggle_run_id": "348340917",
+    "development_result": "48/50 outputs; TRM unavailable; one NVARC timeout"
+  },
+  "hypothesis": "A solution-blind post-merge overlay restricted to one unique grid from two fixed demonstration-exact transforms will add the two missing development outputs without changing attempt one or harming any previously solved output.",
+  "single_algorithmic_change": "After the unchanged stable-V2 neural merge, replace attempt_2 only when the fixed V176 overlay produces exactly one grid whose rule reproduces every demonstration; otherwise preserve the stable-V2 row byte-for-byte.",
+  "rules": [
+    "scale_by_distinct_color_count",
+    "reconstruct_centered_square_perimeters"
+  ],
+  "frozen_hashes": {
+    "overlay_module_sha256": "d0a8e3c2701a6569327f989a09a731c43f734221564e207059e05167e1d38425",
+    "notebook_sha256": "216459571f2499da0cc689b15a576f601cace7a20a68e652d793e80ed0f8cccf",
+    "metadata_sha256": "37c8e88b96e8d827c0fa73e4c2550c615f8062b7b8e79f4cf3e3f5267b3abc74",
+    "development_ablation_sha256": "ae0e129fcf660859fabb95435ff684a88f842c7766129047b3fb44f3b5697caf",
+    "local_combined_submission_sha256": "6ef6f663a3a91d68e7610ecf7b6e6e5ae75757ce6129ac7d3e955b531431b189",
+    "local_selector_receipt_sha256": "7429ef7600fe73ed2838502739d1ea7054841a7009cf31742a20cc144b44c7e3"
+  },
+  "development_evidence": {
+    "split": "frozen public-training development: 48 tasks / 50 outputs",
+    "base": "48/50",
+    "scale_only": "49/50; +d4b1c2b1_0; zero harms",
+    "perimeter_only": "49/50; +4290ef0e_0; zero harms",
+    "combined": "50/50; two changed attempt_2 outputs; zero harms; zero ambiguities",
+    "interpretation": "post-hoc development fit after inspecting both misses; not unseen-task generalization"
+  },
+  "source_corpus_safety_control": {
+    "dataset": "1000 official public-training tasks",
+    "selection": "demonstration-only; test solutions detached until scoring",
+    "scale_rule": "1 selected task / 1 correct output / 0 incorrect outputs",
+    "perimeter_rule": "1 selected task / 1 correct output / 0 incorrect outputs",
+    "interpretation": "false-fire and implementation control only because the rules were derived from this source corpus"
+  },
+  "external_safety": {
+    "kaggle_push_authorized": false,
+    "kaggle_status_query_authorized": false,
+    "sealed_holdout_opened": false,
+    "competition_submission_authorized": false
+  },
+  "promotion_gates": {
+    "before_any_external_run": [
+      "explicit user authorization",
+      "authoritative V2 TRM smoke status may be read only after authorization"
+    ],
+    "before_sealed_holdout": [
+      "TRM one-step smoke reaches optimizer step and checkpoint/submission guards",
+      "full development rerun has zero task timeouts and all decode batches",
+      "submission schema and artifact hashes validate",
+      "V176 overlay remains solution-blind and attempt_1-immutable"
+    ],
+    "before_competition_rerun": [
+      "sealed holdout accuracy does not regress versus the frozen parent",
+      "sealed holdout runtime, memory, failure rate, and format gates pass",
+      "no tuning is performed from public leaderboard feedback"
+    ]
+  },
+  "next_authorized_action": "None. Await explicit authority before any Kaggle status read, push, run, or submission."
+}

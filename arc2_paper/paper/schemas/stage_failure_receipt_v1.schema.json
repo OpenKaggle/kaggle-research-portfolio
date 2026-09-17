@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.arc2.paper/schemas/stage_failure_receipt_v1.schema.json",
+  "title": "ARC-AGI-2 failed-stage diagnostic receipt v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "stage",
+    "candidate_id",
+    "experiment_id",
+    "hypothesis",
+    "single_changed_factor",
+    "data_split",
+    "solver_family",
+    "authoritative_status",
+    "public_leaderboard_used_for_selection",
+    "started_at",
+    "completed_at",
+    "failure_class",
+    "diagnostics",
+    "family_failures",
+    "runtime",
+    "submission_format",
+    "artifacts",
+    "minimal_counterexample",
+    "ablation",
+    "streak_policy",
+    "public_research_reproduction",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "stage": {
+      "enum": ["private_development", "sealed_holdout", "competition_rerun"]
+    },
+    "candidate_id": {"type": "string", "minLength": 1},
+    "experiment_id": {"type": "string", "minLength": 1},
+    "hypothesis": {"type": "string", "minLength": 1},
+    "single_changed_factor": {"type": "string", "minLength": 1},
+    "data_split": {"type": "string", "minLength": 1},
+    "solver_family": {"type": "string", "minLength": 1},
+    "authoritative_status": {"enum": ["ERROR", "FAILED", "COMPLETE"]},
+    "public_leaderboard_used_for_selection": {"const": false},
+    "started_at": {"$ref": "#/$defs/timestamp"},
+    "completed_at": {"$ref": "#/$defs/timestamp"},
+    "failure_class": {"enum": ["format", "cache", "seed", "budget", "solver"]},
+    "diagnostics": {"$ref": "#/$defs/diagnostics"},
+    "family_failures": {"$ref": "#/$defs/familyFailures"},
+    "runtime": {"$ref": "#/$defs/runtime"},
+    "submission_format": {"$ref": "#/$defs/submissionFormat"},
+    "artifacts": {"$ref": "#/$defs/artifacts"},
+    "minimal_counterexample": {"$ref": "#/$defs/minimalCounterexample"},
+    "ablation": {"$ref": "#/$defs/ablation"},
+    "streak_policy": {"$ref": "#/$defs/streakPolicy"},
+    "public_research_reproduction": {"$ref": "#/$defs/publicResearch"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "nullableSha256": {
+      "anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]+)?(?:Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "diagnosticRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "status", "evidence_sha256", "notes"],
+      "properties": {
+        "name": {"enum": ["format", "cache", "seed", "budget"]},
+        "status": {"enum": ["PASS", "FAIL", "NOT_REACHED"]},
+        "evidence_sha256": {"$ref": "#/$defs/nullableSha256"},
+        "notes": {"type": "string", "minLength": 1}
+      }
+    },
+    "diagnostics": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "prefixItems": [
+        {"allOf": [{"$ref": "#/$defs/diagnosticRow"}, {"properties": {"name": {"const": "format"}}}]},
+        {"allOf": [{"$ref": "#/$defs/diagnosticRow"}, {"properties": {"name": {"const": "cache"}}}]},
+        {"allOf": [{"$ref": "#/$defs/diagnosticRow"}, {"properties": {"name": {"const": "seed"}}}]},
+        {"allOf": [{"$ref": "#/$defs/diagnosticRow"}, {"properties": {"name": {"const": "budget"}}}]}
+      ],
+      "items": false
+    },
+    "familyRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tasks", "failed_tasks", "affected_task_ids"],
+      "properties": {
+        "tasks": {"type": "integer", "minimum": 0},
+        "failed_tasks": {"type": "integer", "minimum": 0},
+        "affected_task_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[0-9a-f]{8}$"}
+        }
+      }
+    },
+    "familyFailures": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "geometry", "object", "color", "topology", "counting", "composition", "search"
+      ],
+      "properties": {
+        "geometry": {"$ref": "#/$defs/familyRow"},
+        "object": {"$ref": "#/$defs/familyRow"},
+        "color": {"$ref": "#/$defs/familyRow"},
+        "topology": {"$ref": "#/$defs/familyRow"},
+        "counting": {"$ref": "#/$defs/familyRow"},
+        "composition": {"$ref": "#/$defs/familyRow"},
+        "search": {"$ref": "#/$defs/familyRow"}
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "wall_seconds", "peak_memory_mb", "attempted_tasks", "failed_tasks",
+        "failure_rate", "timed_out_task_ids"
+      ],
+      "properties": {
+        "wall_seconds": {"type": "number", "minimum": 0},
+        "peak_memory_mb": {"type": "number", "minimum": 0},
+        "attempted_tasks": {"type": "integer", "minimum": 1},
+        "failed_tasks": {"type": "integer", "minimum": 1},
+        "failure_rate": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "timed_out_task_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[0-9a-f]{8}$"}
+        }
+      }
+    },
+    "submissionFormat": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "validated", "task_keys_exact", "output_counts_exact", "exactly_two_attempts",
+        "rectangular_grids", "dimensions_1_to_30", "colors_0_to_9"
+      ],
+      "properties": {
+        "validated": {"type": "boolean"},
+        "task_keys_exact": {"type": "boolean"},
+        "output_counts_exact": {"type": "boolean"},
+        "exactly_two_attempts": {"type": "boolean"},
+        "rectangular_grids": {"type": "boolean"},
+        "dimensions_1_to_30": {"type": "boolean"},
+        "colors_0_to_9": {"type": "boolean"}
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "notebook_sha256", "input_manifest_sha256", "artifact_manifest_sha256",
+        "log_sha256", "submission_sha256", "failure_log_sha256"
+      ],
+      "properties": {
+        "notebook_sha256": {"$ref": "#/$defs/sha256"},
+        "input_manifest_sha256": {"$ref": "#/$defs/sha256"},
+        "artifact_manifest_sha256": {"$ref": "#/$defs/sha256"},
+        "log_sha256": {"$ref": "#/$defs/sha256"},
+        "submission_sha256": {"$ref": "#/$defs/nullableSha256"},
+        "failure_log_sha256": {"$ref": "#/$defs/nullableSha256"}
+      }
+    },
+    "minimalCounterexample": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required", "task_id", "output_index", "family_bucket",
+        "artifact_sha256", "construction_notes"
+      ],
+      "properties": {
+        "required": {"type": "boolean"},
+        "task_id": {"type": ["string", "null"], "pattern": "^[0-9a-f]{8}$"},
+        "output_index": {"type": ["integer", "null"], "minimum": 0},
+        "family_bucket": {
+          "type": ["string", "null"],
+          "enum": ["geometry", "object", "color", "topology", "counting", "composition", "search", null]
+        },
+        "artifact_sha256": {"$ref": "#/$defs/nullableSha256"},
+        "construction_notes": {"type": "string", "minLength": 1}
+      }
+    },
+    "ablation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required", "hypothesis", "single_changed_factor", "control_artifact_sha256",
+        "treatment_artifact_sha256", "outcome", "improvement_outputs"
+      ],
+      "properties": {
+        "required": {"type": "boolean"},
+        "hypothesis": {"type": ["string", "null"], "minLength": 1},
+        "single_changed_factor": {"type": ["string", "null"], "minLength": 1},
+        "control_artifact_sha256": {"$ref": "#/$defs/nullableSha256"},
+        "treatment_artifact_sha256": {"$ref": "#/$defs/nullableSha256"},
+        "outcome": {"enum": ["IMPROVED", "NO_IMPROVEMENT", "REGRESSED", null]},
+        "improvement_outputs": {"type": ["integer", "null"]}
+      }
+    },
+    "streakPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prior_no_improvement_streak", "current_no_improvement_streak",
+        "prior_same_failure_streak", "current_same_failure_streak",
+        "history_receipt_sha256", "action", "next_solver_family"
+      ],
+      "properties": {
+        "prior_no_improvement_streak": {"type": "integer", "minimum": 0},
+        "current_no_improvement_streak": {"type": "integer", "minimum": 1},
+        "prior_same_failure_streak": {"type": "integer", "minimum": 0},
+        "current_same_failure_streak": {"type": "integer", "minimum": 1},
+        "history_receipt_sha256": {"$ref": "#/$defs/nullableSha256"},
+        "action": {
+          "enum": ["KEEP_CURRENT_SOLVER", "SWITCH_SOLVER_FAMILY", "REPRODUCE_PUBLIC_RESEARCH"]
+        },
+        "next_solver_family": {"type": ["string", "null"], "minLength": 1}
+      }
+    },
+    "publicResearch": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required", "source_citation", "source_url", "reproduction_artifact_sha256", "result"
+      ],
+      "properties": {
+        "required": {"type": "boolean"},
+        "source_citation": {"type": ["string", "null"], "minLength": 1},
+        "source_url": {"type": ["string", "null"], "format": "uri"},
+        "reproduction_artifact_sha256": {"$ref": "#/$defs/nullableSha256"},
+        "result": {"enum": ["CONFIRMED", "REFUTED", "INCONCLUSIVE", null]}
+      }
+    }
+  }
+}

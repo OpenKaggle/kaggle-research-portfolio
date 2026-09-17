@@ -1,0 +1,29 @@
+{
+  "code_file": "arc2-conservative-agreement-stable-v2-holdout.ipynb",
+  "competition_sources": [
+    "arc-prize-2026-arc-agi-2"
+  ],
+  "dataset_sources": [
+    "christopherdaleman/arc-proof-search-trm-2026-source",
+    "cpmpml/arc-prize-trm-031"
+  ],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "enable_gpu": true,
+  "enable_internet": false,
+  "enable_tpu": false,
+  "id": "jahyee/arc2-conservative-agreement-stable-v2-holdout",
+  "is_private": true,
+  "kernel_sources": [
+    "sorokin/pip-install-unsloth-flash-patch"
+  ],
+  "kernel_type": "notebook",
+  "keywords": [
+    "gpu"
+  ],
+  "language": "python",
+  "machine_shape": "NvidiaL4",
+  "model_sources": [
+    "sorokin/qwen3_4b_grids15_sft139/Transformers/bfloat16/1"
+  ],
+  "title": "ARC2 Conservative Agreement Stable V2 Holdout"
+}

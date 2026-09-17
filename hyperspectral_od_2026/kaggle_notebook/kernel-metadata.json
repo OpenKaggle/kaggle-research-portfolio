@@ -1,0 +1,17 @@
+{
+  "id": "jahyee/hsi-2026-yolo11m-pseudorgb-baseline-v1",
+  "title": "HSI 2026 YOLO11m Pseudorgb Baseline V1",
+  "code_file": "hsi_2026_yolo_baseline.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": ["object-detection", "hyperspectral", "single-model"],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": ["hyperspectral-object-detection-challenge-2026"],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

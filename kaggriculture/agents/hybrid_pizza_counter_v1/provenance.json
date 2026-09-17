@@ -1,0 +1,46 @@
+{
+  "candidate": "hybrid_pizza_counter_v1",
+  "decision": {
+    "fallback": "public_state_955",
+    "feature": "first publicly unlocked shop",
+    "rule": "YARN_STORE -> public_state_955; otherwise -> shop_router_0908",
+    "step": 72
+  },
+  "derived_from": {
+    "bundle_sha256": "3c94aa5390249ed2b9ce77c9f69e646547ff8e4ab010e346757033cc7212a04e",
+    "candidate": "hybrid_public_guard_v1"
+  },
+  "experiment": {
+    "excluded_runtime_features": [
+      "seed",
+      "episode/submission/opponent identity",
+      "future shops",
+      "opponent private state"
+    ],
+    "first_possible_action_difference": 576,
+    "id": "KG-005",
+    "question": "Can a late public continuation counter visible rival Tomato production in Pizza-first worlds?",
+    "runtime_features": [
+      "first already-public shop",
+      "current public rival crop layout"
+    ],
+    "single_change": "At step 576 only, when the first public shop is PIZZA_SHOP and the rival public farm has at least 12 TOMATO plants, commit to the shadow-synchronized public continuation."
+  },
+  "runtime_prohibitions": [
+    "episode seed",
+    "future shop order",
+    "opponent private state",
+    "submission or opponent identity",
+    "network access"
+  ],
+  "sources": [
+    {
+      "local": "../shop_router_0908",
+      "notebook": "yhay81/shop-router-0908"
+    },
+    {
+      "local": "../public_state_955",
+      "notebook": "thomastschinkel/kaggriculture-95-5-win-rate-via-replay-routing"
+    }
+  ]
+}

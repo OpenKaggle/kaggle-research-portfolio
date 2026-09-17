@@ -1,0 +1,25 @@
+{
+  "columns": [
+    "window_id",
+    "vx",
+    "vy",
+    "vz"
+  ],
+  "finite": true,
+  "id_order_exact": true,
+  "max_abs_component": 6.35229868,
+  "md5": "f571673079b05623e658a14410ef0063",
+  "mean_velocity": {
+    "vx": 0.12853159359026237,
+    "vy": -0.0034146922105469275,
+    "vz": -0.01158362481595092
+  },
+  "rows": 30644,
+  "sha256": "4644bb8e11df4a02417902c83b65bff5777a0e98db5bb67923f62c73bcec267a",
+  "std_velocity": {
+    "vx": 0.45220981081511324,
+    "vy": 0.23605793953408338,
+    "vz": 0.13170972279086574
+  },
+  "submission": "tartan_imu/submissions/E003_stacked_1000.csv"
+}

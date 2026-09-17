@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.arc2.paper/schemas/candidate_receipt_v1.schema.json",
+  "title": "ARC-AGI-2 heterogeneous candidate receipt v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "task_id",
+    "output_index",
+    "candidate_id",
+    "grid",
+    "grid_sha256",
+    "solver",
+    "generation",
+    "provenance",
+    "label_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "task_id": {"type": "string", "pattern": "^[0-9a-f]{8}$"},
+    "output_index": {"type": "integer", "minimum": 0},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "grid": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 30,
+      "items": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 30,
+        "items": {"type": "integer", "minimum": 0, "maximum": 9}
+      }
+    },
+    "grid_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "solver": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["family", "version"],
+      "properties": {
+        "family": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "checkpoint": {"type": ["string", "null"]},
+        "program": {"type": ["string", "null"]}
+      }
+    },
+    "generation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["seed", "compute_seconds", "candidate_rank"],
+      "properties": {
+        "seed": {"type": ["integer", "string", "null"]},
+        "compute_seconds": {"type": "number", "minimum": 0},
+        "candidate_rank": {"type": "integer", "minimum": 1},
+        "budget_name": {"type": ["string", "null"]},
+        "stopping_reason": {"type": ["string", "null"]}
+      }
+    },
+    "provenance": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "version", "license", "sha256"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "version": {"type": "string", "minLength": 1},
+          "license": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "url": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "demo_predictions": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "structural_metadata": {"type": "object"},
+    "evidence": {"type": "object"},
+    "label_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generation_saw_target", "selection_saw_target", "evaluator_receipt_separate"],
+      "properties": {
+        "generation_saw_target": {"const": false},
+        "selection_saw_target": {"const": false},
+        "evaluator_receipt_separate": {"const": true}
+      }
+    }
+  }
+}

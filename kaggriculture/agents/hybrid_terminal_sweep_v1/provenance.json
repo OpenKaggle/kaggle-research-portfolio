@@ -1,0 +1,46 @@
+{
+  "candidate": "hybrid_terminal_sweep_v1",
+  "decision": {
+    "fallback": "public_state_955",
+    "feature": "first publicly unlocked shop",
+    "rule": "YARN_STORE -> public_state_955; otherwise -> shop_router_0908",
+    "step": 72
+  },
+  "derived_from": {
+    "bundle_sha256": "3c94aa5390249ed2b9ce77c9f69e646547ff8e4ab010e346757033cc7212a04e",
+    "candidate": "hybrid_public_guard_v1"
+  },
+  "experiment": {
+    "excluded_runtime_features": [
+      "seed",
+      "episode/submission/opponent identity",
+      "future shops",
+      "opponent private state"
+    ],
+    "first_possible_action_difference": 718,
+    "id": "KG-006",
+    "question": "Can a final-step sell sweep eliminate otherwise worthless owned inventory?",
+    "runtime_features": [
+      "current own private shed",
+      "current own carried inventories"
+    ],
+    "single_change": "At step 718 only, preserve base unit actions and market slots; saturate existing SELL quantities and append missing owned sellable products into free slots."
+  },
+  "runtime_prohibitions": [
+    "episode seed",
+    "future shop order",
+    "opponent private state",
+    "submission or opponent identity",
+    "network access"
+  ],
+  "sources": [
+    {
+      "local": "../shop_router_0908",
+      "notebook": "yhay81/shop-router-0908"
+    },
+    {
+      "local": "../public_state_955",
+      "notebook": "thomastschinkel/kaggriculture-95-5-win-rate-via-replay-routing"
+    }
+  ]
+}

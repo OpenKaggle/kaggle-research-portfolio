@@ -1,0 +1,11 @@
+{
+  "checked_at_cst": "2026-09-09",
+  "path": "../../public_assets/qwen3_4b_grids15_sft139/qwen3_4b_grids15_sft139.tar.gz",
+  "observed_bytes": 2194669568,
+  "gzip_integrity_passed_at_observation": false,
+  "observation": "unexpected end of file while the sole active download session was still extending the archive",
+  "correction": "this observation does not diagnose final archive corruption; the file later grew beyond the observed byte count",
+  "classification": "download_in_progress_unverified",
+  "paper_evidence_eligible": false,
+  "required_action": "allow the sole download to finish, extract the remote file set, then require verify_public_assets.py --hash to pass; redownload only if the finished archive or final manifest fails"
+}

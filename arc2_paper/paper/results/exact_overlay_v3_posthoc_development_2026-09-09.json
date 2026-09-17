@@ -1,0 +1,57 @@
+{
+  "result_type": "post_hoc_public_training_development_diagnostic",
+  "candidate": "conservative_exact_overlay_v3",
+  "external_actions_performed": false,
+  "sealed_holdout_opened": false,
+  "competition_submission_created": false,
+  "parent": {
+    "candidate": "conservative_agreement_stable_v2",
+    "kaggle_run_id": "348340917",
+    "frozen_development_outputs": "48/50"
+  },
+  "single_change": "Preserve attempt_1 and replace attempt_2 only when the fixed V176 rules that reproduce every demonstration yield one unique grid.",
+  "rules": {
+    "scale_by_distinct_color_count": {
+      "development_ablation": "49/50",
+      "exclusive_gain": [
+        "d4b1c2b1_0"
+      ],
+      "harms": 0,
+      "public_training_source_corpus_selection": "1 task / 1 correct output / 0 incorrect outputs"
+    },
+    "reconstruct_centered_square_perimeters": {
+      "development_ablation": "49/50",
+      "exclusive_gain": [
+        "4290ef0e_0"
+      ],
+      "harms": 0,
+      "public_training_source_corpus_selection": "1 task / 1 correct output / 0 incorrect outputs"
+    }
+  },
+  "combined_local_replay": {
+    "tasks": 48,
+    "outputs": 50,
+    "solved_tasks": 48,
+    "solved_outputs": 50,
+    "attempt_1_exact_outputs": 47,
+    "attempt_2_incremental_outputs": 3,
+    "changed_attempt_2_outputs": 2,
+    "ambiguous_outputs": 0,
+    "harm_outputs": 0,
+    "submission_schema_valid": true,
+    "cli_and_saved_submission_byte_identical": true
+  },
+  "interpretation": "The two rules were derived after inspecting the development misses. The 50/50 replay proves implementation and complementarity on the development source corpus only; it is not an unseen-task, sealed-holdout, public-evaluation, or competition result.",
+  "frozen_artifacts": {
+    "overlay_module_sha256": "d0a8e3c2701a6569327f989a09a731c43f734221564e207059e05167e1d38425",
+    "blindspot_analysis_sha256": "261bc53a7bfbd11d04e308c90f9a8f681aedc4384b7185b64ff68be595218670",
+    "development_ablation_sha256": "ae0e129fcf660859fabb95435ff684a88f842c7766129047b3fb44f3b5697caf",
+    "combined_submission_sha256": "6ef6f663a3a91d68e7610ecf7b6e6e5ae75757ce6129ac7d3e955b531431b189",
+    "selector_receipt_sha256": "7429ef7600fe73ed2838502739d1ea7054841a7009cf31742a20cc144b44c7e3",
+    "development_notebook_sha256": "216459571f2499da0cc689b15a576f601cace7a20a68e652d793e80ed0f8cccf",
+    "sealed_holdout_notebook_sha256": "9bc52296435a1efccdc6e8b00b568d0bddcffe4d399d631b6e5ed775b39f32ba",
+    "development_preregistration_sha256": "1ef60af076540455f4535172e5ed5fc1756cca4dbd5db7d294ad60ccd3437f26",
+    "sealed_holdout_preregistration_sha256": "4d9bde6801f061109434b29d439e51da1ebebd2ae93fe1a05eba52ed4d50ab2a"
+  },
+  "decision": "freeze_local_candidate; do_not_query_or_push_kaggle; do_not_open_sealed_holdout until explicit authorization and all runtime gates pass"
+}

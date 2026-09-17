@@ -1,0 +1,42 @@
+{
+  "artifact_manifest_sha256": "6084ce39cb6f3ec885e17fbe0a1518acc945cdaf7c3bc998668963e824565dc5",
+  "artifacts": {
+    "challenge_without_test_outputs_sha256": "53e63c168d89db8a41ee8c6be952754207de4fd7e4dca6ad5dd4ea4c6bc9c2fe",
+    "per_output_sha256": "16d1cba398ccf40e95a2d217d6305b7541ca2c8c4f55008d9ca24c6556352714",
+    "summary_sha256": "12fb97d282a0b81f1b2270013dc78269e7ac32d10dbf9481e5a4eee580283e29",
+    "task_traces_sha256": "e2ec81d2f1a7eb86733173e5a2ac139e448b948e09aef3e58a96f3cb6283fad7"
+  },
+  "candidate_family": "typed_object_correspondence_v1",
+  "claim_boundary": "test outputs detached before inference and used once after code hash freeze",
+  "completed_at": "2026-09-09T08:50:20.685636+00:00",
+  "coverage": 0.005076142131979695,
+  "data_split": "implementation-sealed grouped fold 0 exclusions",
+  "direct_precision": 1.0,
+  "exact_selected_outputs": 1,
+  "experiment_id": "20260909-typed-object-correspondence-v1",
+  "gates": {
+    "all_passed": true,
+    "maximum_incorrect_selected_outputs": true,
+    "minimum_exact_selected_outputs": true,
+    "minimum_unique_loo_safe_outputs": true
+  },
+  "hypothesis": "A fixed property-based object extraction and placement program family, selected only by demonstration reconstruction and leave-one-demonstration-out stability, yields nonzero unique exact candidates on an implementation-sealed task-disjoint audit fold.",
+  "incorrect_selected_outputs": 0,
+  "interpretation": "prospective implementation audit of an independent candidate family; not development-stage, sealed-holdout, public-evaluation, or Kaggle evidence",
+  "manifest_path": "paper/manifests/typed_object_family_audit_v1.json",
+  "manifest_sha256": "564f1c396802367a9793e64867d9d5d044aea8510bcd9215bef977eceed8a8b5",
+  "outputs": 197,
+  "peak_rss_raw": 332398592,
+  "public_leaderboard_used_for_selection": false,
+  "runner_path": "run_typed_object_audit.py",
+  "runner_sha256": "11715a80f32793e7f7fbb57003ccbc1aad980d75c49f80131b4d52c0c8ea57e8",
+  "schema_version": 1,
+  "selected_tasks": 1,
+  "single_changed_factor": "add typed_object_correspondence_v1 candidates; data, fallback attempts, selection thresholds, and all existing solver families remain absent or fixed",
+  "solver_path": "typed_object_correspondence.py",
+  "solver_sha256": "49133d7aaa3978f8a8aa1cdb6bb2b1e560857ae6dd2b31e36abadd9d229ff390",
+  "started_at": "2026-09-09T08:48:32.392426+00:00",
+  "tasks": 181,
+  "unique_loo_safe_outputs": 1,
+  "wall_seconds": 108.29258229094557
+}

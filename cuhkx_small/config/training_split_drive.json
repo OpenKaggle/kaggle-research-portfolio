@@ -1,0 +1,99 @@
+{
+  "archive": "CUHK-X Small Model Track training HAR split ZIP",
+  "provenance": "Organizer-linked public Google Drive folder",
+  "expected_directory": {
+    "disk": 8,
+    "offset": 1599292780,
+    "size": 73843427,
+    "entries": 491879,
+    "total_disks": 9,
+    "sha256": "a0cefe0405ff6a1b2cd3f7beeae4bb0e1f11126250c0d6a5fe2f4994bed7eaa8"
+  },
+  "expected_selections": {
+    "HAR/data/IMU/": {
+      "files": 5806,
+      "payload_bytes": 74079366,
+      "groups": 2903
+    },
+    "HAR/data/Thermal/": {
+      "files": 201466,
+      "payload_bytes": 3524685759,
+      "groups": 2891
+    },
+    "HAR/data/Depth_Color/": {
+      "files": 85879,
+      "payload_bytes": 14188792524,
+      "groups": 2931
+    },
+    "HAR/data/IR/": {
+      "files": 85918,
+      "payload_bytes": 26461897975,
+      "groups": 2933
+    }
+  },
+  "parts": [
+    {
+      "disk": 0,
+      "name": "HAR.z01",
+      "source": "https://drive.usercontent.google.com/download?id=1uue29l0fGuAmFkurs3idiZtLfX5vTtVo&export=download&confirm=t",
+      "size": 5368709120,
+      "sha256": "784185d57dbc07fc1947ec70be697fe7e3e217a0ae77b5a64e7835d10991c94c"
+    },
+    {
+      "disk": 1,
+      "name": "HAR.z02",
+      "source": "https://drive.usercontent.google.com/download?id=19yYqCAJP2TBN0d0BO4rRrCU5phzMajv-&export=download&confirm=t",
+      "size": 5368709120,
+      "sha256": "879632bf647198d7202217b4057644efe63e30d893ca312d2abff86c9bcc023d"
+    },
+    {
+      "disk": 2,
+      "name": "HAR.z03",
+      "source": "https://drive.usercontent.google.com/download?id=1QbsW4TupA2QMuE8ckph-YT9kP_MKRakV&export=download&confirm=t",
+      "size": 5368709120,
+      "sha256": "a67623dbdb212fb03c8a33cb9b8a84ab986b1dc59a4b22aa59b4ba32f69fddf1"
+    },
+    {
+      "disk": 3,
+      "name": "HAR.z04",
+      "source": "https://drive.usercontent.google.com/download?id=1l88H18t2RGS4_FVNDjjEaojV78YjMYrZ&export=download&confirm=t",
+      "size": 5368709120,
+      "sha256": "e1136fe9243941b38381807a7743c9423342f0acd07f4be12bb634e2e3c08cef"
+    },
+    {
+      "disk": 4,
+      "name": "HAR.z05",
+      "source": "https://drive.usercontent.google.com/download?id=1OwnMopVOWZC1UGooUZE2Xq4ouin3tBDR&export=download&confirm=t",
+      "size": 5368709120,
+      "sha256": "27855f1d177c5196a22f989542d9c16757a8641f574b1dd1dc611344bb3c5aea"
+    },
+    {
+      "disk": 5,
+      "name": "HAR.z06",
+      "source": "https://drive.usercontent.google.com/download?id=1N0DivixXvFV9p9XdxMmcf5yHOneTqL-u&export=download&confirm=t",
+      "size": 5368709120,
+      "sha256": "60d73a466fc11ef43260bc7b4266adfb86567057b3a473f933546d0e3a369112"
+    },
+    {
+      "disk": 6,
+      "name": "HAR.z07",
+      "source": "https://drive.usercontent.google.com/download?id=1Hrap5N8T_bUeEX9V59oAIlsCKTzUQc3D&export=download&confirm=t",
+      "size": 5368709120,
+      "sha256": "5dfc67f0a53293621f5f411ed8138325e189231c41dafdd978afaaf06baff008"
+    },
+    {
+      "disk": 7,
+      "name": "HAR.z08",
+      "source": "https://drive.usercontent.google.com/download?id=1HW5nxo03oNkw1_Xk1k5Pw6fQH2U_q5XK&export=download&confirm=t",
+      "size": 5368709120,
+      "sha256": "345204f006b19907800b4308ba57f346427cdfe0c0142ed03164484c40452a61"
+    },
+    {
+      "disk": 8,
+      "name": "HAR.zip",
+      "source": "https://drive.usercontent.google.com/download?id=1nlJIpcRuL2FRcapJaFVS3eC-uZuedtqh&export=download&confirm=t",
+      "size": 1673136305,
+      "sha256": "33fd86a10528ced3868edd8b2a4367866d03f0bddaed9682c490ea22931ace15"
+    }
+  ]
+}

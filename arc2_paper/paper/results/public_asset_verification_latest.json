@@ -1,0 +1,21 @@
+{
+  "checked_at_cst": "2026-09-09T00:37:51+08:00",
+  "source": "../../public_assets/verification.json",
+  "source_sha256": "1823852c94d0231c52d846b8fb1d6e1ea480562657c3154a5de0d8f4adaa12c5",
+  "complete": true,
+  "qwen": {
+    "complete": true,
+    "file_count": 10,
+    "bytes": 7267271302,
+    "model_shard_sha256": {
+      "model-00001-of-00002.safetensors": "379de219f74a1402a67d26fe7dcacdacadbf686947e08e41117dd9c884ee4529",
+      "model-00002-of-00002.safetensors": "3b8470b83355ccbc527afcb7a77664bd679e63899a80e79169c016658e6b92e0"
+    }
+  },
+  "trm": {
+    "complete": true,
+    "bytes": 2159719349,
+    "sha256": "dbf771737d9799b84faf009c24c5376831f095d2cfd66debbe9a505a445bfc31"
+  },
+  "claim_boundary": "asset identity only; no neural accuracy, runtime, or Kaggle score is implied"
+}

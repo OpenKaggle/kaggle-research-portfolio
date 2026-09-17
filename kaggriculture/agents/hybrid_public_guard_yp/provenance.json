@@ -1,0 +1,34 @@
+{
+  "candidate": "hybrid_public_guard_yp",
+  "decision": {
+    "fallback": "public_state_955",
+    "feature": "first publicly unlocked shop",
+    "public_first_shops": [
+      "PIZZA_SHOP",
+      "YARN_STORE"
+    ],
+    "rule": "PIZZA_SHOP,YARN_STORE -> public_state_955; otherwise -> shop_router_0908",
+    "step": 72
+  },
+  "derived_from": {
+    "bundle_sha256": "3c94aa5390249ed2b9ce77c9f69e646547ff8e4ab010e346757033cc7212a04e",
+    "candidate": "hybrid_public_guard_v1"
+  },
+  "runtime_prohibitions": [
+    "episode seed",
+    "future shop order",
+    "opponent private state",
+    "submission or opponent identity",
+    "network access"
+  ],
+  "sources": [
+    {
+      "local": "../shop_router_0908",
+      "notebook": "yhay81/shop-router-0908"
+    },
+    {
+      "local": "../public_state_955",
+      "notebook": "thomastschinkel/kaggriculture-95-5-win-rate-via-replay-routing"
+    }
+  ]
+}
