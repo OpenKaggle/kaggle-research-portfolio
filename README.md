@@ -4,6 +4,20 @@ This is a public, sanitized research archive prepared from a larger local worksp
 
 The full local workspace is about 112 GiB. This repository intentionally contains only reproducible research material: source code, small configuration files, experiment notes, technical reports, and environment specifications. It excludes raw competition data, downloaded models, checkpoints, generated submissions, local virtual environments, third-party notebook mirrors, and large binary artifacts.
 
+## Publication status
+
+This repository is public for research inspection and reproducibility. It is an
+archive, not yet a uniformly licensed software distribution: the retained
+campaigns have mixed provenance, so no blanket open-source license is asserted
+over files whose authorship or upstream license has not been verified. Reuse is
+governed by the notices attached to individual files and their upstream sources.
+
+Standalone competition archives extracted from the same local research corpus:
+
+- [NVIDIA Nemotron reasoning research](https://github.com/Jah-yee/nemotron-reasoning-research)
+- [NeuroGolf 2026 ONNX research](https://github.com/Jah-yee/neurogolf-2026-onnx-research)
+- [Maze Crawler research](https://github.com/Jah-yee/maze-crawler-research)
+
 ## Campaigns represented
 
 The archive contains work associated with these locally recorded campaigns:
