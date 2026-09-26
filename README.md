@@ -1,6 +1,13 @@
-# Kaggle Prediction & Research Archive
+# OpenKaggle Research Portfolio
 
 This is a public, sanitized research archive prepared from a larger local workspace named `kagglepred` on 2026-09-17.
+
+> [!NOTE]
+> The OpenKaggle organization first mirrored the original public history through
+> commit `33ee5bfc2fc2b4b6aff9610cc61c509fa4fc2b29`, then updated this index to
+> point at the competition-level organization repositories. See
+> [`OPENKAGGLE_MIGRATION.md`](OPENKAGGLE_MIGRATION.md) for the preservation and
+> migration boundary.
 
 The full local workspace is about 112 GiB. This repository intentionally contains only reproducible research material: source code, small configuration files, experiment notes, technical reports, and environment specifications. It excludes raw competition data, downloaded models, checkpoints, generated submissions, local virtual environments, third-party notebook mirrors, and large binary artifacts.
 
@@ -14,9 +21,20 @@ governed by the notices attached to individual files and their upstream sources.
 
 Standalone competition archives extracted from the same local research corpus:
 
-- [NVIDIA Nemotron reasoning research](https://github.com/Jah-yee/nemotron-reasoning-research)
-- [NeuroGolf 2026 ONNX research](https://github.com/Jah-yee/neurogolf-2026-onnx-research)
-- [Maze Crawler research](https://github.com/Jah-yee/maze-crawler-research)
+- [NVIDIA Nemotron reasoning research](https://github.com/openkaggle/nemotron-reasoning-research)
+- [NeuroGolf 2026 ONNX research](https://github.com/openkaggle/neurogolf-2026-onnx-research)
+- [Maze Crawler research](https://github.com/openkaggle/maze-crawler-research)
+- [ARC-AGI-2 and Paper Track research](https://github.com/openkaggle/arc2-paper-research)
+- [ARC-AGI-3 2026 research](https://github.com/openkaggle/arc3-2026-research)
+- [BioHub cell-tracking research](https://github.com/openkaggle/biohub-cell-tracking-research)
+- [CUHK-X research](https://github.com/openkaggle/cuhk-x-research)
+- [Kaggriculture research](https://github.com/openkaggle/kaggriculture-research)
+- [TartanIMU research](https://github.com/openkaggle/tartan-imu-research)
+- [Traffic-flow forecasting research](https://github.com/openkaggle/traffic-forecasting-research)
+
+The Tree Species HSI material remains represented in this portfolio while its
+dirty local workspace is reviewed. It will not be promoted to a standalone
+archive until uncommitted work and redistribution boundaries are preserved.
 
 ## Campaigns represented
 
