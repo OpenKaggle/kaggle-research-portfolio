@@ -31,10 +31,12 @@ Standalone competition archives extracted from the same local research corpus:
 - [Kaggriculture research](https://github.com/openkaggle/kaggriculture-research)
 - [TartanIMU research](https://github.com/openkaggle/tartan-imu-research)
 - [Traffic-flow forecasting research](https://github.com/openkaggle/traffic-forecasting-research)
+- [Hyperspectral tree-species research](https://github.com/openkaggle/tree-species-hsi-research)
 
-The Tree Species HSI material remains represented in this portfolio while its
-dirty local workspace is reviewed. It will not be promoted to a standalone
-archive until uncommitted work and redistribution boundaries are preserved.
+The Tree Species repository preserves an explicit source-and-evidence overlay
+from a dirty local workspace without publishing its restricted 13 GB data,
+model, submission, cache, or absolute-symlink payloads. The original dirty
+workspace remains untouched.
 
 ## Campaigns represented
 
