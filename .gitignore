@@ -44,3 +44,10 @@ tmp_*/
 *.tar
 *.tar.*
 *.zip
+
+# Competition replay and split outputs are not public-source artifacts.
+kaggriculture/remote/logs/
+kaggriculture/agents/*/actions.json
+kaggriculture/agents/*/tapes.json
+biohub_cell_tracking/**/kaggle_test_splits_*.json
+biohub_cell_tracking/**/predictions/
