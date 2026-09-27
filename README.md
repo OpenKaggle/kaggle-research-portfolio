@@ -74,7 +74,11 @@ The following are deliberately not published to GitHub:
 - `.venv`, caches, temporary work directories, and local application state
 - credentials, tokens, `.env` files, and private configuration
 
-Large first-party artifacts may be mirrored separately to private Kaggle Datasets. A remote upload is not considered a backup until its file list and sizes have been verified.
+The [public sanitized Kaggle mirror](https://www.kaggle.com/datasets/jahyee/kaggle-research-portfolio-sanitized)
+preserves the same category of reviewable research material for Kaggle-native
+discovery. It deliberately excludes the restricted material listed above. A
+remote upload is not considered a backup until its file list and sizes have
+been verified.
 
 ## Reproducibility
 
