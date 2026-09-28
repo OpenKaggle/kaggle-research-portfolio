@@ -24,14 +24,14 @@ Standalone competition archives extracted from the same local research corpus:
 - [NVIDIA Nemotron reasoning research](https://github.com/OpenKaggle/nemotron-reasoning-research)
 - [NeuroGolf 2026 ONNX research](https://github.com/OpenKaggle/neurogolf-2026-onnx-research)
 - [Maze Crawler research](https://github.com/OpenKaggle/maze-crawler-research)
-- [ARC-AGI-2 and Paper Track research](https://github.com/OpenKaggle/arc2-paper-research)
+- [ARC-AGI-2 and Paper Track research](https://github.com/OpenKaggle/arc-agi-2-paper-track-research)
 - [ARC-AGI-3 2026 research](https://github.com/OpenKaggle/arc3-2026-research)
 - [BioHub cell-tracking research](https://github.com/OpenKaggle/biohub-cell-tracking-research)
 - [CUHK-X research](https://github.com/OpenKaggle/cuhk-x-research)
 - [Kaggriculture research](https://github.com/OpenKaggle/kaggriculture-research)
-- [TartanIMU research](https://github.com/OpenKaggle/tartan-imu-research)
-- [Traffic-flow forecasting research](https://github.com/OpenKaggle/traffic-forecasting-research)
-- [Hyperspectral tree-species research](https://github.com/OpenKaggle/tree-species-hsi-research)
+- [TartanIMU research](https://github.com/OpenKaggle/tartan-imu-iros-2026-research)
+- [Traffic-flow forecasting research](https://github.com/OpenKaggle/traffic-flow-2026-research)
+- [Hyperspectral tree-species research](https://github.com/OpenKaggle/tree-species-hsi-2026-research)
 
 The Tree Species repository preserves an explicit source-and-evidence overlay
 from a dirty local workspace without publishing its restricted 13 GB data,
