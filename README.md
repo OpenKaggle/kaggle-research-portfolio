@@ -22,6 +22,7 @@ governed by the notices attached to individual files and their upstream sources.
 Standalone competition archives extracted from the same local research corpus:
 
 - [NVIDIA Nemotron reasoning research](https://github.com/OpenKaggle/nemotron-reasoning-research)
+- [Nemotron evaluation records](https://github.com/OpenKaggle/nemotron-evaluation-records)
 - [NeuroGolf 2026 ONNX research](https://github.com/OpenKaggle/neurogolf-2026-onnx-research)
 - [Maze Crawler research](https://github.com/OpenKaggle/maze-crawler-research)
 - [ARC-AGI-2 and Paper Track research](https://github.com/OpenKaggle/arc-agi-2-paper-track-research)
