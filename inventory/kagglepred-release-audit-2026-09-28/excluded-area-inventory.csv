@@ -1,0 +1,234 @@
+project,area,files,bytes,decision
+.pytest_cache,v,2,2083,mixed workspace material; review before release
+arc2_paper,__pycache__,27,256457,mixed workspace material; review before release
+arc2_paper,artifacts,332,66409678,derived artifacts; release only with provenance and hash readback
+arc2_paper,candidate_notebooks,26,594175,mixed workspace material; review before release
+arc2_paper,evaluator_only,49,167279,mixed workspace material; review before release
+arc2_paper,kaggle_runs,630,123158964,mixed workspace material; review before release
+arc2_paper,official,1132,12961543,upstream official repository/content; retain upstream URL/license
+arc2_paper,paper,235,6304880,mixed workspace material; review before release
+arc2_paper,public_assets,143,9432983882,model/data assets; provenance and license review required
+arc2_paper,public_notebooks,63,3762090,third-party/public notebook copies; attribution/index only
+arc3_2026,docs,4,24696,mixed workspace material; review before release
+arc3_2026,manifests,2,1335,mixed workspace material; review before release
+arc3_2026,receipts,1,3553,mixed workspace material; review before release
+biohub_cell_tracking,THIRD_PARTY_LICENSES,12,38784,mixed workspace material; review before release
+biohub_cell_tracking,__pycache__,4,135632,mixed workspace material; review before release
+biohub_cell_tracking,artifacts,24,119501,derived artifacts; release only with provenance and hash readback
+biohub_cell_tracking,data,157,317179847,official or downloaded competition inputs; pointer/hash only
+biohub_cell_tracking,kaggle_runs,102,94579730,mixed workspace material; review before release
+biohub_cell_tracking,kernels,12,696432,mixed workspace material; review before release
+biohub_cell_tracking,logs,0,0,mixed workspace material; review before release
+biohub_cell_tracking,notebooks,0,0,mixed workspace material; review before release
+biohub_cell_tracking,official,24,2381231,upstream official repository/content; retain upstream URL/license
+biohub_cell_tracking,official_repo,23406,1309808836,upstream official repository/content; retain upstream URL/license
+biohub_cell_tracking,public_assets,12,118752,model/data assets; provenance and license review required
+biohub_cell_tracking,public_notebooks,274,52265244,third-party/public notebook copies; attribution/index only
+biohub_cell_tracking,public_repos,20,197731,mixed workspace material; review before release
+biohub_cell_tracking,src,10,86464,mixed workspace material; review before release
+biohub_cell_tracking,tests,12,69347,mixed workspace material; review before release
+cuhk_x_large,artifacts,394,606421440,derived artifacts; release only with provenance and hash readback
+cuhk_x_large,cache,226,8977238489,derived cache/temporary artifacts; manifest/hash only
+cuhk_x_large,candidates,11,92671,mixed workspace material; review before release
+cuhk_x_large,data,268616,9473936466,official or downloaded competition inputs; pointer/hash only
+cuhk_x_large,official_receipts,48,95598,mixed workspace material; review before release
+cuhk_x_large,patches,1,468,mixed workspace material; review before release
+cuhk_x_large,public_baselines,40,11317739,third-party baseline copies; attribution/index only
+cuhk_x_large,reports,112,1165112,mixed workspace material; review before release
+cuhk_x_large,scripts,67,747187,mixed workspace material; review before release
+cuhk_x_large,tests,6,24424,mixed workspace material; review before release
+cuhkx_small,artifacts,7,113001921,derived artifacts; release only with provenance and hash readback
+cuhkx_small,config,4,18234,mixed workspace material; review before release
+cuhkx_small,data,24880,4414370313,official or downloaded competition inputs; pointer/hash only
+cuhkx_small,receipts,29,164430,mixed workspace material; review before release
+cuhkx_small,reports,0,0,mixed workspace material; review before release
+cuhkx_small,src,14,242626,mixed workspace material; review before release
+cuhkx_small,submissions,0,0,generated submissions/models; release selected families only
+cuhkx_small,vendor,502,110706489,mixed workspace material; review before release
+data,processed,0,0,mixed workspace material; review before release
+data,raw,2352,10847493126,official/raw competition material; pointer/hash only
+hyperspectral_od_2026,kaggle_notebook,2,14518,mixed workspace material; review before release
+hyperspectral_od_2026,kaggle_smoke,2,4947,mixed workspace material; review before release
+hyperspectral_od_2026,kaggle_smoke_v3,4,25617,mixed workspace material; review before release
+hyperspectral_od_2026,logs,0,0,mixed workspace material; review before release
+hyperspectral_od_2026,official,9,584691,upstream official repository/content; retain upstream URL/license
+hyperspectral_od_2026,processed,1,306315,mixed workspace material; review before release
+hyperspectral_od_2026,raw,6,8065529,official/raw competition material; pointer/hash only
+hyperspectral_od_2026,runs,5,7909,mixed workspace material; review before release
+hyperspectral_od_2026,scripts,4,12269,mixed workspace material; review before release
+hyperspectral_od_2026,submissions,0,0,generated submissions/models; release selected families only
+kaggriculture,__pycache__,11,100361,mixed workspace material; review before release
+kaggriculture,agents,87,20343032,mixed workspace material; review before release
+kaggriculture,arena,9,89564,mixed workspace material; review before release
+kaggriculture,reference,24,2115154,mixed workspace material; review before release
+kaggriculture,remote,1680,27055004125,remote replay/episode cache; derived summaries only
+kaggriculture,reports,179,1531498814,mixed workspace material; review before release
+kaggriculture,research,5,1603842,mixed workspace material; review before release
+kaggriculture,submissions,4,346456,generated submissions/models; release selected families only
+kernels,aeroridge_v34,2,16646,mixed workspace material; review before release
+kernels,afr1ste_pf_beam_tabicl_codex,2,108396,mixed workspace material; review before release
+kernels,agentzz_super_solution_top3,2,42248,mixed workspace material; review before release
+kernels,aidensong_genuine_pf_v2_codex,2,14124,mixed workspace material; review before release
+kernels,aidensong_sel15_rerun_codex,2,14817,mixed workspace material; review before release
+kernels,ajay_latest_rogii_codex,2,15926,mixed workspace material; review before release
+kernels,aliafzal_fresh_codex,2,66611,mixed workspace material; review before release
+kernels,aliafzal_typewell_gr_alignment_pf_gbdt_codex,2,66645,mixed workspace material; review before release
+kernels,beicicc_aeroridge_w10000,2,16644,mixed workspace material; review before release
+kernels,beicicc_aeroridge_w9505,2,16641,mixed workspace material; review before release
+kernels,beicicc_aiden_pf_param,2,16195,mixed workspace material; review before release
+kernels,biohack_nnls_blend_codex,2,103287,mixed workspace material; review before release
+kernels,byron_v42_codex,2,62208,mixed workspace material; review before release
+kernels,dimple_rogii_codex,2,15850,mixed workspace material; review before release
+kernels,diversedharun_train2_codex,2,90223,mixed workspace material; review before release
+kernels,gruuby_baseline_9956_codex,2,39686,mixed workspace material; review before release
+kernels,jamie_sunny_physical_pf_v12_codex,2,11770,mixed workspace material; review before release
+kernels,k1nsom_defensive_codex,2,8630,mixed workspace material; review before release
+kernels,k1nsom_gru_submit_codex,2,6659,mixed workspace material; review before release
+kernels,k1nsom_gru_v9_codex,2,7320,mixed workspace material; review before release
+kernels,k1nsom_lgb_relative_codex,2,7236,mixed workspace material; review before release
+kernels,kojimar_pf_beam_tabicl_codex,2,102622,mixed workspace material; review before release
+kernels,konbu_plane_fit_formation_top_knn,2,34576,mixed workspace material; review before release
+kernels,llkh0a_lgbm_aug,2,52723,mixed workspace material; review before release
+kernels,llkh0a_lgbm_aug_online_training,2,54667,mixed workspace material; review before release
+kernels,needless_score_10081_rank32,2,88624,mixed workspace material; review before release
+kernels,nihilistic_dwt_lgb4,2,96263,mixed workspace material; review before release
+kernels,nina_h_blend_v1,2,532816,mixed workspace material; review before release
+kernels,pilkwang_h_blend_sidecar,2,346500,mixed workspace material; review before release
+kernels,plagiagia_top3_cbfix_codex,2,43791,mixed workspace material; review before release
+kernels,plagiagia_v28_beam_pf_ensemble,2,10054,mixed workspace material; review before release
+kernels,praxel_zhen110_exact100_w100,2,77388,mixed workspace material; review before release
+kernels,praxel_zhen110_exact100_w100_codex,2,77400,mixed workspace material; review before release
+kernels,praxel_zhen111_exact100_w280,2,69283,mixed workspace material; review before release
+kernels,praxel_zhen111_exact100_w280_codex,2,69489,mixed workspace material; review before release
+kernels,qiyue_p2_full_frozen_submission,2,114685,mixed workspace material; review before release
+kernels,qiyue_pf_physical_submission,2,17231,mixed workspace material; review before release
+kernels,qujiahui_9608_cpu_codex,2,64143,mixed workspace material; review before release
+kernels,raunak_ultra_sub9_codex,5,135909,mixed workspace material; review before release
+kernels,ravaghi_hc_baseline,5,122512,mixed workspace material; review before release
+kernels,rishabh_v5_typewellwindowstats,2,30389,mixed workspace material; review before release
+kernels,romantamrazov_super_solution_codex,2,40813,mixed workspace material; review before release
+kernels,safar_lb9633,2,121935,mixed workspace material; review before release
+kernels,sanidhya_9946_cpu_codex,2,57570,mixed workspace material; review before release
+kernels,scottweeden_v13_anchored_seq_cnn_infer_codex,2,19499,mixed workspace material; review before release
+kernels,shiny_better_baseline_particle_filter,2,21265,mixed workspace material; review before release
+kernels,shiny_triple_signal_beam_pf_lgb,2,40290,mixed workspace material; review before release
+kernels,suneet_lb900_codex,2,44813,mixed workspace material; review before release
+kernels,sunny_tvt_physical_model_codex,2,11751,mixed workspace material; review before release
+kernels,tasmim_9804_cpu_codex,2,48835,mixed workspace material; review before release
+kernels,tasmim_lb9356_codex,2,52377,mixed workspace material; review before release
+kernels,thbdh_v10_fresh_artifact_infer,2,121594,mixed workspace material; review before release
+kernels,thbdh_v11_fresh_artifact_infer,2,56120,mixed workspace material; review before release
+kernels,thbdh_v4_aeroridge_cache_tabicl,2,95236,mixed workspace material; review before release
+kernels,torrreeesss_9637_gbdt_stack2_codex,2,57154,mixed workspace material; review before release
+kernels,writer_ravaghi_lgb4,2,493237,mixed workspace material; review before release
+kernels,yoshi70_ulas_treeonly_blend_gc2,2,129810,mixed workspace material; review before release
+kernels,yoshi70_ulas_treeonly_blend_gc2_codex,2,129743,mixed workspace material; review before release
+kernels,yuki_lgbm_gr_typewell_corr,2,19781,mixed workspace material; review before release
+kernels,zhen_exp110_yoshi74_self_contained,2,77442,mixed workspace material; review before release
+kernels,zhen_exp119_ajay_cached_lgbcb,2,74907,mixed workspace material; review before release
+notebooks,aeroridge_v34,2,16719,mixed workspace material; review before release
+notebooks,afr1ste_koolbox_truth_probe_8107,1,70359,mixed workspace material; review before release
+notebooks,afr1ste_pf_beam_tabicl,2,108429,mixed workspace material; review before release
+notebooks,agent_public_frontier_2026-06-06,42,1662870,mixed workspace material; review before release
+notebooks,aidensong_genuine_pf_v2,2,14120,mixed workspace material; review before release
+notebooks,aidensong_pf_parameter_study,2,16276,mixed workspace material; review before release
+notebooks,aidensong_sel15_rerun,2,14813,mixed workspace material; review before release
+notebooks,ajayrao43_11,2,14862,mixed workspace material; review before release
+notebooks,ajayrao43_main,2,15926,mixed workspace material; review before release
+notebooks,aliafzal_typewell_gr_alignment_pf_gbdt,2,66720,mixed workspace material; review before release
+notebooks,biohack_nnls_blend,2,63995,mixed workspace material; review before release
+notebooks,byron_latest_0606,1,61522,mixed workspace material; review before release
+notebooks,byron_rogii_wellbore_geology,2,62239,mixed workspace material; review before release
+notebooks,cdeotte_nn_starter,2,37764,mixed workspace material; review before release
+notebooks,debatreya_koolbox_best_8188,1,65001,mixed workspace material; review before release
+notebooks,dwt_based_9251,0,0,mixed workspace material; review before release
+notebooks,gruuby_baseline_9956,2,39703,mixed workspace material; review before release
+notebooks,hanhan_sunny_v1131,2,11792,mixed workspace material; review before release
+notebooks,hengck23_cnn_mtp_example,2,14036,mixed workspace material; review before release
+notebooks,jamie_sunny_physical_pf_v12,2,11790,mixed workspace material; review before release
+notebooks,k1nsom_defensive,2,8630,mixed workspace material; review before release
+notebooks,k1nsom_gru_submit,2,6659,mixed workspace material; review before release
+notebooks,k1nsom_gru_v9,2,7320,mixed workspace material; review before release
+notebooks,k1nsom_lgb_relative,2,7232,mixed workspace material; review before release
+notebooks,kojimar_pf_beam_tabicl,2,102669,mixed workspace material; review before release
+notebooks,medali_tcn_infer,2,127342,mixed workspace material; review before release
+notebooks,mitch_drift_ncc_tree,2,68520,mixed workspace material; review before release
+notebooks,mitch_gr_features_outlier,2,71990,mixed workspace material; review before release
+notebooks,needless_ridge_sp45,1,67141,mixed workspace material; review before release
+notebooks,nihilistic_dwt,2,56931,mixed workspace material; review before release
+notebooks,nina_h_blend_v1,2,532842,mixed workspace material; review before release
+notebooks,nina_h_blend_v2,2,523682,mixed workspace material; review before release
+notebooks,opengs7_r11_self_contained,2,62546,mixed workspace material; review before release
+notebooks,pilkwang_h_blend_sidecar,2,346561,mixed workspace material; review before release
+notebooks,pilkwang_target_free_alignment,2,352783,mixed workspace material; review before release
+notebooks,pilkwang_target_free_alignment_latest,1,499642,mixed workspace material; review before release
+notebooks,plagiagia_top3_cbfix,2,43822,mixed workspace material; review before release
+notebooks,qamar_ml_physics,1,64565,mixed workspace material; review before release
+notebooks,qujiahui_9608_azimuth_dip,2,63825,mixed workspace material; review before release
+notebooks,raunak_ultra_sub9,2,60334,mixed workspace material; review before release
+notebooks,ravaghi_hill_climbing,2,46850,mixed workspace material; review before release
+notebooks,ravaghi_lightgbm,2,52026,mixed workspace material; review before release
+notebooks,ravaghi_ridge,1,61750,mixed workspace material; review before release
+notebooks,romantamrazov_super_solution,2,40843,mixed workspace material; review before release
+notebooks,ruhul_temporal_cnn_tcn_baseline,2,20789,mixed workspace material; review before release
+notebooks,safar_9633,2,121943,mixed workspace material; review before release
+notebooks,sanidhya_9946_geostat_ncc,2,57423,mixed workspace material; review before release
+notebooks,scott_anchored_seq_cnn_latest,1,29376,mixed workspace material; review before release
+notebooks,scottweeden_v13_anchored_seq_cnn_infer,2,19530,mixed workspace material; review before release
+notebooks,suneet_lb900,2,43664,mixed workspace material; review before release
+notebooks,sunny_tvt_physical_model,2,11789,mixed workspace material; review before release
+notebooks,svanik_aeroridge_v3,2,551211,mixed workspace material; review before release
+notebooks,tasmim_9804,2,48849,mixed workspace material; review before release
+notebooks,tasmim_lb9356,2,52377,mixed workspace material; review before release
+notebooks,torrreeesss_9637_gbdt_stack2,2,57173,mixed workspace material; review before release
+playground_s6e9,artifacts,21,135514722,derived artifacts; release only with provenance and hash readback
+playground_s6e9,data,4,85523554,official or downloaded competition inputs; pointer/hash only
+playground_s6e9,external,2,695134,mixed workspace material; review before release
+playground_s6e9,official,3,3550,upstream official repository/content; retain upstream URL/license
+playground_s6e9,public_notebooks,22,766584,third-party/public notebook copies; attribution/index only
+playground_s6e9,reports,13,36480,mixed workspace material; review before release
+playground_s6e9,src,7,53316,mixed workspace material; review before release
+playground_s6e9,submissions,0,0,generated submissions/models; release selected families only
+poker,reference,6,100023,mixed workspace material; review before release
+poker,src,30,765626,mixed workspace material; review before release
+poker,tests,15,153262,mixed workspace material; review before release
+poker,work,114,2452866740,prepared feature tables and evaluation artifacts; review before release
+reports,agent_github_reuse_2026-06-06_raw,215,36136940,mixed workspace material; review before release
+reports,agent_public_frontier_2026-06-06_raw,109,3493350,mixed workspace material; review before release
+reports,cuhk_x_incremental_radar_snapshots,422,2923518,mixed workspace material; review before release
+reports,kaggle_ddl_radar,3,51512,mixed workspace material; review before release
+reports,kaggle_kernel_output,126,99779040,mixed workspace material; review before release
+reports,leaderboard_download,9,1114052,mixed workspace material; review before release
+reports,local_notebook_runs,3,854700,mixed workspace material; review before release
+reports,rogii_candidate_cache,50,111099409,mixed workspace material; review before release
+scripts,__pycache__,46,1905106,mixed workspace material; review before release
+tartan_imu,artifacts,23,389831755,derived artifacts; release only with provenance and hash readback
+tartan_imu,data,571,2769858989,official or downloaded competition inputs; pointer/hash only
+tartan_imu,logs,0,0,mixed workspace material; review before release
+tartan_imu,official,116,15423124,upstream official repository/content; retain upstream URL/license
+tartan_imu,official_weights,12,63853744,upstream/model weights; license and lineage review required
+tartan_imu,output,4,464397,mixed workspace material; review before release
+tartan_imu,release,64,73928451,mixed workspace material; review before release
+tartan_imu,reports,19,745458,mixed workspace material; review before release
+tartan_imu,src,9,44492,mixed workspace material; review before release
+tartan_imu,submissions,11,6863999,generated submissions/models; release selected families only
+tartan_imu,tmp,12,4135211,mixed workspace material; review before release
+traffic,__pycache__,1,16171,mixed workspace material; review before release
+traffic,artifacts,148,833578368,derived artifacts; release only with provenance and hash readback
+traffic,config,9,26311,mixed workspace material; review before release
+traffic,data,9748,23341544812,official or downloaded competition inputs; pointer/hash only
+traffic,intel,7,124893,mixed workspace material; review before release
+traffic,official,35,676676,upstream official repository/content; retain upstream URL/license
+traffic,public_notebooks,15,1498162036,third-party/public notebook copies; attribution/index only
+traffic,src,35,430875,mixed workspace material; review before release
+traffic,tests,25,61549,mixed workspace material; review before release
+tree_species_hsi_2026,artifacts,8,53585255,derived artifacts; release only with provenance and hash readback
+tree_species_hsi_2026,downloads,40,8328356425,downloaded source or competition package; pointer/hash only
+tree_species_hsi_2026,official,6,6443,upstream official repository/content; retain upstream URL/license
+tree_species_hsi_2026,raw,6,4014324602,official/raw competition material; pointer/hash only
+tree_species_hsi_2026,raw_phase2,0,0,mixed workspace material; review before release
+tree_species_hsi_2026,reports,25,257830,mixed workspace material; review before release
+tree_species_hsi_2026,scripts,2,10122,mixed workspace material; review before release
+tree_species_hsi_2026,src,8,81319,mixed workspace material; review before release
+tree_species_hsi_2026,submissions,6,1718215837,generated submissions/models; release selected families only
+tree_species_hsi_2026,tests,3,13230,mixed workspace material; review before release
