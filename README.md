@@ -56,14 +56,14 @@ The archive contains work associated with these locally recorded campaigns:
 | BioHub Cell Tracking | `biohub_cell_tracking` | Ended — frozen (2026-09-29) |
 | Kaggriculture | `kaggriculture` | Ended — closeout (2026-10-15) |
 | Detect Suspicious Value Transfers in Poker | `poker` | Ended — sealed after infrastructure failure (2026-09-20) |
-| Gemma 4 Developer Agent Paper Track | — | Joined 2026-10-31, Active — writeup due 2026-11-12 |
-| Verifiable Quantum Circuit Compilation | — | Joined 2026-10-31, Active — final 2027-01-20 |
-| NFL Big Data Bowl 2027 | — | Joined 2026-10-31, Active — final 2027-01-06 |
-| NeurIPS 2026 Smart Buildings | — | Joined 2026-10-31, Active — final 2027-01-15 |
+| Gemma 4 Developer Agent Paper Track | `gemma_paper_2026` | Joined 2026-10-31, Active — writeup due 2026-11-12 |
+| Verifiable Quantum Circuit Compilation | `quantum_2026` | Joined 2026-10-31, Active — final 2027-01-20 |
+| NFL Big Data Bowl 2027 | `nfl_2027` | Joined 2026-10-31, Active — final 2027-01-06 |
+| NeurIPS 2026 Smart Buildings | `buildings_2026` | Joined 2026-10-31, Active — final 2027-01-15 |
 
 Full registered-competition sweep 2026-10-31: 12 joined total (7 active, 5 ended).
 
-The ROGII Wellbore Geology Prediction record and other workspace folders without a dedicated directory in this archive are not covered by the status table above.
+The ROGII Wellbore Geology Prediction record and other workspace folders without a dedicated directory in this archive are not covered by the status table above. Local directories for the four 2026-10-31 additions exist under the same root naming scheme.
 
 Status column updated 2026-10-31 from internal portfolio state; statuses are terminal-state labels, not quality judgments.
 
