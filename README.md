@@ -43,17 +43,23 @@ workspace remains untouched.
 
 The archive contains work associated with these locally recorded campaigns:
 
-- IEEE Big Data Traffic Flow Bench
-- CUHK-X Small Model Track and Large Model Track
-- ARC-AGI-2 plus Paper Track execution audits
-- ARC Prize 2026 / ARC-AGI-3 clean-room research
-- Hyperspectral Tree Species Identification Challenge 2026
-- Hyperspectral Object Detection Challenge 2026
-- TartanIMU IROS 2026
-- Kaggle Playground Series S6E9
-- ROGII Wellbore Geology Prediction
-- BioHub Cell Tracking
-- additional local workspaces under `kaggriculture`, `poker`, and related research folders
+| Campaign | Directory | Status |
+|---|---|---|
+| IEEE Big Data Traffic Flow Bench | `traffic` | Active — final selection due 2026-11-04, deadline 2026-11-07 |
+| CUHK-X Small Model Track and Large Model Track | `cuhkx_small`, `cuhk_x_large` | Ended — closed (2026-09-15) |
+| ARC-AGI-2 plus Paper Track execution audits | `arc2_paper` | Active — evidence line (paper track); leaderboard anchor sealed at 28.89 |
+| ARC Prize 2026 / ARC-AGI-3 clean-room research | `arc3_2026` | Sealed — local baseline gate failed (2026-10-15); entry window closed |
+| Hyperspectral Tree Species Identification Challenge 2026 | `tree_species_hsi_2026` | Ended — sealed (2026-09-25) |
+| Hyperspectral Object Detection Challenge 2026 | `hyperspectral_od_2026` | Ended — frozen (2026-09-24) |
+| TartanIMU IROS 2026 | `tartan_imu` | Delivery complete (2026-09-20) |
+| Kaggle Playground Series S6E9 | `playground_s6e9` | Ended — frozen (2026-09-30) |
+| BioHub Cell Tracking | `biohub_cell_tracking` | Ended — frozen (2026-09-29) |
+| Kaggriculture | `kaggriculture` | Ended — closeout (2026-10-15) |
+| Detect Suspicious Value Transfers in Poker | `poker` | Ended — sealed after infrastructure failure (2026-09-20) |
+
+The ROGII Wellbore Geology Prediction record and other workspace folders without a dedicated directory in this archive are not covered by the status table above.
+
+Status column updated 2026-10-29 from internal portfolio state; statuses are terminal-state labels, not quality judgments.
 
 These names describe the local research folders and do not imply affiliation with the competition organizers.
 
