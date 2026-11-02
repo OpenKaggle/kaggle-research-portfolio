@@ -43,8 +43,8 @@ workspace remains untouched.
 
 The archive contains work associated with these locally recorded campaigns:
 
-| Campaign | Directory | Status |
-|---|---|---|
+| Campaign | Directory | Status | Research repository | Public-eligible-after (UTC) |
+|---|---|---|---|---|
 | IEEE Big Data Traffic Flow Bench | `traffic` | Active — final selection due 2026-11-04, deadline 2026-11-07 |
 | CUHK-X Small Model Track and Large Model Track | `cuhkx_small`, `cuhk_x_large` | Ended — closed (2026-09-15) |
 | ARC-AGI-2 plus Paper Track execution audits | `arc2_paper` | Active — evidence line (paper track); leaderboard anchor sealed at 28.89 |
@@ -68,6 +68,8 @@ The ROGII Wellbore Geology Prediction record and other workspace folders without
 Status column updated 2026-10-31 from internal portfolio state; statuses are terminal-state labels, not quality judgments.
 
 These names describe the local research folders and do not imply affiliation with the competition organizers.
+
+**Publication gate** = the line's competition submission end. Research repositories stay private until at least that time; flipping visibility is a separate human decision. Four additional repositories predate this table and carry their own gate statements: `maze-crawler-research` (2026-06-16T23:59Z, elapsed), `neurogolf-2026-onnx-research` (2026-07-15T23:59Z, elapsed), `nemotron-reasoning-research` (2026-06-15T23:59Z, elapsed), `rogii-wellbore-geology-research` (TBD — competition end not yet stated in-repo). Gate column added 2026-11-02; on the same date the two repositories whose gates had not yet passed (`traffic-flow-2026-research`, `arc-agi-2-paper-track-research`) were set to private, and the four 2026-10-31 line repositories were created private with gate statements.
 
 ## Repository structure
 
